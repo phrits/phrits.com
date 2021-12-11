@@ -16,17 +16,20 @@ Checkpoint: http://localhost:800 shows the Django welcome screen.
 
 - Create a View.
 
-`# .../app/views.py
+```
+# .../app/views.py
 from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello, world!")`
+    return HttpResponse("Hello, world!")
+```
 
 - Create a URL pattern. 'views.py' has to be updated in app folder and its parent.
 
-'# .../app/views.py
+```
+# .../app/views.py
 # May need to be created or copied from parent folder.
 from django.urls import path
 from . import views
@@ -34,9 +37,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name="index"),
 ]
-'
-
-
+```
 
 ## Source Notes
 IDG TECHtalk
