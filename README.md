@@ -5,6 +5,10 @@ URL: https://www.youtube.com/watch?v=ZsJRXS_vrw0
 Accessed ca. 2021-12-11
 
 ## DJango Notes
+(django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>django-admin startproject phrits
+(django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>python manage.py startapp appWelcome  
+(django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>python manage.py migrate
+(django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>python manage.py runserver
 
 ## Source Notes
 IDG TECHtalk
