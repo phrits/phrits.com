@@ -2,6 +2,14 @@
 
 ## DJango Notes
 
+### First Steps.
+
+1. Make sure it's installed.
+1. Install the project from project's root.
+1. Install an Application
+1. Create the database structure, etc.
+1. Start the django webservice.
+
 
 ## History
 
@@ -25,7 +33,7 @@
 - *Start the django webservice*
 (django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>`python manage.py runserver`
 
-##### Checkpoint: http://localhost:800 shows the Django welcome screen.
+##### Checkpoint: http://localhost:8000 shows the Django welcome screen.
 
 ### Branch djangoDocTutorial
 
@@ -35,6 +43,6 @@
 - (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`django-admin startproject phrits`
 - (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py runserver`
 
-##### Checkpoint: http://localhost:800 shows the Django welcome screen.
+##### Checkpoint: http://localhost:8000 shows the Django welcome screen.
 
 - (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py startapp appWelcome`
