@@ -17,7 +17,7 @@ Checkpoint: http://localhost:800 shows the Django welcome screen.
 - Create a View.
 
 ```
-# .../app/views.py
+# .../appName/views.py
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -26,10 +26,12 @@ def index(request):
     return HttpResponse("Hello, world!")
 ```
 
-- Create a URL pattern. 'views.py' has to be updated in app folder and its parent.
+#### Here forward isn't working yet.
+
+- Create a URL pattern. 'urls.py' has to be updated in app folder and its parent.
 
 ```
-# .../app/views.py
+# .../appName/urls.py
 # May need to be created or copied from parent folder.
 from django.urls import path
 from . import views
@@ -39,6 +41,9 @@ urlpatterns = [
 ]
 ```
 
+```
+# ...//urls.py
+```
 ## Source Notes
 IDG TECHtalk
 47.2K subscribers
