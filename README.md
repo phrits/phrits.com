@@ -19,7 +19,7 @@
 -*Install an Application*
 (django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>`python manage.py startapp appWelcome`
 
--*Create the database structure, etc.
+-*Create the database structure, etc.*
 (django) E:\Dropbox\Active\phrits.com\ZsJRXS_vr0>`python manage.py migrate`
 
 -*Start the django webservice*
