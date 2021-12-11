@@ -30,7 +30,8 @@ Checkpoint: http://localhost:800 shows the Django welcome screen.
 ### Branch djangoDocTutorial
 
 2021-12-11
-(django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python -m django --version`
-(django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`django-admin startproject phrits`
-(django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py runserver`
-(django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py startapp appWelcome`
+
+- (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python -m django --version`
+- (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`django-admin startproject phrits`
+- (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py runserver`
+- (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py startapp appWelcome`
