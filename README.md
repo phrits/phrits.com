@@ -82,7 +82,17 @@ def index(request):
 
 - *Create the database, etc.* (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial\_phrits>`python manage.py migrate`
 
-- `/_phrits/appWelcome/`
+- `_phrits/appWelcome/apps.py`
+```
+from django.apps import AppConfig
+
+
+class appWelcomeConfig(AppConfig):  # Default installation messes with casing.
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'appWelcome'
+```
+
+- `/_phrits/appWelcome/models.py`
 ```
 from django.db import models
 
@@ -96,6 +106,9 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 ```
-
+- `/_phrits/settings.py
+```
 INSTALLED_APPS = [
     'appWelcome.apps.appWelcomeConfig',
+]
+```
