@@ -7,8 +7,10 @@
 1. Make sure it's installed.
 1. Install the project from project's root.
 1. Install an Application
-1. Create the database structure, etc.
-1. Start the django webservice.
+1. Create the database structure, etc. (migrate)
+1. Create models.
+1. Create migrations for those changes.
+1. Apply those changes to the database. (migrate)
 
 
 ## History
@@ -93,8 +95,7 @@ class AppwelcomeConfig(AppConfig):
 ```
 
 - `/_phrits/appWelcome/models.py`
-```
-from django.db import models
+```from django.db import models
 
 
 class Question(models.Model):
@@ -109,6 +110,19 @@ class Choice(models.Model):
 - `/_phrits/settings.py
 ```
 INSTALLED_APPS = [
-    'appWelcome.apps.appWelcomeConfig',
+    'appWelcome.apps.AppwelcomeConfig',
 ]
 ```
+
+##### Checkpoint: Models created
+
+- *View in SQL (Optional)* (django) E:\Dropbox\Active\phrits.com\djangoDocTutorial\_phrits>`python manage.py sqlmigrate appWelcome 0001`
+
+- *Make the database changes.* (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial\_phrits>`python manage.py migrate`
+
+> three-step guide to making model changes:
+2. Change your models (in models.py).
+2. Run python manage.py makemigrations to create migrations for those changes
+2. Run python manage.py migrate to apply those changes to the database.
+
+##### Checkpoint: Database schema changes implemented
