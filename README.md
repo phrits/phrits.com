@@ -46,3 +46,35 @@
 ##### Checkpoint: http://localhost:8000 shows the Django welcome screen.
 
 - (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial>`python manage.py startapp appWelcome`
+```
+# /phrits/urls.py
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('', include('appWelcome.urls')),
+    path('admin/', admin.site.urls),
+```
+
+```
+# /appWelcome/urls.py
+from django.contrib import admin
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
+
+```
+# /appWelcome/views.py
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    return HttpResponse('<h1>Hello, world!</h1>')
+```
+
+##### Checkpoint: Hello, world!
