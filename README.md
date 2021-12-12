@@ -87,7 +87,7 @@ def index(request):
 from django.apps import AppConfig
 
 
-class appWelcomeConfig(AppConfig):  # Default installation messes with casing.
+class AppwelcomeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'appWelcome'
 ```
