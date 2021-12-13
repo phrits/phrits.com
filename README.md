@@ -16,7 +16,8 @@
 
 ### Useful Knowledge
 
-- ```
+- 
+```
 # Lookup by a primary key is the most common case, so Django provides a
 # shortcut for primary-key exact lookups.
 # The following is identical to Question.objects.get(id=1).
