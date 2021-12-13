@@ -12,6 +12,14 @@
 1. Create migrations for those changes.
 1. Apply those changes to the database. (migrate)
 
+### Useful Knowledge
+```
+# Lookup by a primary key is the most common case, so Django provides a
+# shortcut for primary-key exact lookups.
+# The following is identical to Question.objects.get(id=1).
+>>> Question.objects.get(pk=1)
+<Question: What's up?>
+```
 
 ## History
 
