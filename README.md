@@ -11,6 +11,8 @@
 1. Create models.
 1. Create migrations for those changes.
 1. Apply those changes to the database. (migrate)
+1. Create admin account
+1. Make models available for djangoAdmin access. GUI data edits.
 
 ### Useful Knowledge
 ```
@@ -134,3 +136,15 @@ INSTALLED_APPS = [
 2. Run python manage.py migrate to apply those changes to the database.
 
 ##### Checkpoint: Database schema changes implemented
+
+- *Create Django admin account.* (django) E:\Dropbox\Active\phrits.com\dJangoDocTutorial\_phrits>`python manage.py createsuperuser`
+
+- `_phrits/appWelcome/admin.py` (Probably optional.)
+```
+polls/admin.py¶
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
+```
