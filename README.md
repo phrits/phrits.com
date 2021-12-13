@@ -15,13 +15,16 @@
 1. Make models available for djangoAdmin access. GUI data edits.
 
 ### Useful Knowledge
-```
+
+- ```
 # Lookup by a primary key is the most common case, so Django provides a
 # shortcut for primary-key exact lookups.
 # The following is identical to Question.objects.get(id=1).
 >>> Question.objects.get(pk=1)
 <Question: What's up?>
 ```
+
+- `question = get_object_or_404(Question, pk=question_id)`
 
 ## History
 
@@ -141,7 +144,7 @@ INSTALLED_APPS = [
 
 - `_phrits/appWelcome/admin.py` (Probably optional.)
 ```
-polls/admin.py¶
+appWelcome/admin.py¶
 from django.contrib import admin
 
 from .models import Question

@@ -6,11 +6,12 @@ from . import views
 """
 'index' is also returned for '' in the project urls.py.
 """
+
+app_name = 'appWelcome'
 urlpatterns = [
     path('', views.index, name='index'),
     
-# *****************************************************************************
-
+# **************************************
     # ex: /appWelcome/5/
     path('<int:question_id>/', views.detail, name='detail'),
     # ex: /appWelcome/5/results/
