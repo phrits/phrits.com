@@ -16,7 +16,8 @@
 
 ### Useful Knowledge
 
-- ```
+- 
+```
 # Lookup by a primary key is the most common case, so Django provides a
 # shortcut for primary-key exact lookups.
 # The following is identical to Question.objects.get(id=1).
@@ -25,6 +26,19 @@
 ```
 
 - `question = get_object_or_404(Question, pk=question_id)`
+
+- 
+```
+{{ forloop.counter }} index starts at 1.
+{{ forloop.counter0 }} index starts at 0.
+```
+- 
+```
+# Always return an HttpResponseRedirect after successfully dealing
+# with POST data. This prevents data from being posted twice if a
+# user hits the Back button.
+```
+
 
 ## History
 
