@@ -27,6 +27,19 @@
 
 - `question = get_object_or_404(Question, pk=question_id)`
 
+- 
+```
+{{ forloop.counter }} index starts at 1.
+{{ forloop.counter0 }} index starts at 0.
+```
+- 
+```
+# Always return an HttpResponseRedirect after successfully dealing
+# with POST data. This prevents data from being posted twice if a
+# user hits the Back button.
+```
+
+
 ## History
 
 ### Branch creatingSimpleWDjango-0924-ZsJRXS_vrw0 
