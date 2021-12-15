@@ -1,0 +1,298 @@
+/*
+
+phrits.css
+
+*/
+body {
+    background: white url("../images/background.jpg") no-repeat fixed center;
+}
+
+.phrits {
+    font-family:            "Courier New", Courier, monospace !important;
+    font-weight:            bold !important;
+    color:                  #000000 !important;
+    text-decoration:        none !important;
+    border:                 0 0 0 0 !important;
+    text-transform:         lowercase !important;
+}
+
+.highlight,
+.emph {
+    font-weight:            bold;
+}
+
+.exposition:first-line {
+    font-weight:            bold;
+}
+
+.foreign {
+    font-style:             italic;
+}
+
+.title {
+    font-style:             italic;
+    font-variant:           small-caps;
+}
+
+.dietary {
+    font-variant:           small-caps;
+    font-weight:            bold;
+}
+
+.nobullet,
+.ingredient,
+.credits {
+    list-style:             none;
+    margin-left: 0;
+}
+
+.credits li {
+    margin-bottom: 1em;
+}
+
+.oneline li {
+    display:                inline-block;
+    padding:                0 1ex 0 0;
+}
+
+.left {
+    text-align:             left;
+}
+
+.right {
+    text-align:             right;
+}
+
+.center {
+    text-align:             center;
+}
+
+aside {
+    max-width:              33%;
+    min-width:              25%;
+    border:                 3px ridge;
+    padding:                1ex;
+    text-align:             left;
+}
+aside.r {
+    float:                  right;
+    margin-left:            1ex;
+}
+aside.l {
+    float:                  left;
+    margin-right:           1ex;
+}
+
+.inline {
+    display:                inline;
+}
+
+/* Page */
+#above_board        {
+    min-height:             100%;
+    margin: 0 auto;
+}
+#board          {
+    height:                 32px;
+    width:                  100%;
+    margin-top:             -32px;  /* negative margin-top equals height of #board */
+    background:             url("/images/board.png");
+    /* board image: http://farm4.static.flickr.com/3254/2779025080_c38653e1a5.jpg */
+}
+
+/* Banner */
+#banner {
+    background:             #00001A;
+    position:               fixed;
+    width:                  100%;
+}
+#banner .colorband {
+    padding-bottom:         1px; /* There's an extra px floating around somewhere above. */
+    background:             url("/images/underbanner.png");
+    height:                 16px;
+}
+#banner img {
+    border:                 0;
+    padding:                1em 0 1em 1em;
+}
+#content_pad {
+    margin:                 0;
+    padding:                117px 0 0 0;    /* underbanner image plus logo image plus #top_menu heights */
+}
+
+/* Footer */
+#footer {
+clear:both;
+    background:             url('/images/bg_vertical_stripe.png'), url('/images/bg_pixel_0x1A.png');
+    background-position:    12%, top left;
+    background-size:        auto, 12% auto;
+    background-repeat:      repeat-y;
+    margin:                 0 10% 32px 0; /* 32px is height of #board */
+    font-size:              80%;
+    text-align:             right;
+}
+
+#footer p {
+    font-size:              85%;
+    margin-left:            30%;
+}
+
+/* Content */
+.outerband,
+.splash {
+    background:             url('/images/bg_vertical_stripe.png'), url('/images/bg_pixel_0x1A.png');
+    background-position:    12%, top left;
+    background-size:        auto, 12% auto;
+    background-repeat:      repeat-y;
+    padding:                2em 2em 0 2em;
+}
+
+.outerband {
+    margin:                 0 10% 0 0;
+}
+
+.splash {
+/*    display: none; */
+    margin:                 0 10% 0 0;
+    color:                  #2B65EC}
+
+.splash h1,
+.splash h2,
+.splash h3,
+.splash h4,
+.splash h5,
+.splash h6 {
+    color:                  #00001A}
+
+.splash .innerband {
+    border:                 4px double #2B65EC;
+    border-right:           0;
+    font-size:              80%;
+    margin-left:            10%;
+    box-shadow:             0px -4px 10px 0 #2B65EC;
+}
+
+
+#top_menu {
+    background:             url('/images/bg_vertical_stripe.png'), url('/images/bg_pixel_0x1A.png');
+    background-position:    12%, top left;
+    background-size:        auto, 12% auto;
+    background-repeat:      repeat-y;
+    font-family:            Helvetica, Arial, sans-serif;
+    color:                  #FFFFFF;
+    margin:                 0 10% 0 0;
+    padding:                0 2em 0 2em;
+}
+
+#top_menu * {
+    text-align: right;
+}
+
+#top_menu li {
+    margin-bottom:          0; /* Overrides global li bottom margin of 1ex */
+}
+
+
+/* #top_menu a:hover {} */
+
+#top_menu li {
+    padding:                0 1ex 0 1ex;
+}
+
+#top_menu ol,
+#top_menu ul {
+    margin-bottom:          0;
+}
+
+.innerband {
+    margin:                 0;
+    border:                 3px solid #00001A;
+    border-right:           0;
+    background:             #FFFFFF;
+    border-radius:          1em 0 0 1em;
+    padding:                1em;
+height: auto !important;
+}
+
+.insetRight,
+.insetRight_small {
+    float:                  right;
+    border:                 3px solid #660000;
+    padding:                1ex;
+    border-radius:          0 0em 0 1em;
+    border-top:             0;
+    border-right:           0;
+    margin:                 1em 0 1ex 1ex;
+    text-align:             right;
+    box-shadow:             0 -5px 12px 0px #00001A;
+    max-width:              33%;
+}
+
+.insetRight_small p {
+    font-size:              80%;
+    }
+
+.insetLeft {
+    float:                  left;
+    border:                 3px solid #660000;
+    padding:                1ex;
+    border-radius:          0 0em 1em 0em;
+    border-top:             0;
+    border-left:            0;
+    margin:                 1em 1ex 1ex 0;
+    text-align:             left;
+    box-shadow:             0 -5px 10px 0px #00001A;
+    max-width:              33%;
+}
+
+.insetRight_cpowder,
+.insetLeft_cpowder {
+    max-width:              100%;
+}
+
+.spaced {
+    padding-left:           5px;
+    padding-right:          5px;
+}
+
+.noscreen {
+    display: none !important;
+}
+
+.photo_step {   /* Used in the Chili Powder photo essay. */
+    clear:                  both;
+    border-top:             1px dotted #00001A;
+    max-width:              85%;
+}
+
+@media print {
+    html,
+    body {
+        font-family:            Times, "Times New Roman", serif;
+        background:             #FFFFFF;
+        color:                  #000000;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .noprint {
+        display: none !important;
+    }
+
+    #top_menu,
+    #board,
+    .colorband {
+        display: none !important;
+    }
+    #content_pad {
+        padding-top:            0;  /* Reset #board adjustment. */
+    }
+
+    #footer {
+        margin-bottom:          0;  /* Reset #board adjustment. */
+    }
+
+}
+
