@@ -1,0 +1,18 @@
+li a {
+    color: green;
+}
+h1 {
+    color: blue;
+}
+.phrits {
+    font-family:            "Courier New", Courier, monospace !important;
+    font-weight:            bold !important;
+    color:                  #000000 !important;
+    text-decoration:        none !important;
+    border:                 0 0 0 0 !important;
+    text-transform:         lowercase !important;
+}
+
+body {
+    background: white url("../images/background.gif") no-repeat;
+}
