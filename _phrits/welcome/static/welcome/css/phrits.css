@@ -274,7 +274,7 @@ height: auto !important;
     }
 
     a {
-        text-decoration: none !important;
+        text-decoration: underline dotted !important;
     }
 
     .noprint {
@@ -295,4 +295,3 @@ height: auto !important;
     }
 
 }
-
