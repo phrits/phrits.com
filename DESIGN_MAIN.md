@@ -37,21 +37,4 @@ phrits_conn         # e.g., edit a page link in the URL table, show current exam
 
 ## dynamic content
 
-## Models
-
-FAT TOM
-<!-- infer from presentation -->
-h2 - heading
-p* - content
-date
-version
-
-Sugarplums
-<!-- infer from structure -->
-h? - heading(s)
-p* - content
-li - content
-images
-date
-version
-
+## models
