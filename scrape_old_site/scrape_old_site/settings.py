@@ -34,6 +34,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # **********************
 # Application definition
 INSTALLED_APPS = [
+    'Scrape.apps.ScrapeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
