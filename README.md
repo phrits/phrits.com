@@ -8,8 +8,8 @@ I'm in the early stages of getting a Django project set up. I intend to port the
 
 ### See Also
 
-    - [COMPONENTS.md](COMPONENTS.md)
+[COMPONENTS.md](COMPONENTS.md)
 
-    - [DESIGN_GOALS.md](DESIGN_GOALS.md)
+[DESIGN_GOALS.md](DESIGN_GOALS.md)
 
-    - [WORKLOG.md](WORKLOG.md)
+[WORKLOG.md](WORKLOG.md)
