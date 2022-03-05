@@ -1,39 +1,15 @@
 # phrits.com
 
-## UI
+This is the repo for my personal website, [`phrits.com`](https://phrits.com).
 
--   It has to look right. In particular, it has to be readable:
-    - Desktop, Tablet, Phone
-    - Watch?
-    - Even when the CSS file can't be found
-    - Even when JavaScript is disabled
-    - Agnostic across all browsers
+## Status
 
--   It should print a useful document.
+I'm in the early stages of getting a Django project set up. I intend to port the existing content, make the site easy to maintain, and give it a more modern look and feel.
 
--   It would be swell if:
-    - Selectable themes
-    - The printout version isn't overly cluttered, even with missing CSS
-    - Links are automatically tested and handled appropriately
-        - Bonus points for making it automatic and letting me know when something goes newly stale.
-    - Live archive; i.e., phrits.com as it looked on a particular date
+### See Also
 
-## Functionality
+    - [`COMPONENTS.md`](COMPONENTS.md)
 
--   robots.txt
--   Appropriate attention from Google, etc.
+    - [`DESIGN_GOALS.md`](DESIGN_GOALS.md)
 
-## Scrape Old Site
-
-    - scrape all the content from phrits.com into tables
-
-    - create Models for use in the new site
-
-    - populate the resulting tables with scraped content
-
-    - apply the same scrapers to new site content
-
-
-## Libraries to Build
-
-- Personal Toolbox
+    - [`WORKLOG.md`](WORKLOG.md)
