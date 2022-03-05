@@ -23,6 +23,17 @@
 -   robots.txt
 -   Appropriate attention from Google, etc.
 
+## Scrape Old Site
+
+    - scrape all the content from phrits.com into tables
+
+    - create Models for use in the new site
+
+    - populate the resulting tables with scraped content
+
+    - apply the same scrapers to new site content
+
+
 ## Libraries to Build
 
 - Personal Toolbox
