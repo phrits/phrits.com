@@ -12,6 +12,26 @@ Repo setup. `$www . "/content/parts/part_splash.php"` reflecting same.
 
 Consider for the palate making the main, the dark blue brigher by 20% or so. Highlight yellow gets muted or morphed appropriately.
 
+##### Potential blue: #0000AA
+
+[Neumorphism.io](https://neumorphism.io/#0000AA)
+
+```
+border-radius: 32px;
+background: linear-gradient(145deg, #0000fa, #0000d3);
+box-shadow:  16px 16px 32px #000075,
+             -16px -16px 32px #0000ff;
+```
+
+##### Maroon: #663333
+
+[neumorphic.design](https://neumorphic.design/)
+
+```
+background: linear-gradient(145deg, #783C3C, #542A2A);
+border-radius: 15%;
+box-shadow: 7.21px 7.21px 9px #3F1F1F, -7.21px -7.21px 9px #8D4747;
+```
 Consider dark mode backgrounds to make stuff jump when it should.
 
 #### Neumorphism
@@ -30,5 +50,6 @@ background: linear-gradient(145deg, #0000f5, #0000ce);
 box-shadow:  25px 25px 35px #000073,
              -25px -25px 35px #0000ff;
 ```
+
 
 Pictures. Graphics.
