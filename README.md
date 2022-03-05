@@ -13,3 +13,7 @@ I'm in the early stages of getting a Django project set up. I intend to port the
 [`DESIGN_GOALS.md`](DESIGN_GOALS.md)
 
 [`WORKLOG.md`](WORKLOG.md)
+
+## Branches
+
+Anything starting with `zz_` in its name is dead. False starts, mistakes, probably some garbage. If I can find a way to archive just a branch, I'll do it eventually.
