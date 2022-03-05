@@ -1,3 +1,8 @@
+# Info Dump
+
+Just a bucket to hold random stuff until I can put it where it belongs.
+
+## Less link-rotted links for resume
 vanceband.org - Wednesday, February 22 2006 @ 21:57 EST
 https://web.archive.org/web/20060223025019/
 and its still functioning predecessor
