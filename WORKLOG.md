@@ -1,5 +1,23 @@
 # WorkLog
 
+## 2022-03-06
+
+### Anaconda
+
+#### Django
+
+Python 3.8.12
+Django 4.0.2
+
+See [`DJANGO.md`](DJANGO.md) for full package listing.
+
+#### Flask
+
+Python 3.8.12
+Flask 1.1.2
+
+See [`FLASK.md`](FLASK.md) for full package listing.
+
 ## 2022-03-05
 
 Repo setup. `$www . "/content/parts/part_splash.php"` reflecting same.
