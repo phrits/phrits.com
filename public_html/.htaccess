@@ -1,0 +1,21 @@
+
+RewriteEngine on
+
+ErrorDocument 404 /content/page_error_404.php
+ErrorDocument 403 /content/page_error_403.php
+ErrorDocument 500 /content/page_error_500.php
+RewriteCond %{HTTP_HOST} ^phrits\.us$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.phrits\.us$
+RewriteRule ^/?$ "https\:\/\/phrits\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^recipes\.phrits\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.recipes\.phrits\.com$
+RewriteRule ^/?$ "https\:\/\/phrits\.com\/recipes\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^bugs\.phrits\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bugs\.phrits\.com$
+RewriteRule ^/?$ "https\:\/\/phrits\.com\/bugs\/" [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^phrits\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.phrits\.com$
+RewriteRule ^/?$ "https\:\/\/phrits\.com\/" [R=301,L]
+

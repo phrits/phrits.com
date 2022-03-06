@@ -1,0 +1,1823 @@
+﻿<!DOCTYPE html>
+<html>
+<!--
+    QuickAnswers.html
+
+    Description
+    ===========
+    Fritz's bucket of notes. A couple of folks had asked to have copies,
+    so I figured I'd make it presentable and accessible to the group.
+
+    Author: Fritz Knack
+    2016-04-18. First "public" launch. There's no intention to maintain
+    a comprehensive changelog with this. What you see is what you get.
+
+-->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Fritz's Quick Answers Guide</title>
+        <link rel="stylesheet" type="text/css" href="./QuickAnswers.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1><a id="top"></a>Fritz's Quick Answers Guide</h1>
+        <article> <!-- Introduction -->
+            <header>
+                <h1>Introduction and Warning</h1>
+                <p>This is Fritz's page of shortcuts and summaries for procedures or information that he wants to keep at hand. Use at your own risk. It is subject to change without notice. It may contain cryptic notes, missing steps, and erroneous information. If you're looking for something stable or reliable <b>please refer to the <a href="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-512/OpsPMTPortal/Lists/EUS/WMSSuppt.aspx">PMT Docs</a></b>.</p>
+                <p class="noprint">Incidentally, if you do print this page, you'll still have useful content. For example, the navigation buttons under <a href="#bookmarks">Bookmarks</a> are replaced with URL text, sections with click-to-show items are expanded, and (most?) other things that don't do any good printed are either modified or don't print.</p>
+            </header>
+        </article>
+
+        <nav class="noprint"> <!-- Contents -->
+            <!-- Contents -->
+            <ul>
+                <li class="navButton"><a href="#bookmarks">Bookmarks</a></li>
+                <li class="navButton"><a href="#updateStorefrontUser">Update Storefront User</a></li>
+                <li class="navButton"><a href="#addOracleRecord">Add Oracle Record</a></li>
+                <li class="navButton"><a href="#addHrRecord">Add HR Record</a></li>
+                <li class="navButton"><a href="#newStore">Create New EUS Store</a></li>
+                <li class="navButton"><a href="#wfColors">WF Color Palette</a></li>
+                <li class="navButton"><a href="#configReport">Configuration Report in MS-Access</a></li>
+                <li class="navButton"><a href="#itemList">SharePoint Item List</a></li>
+                <li class="navButton"><a href="#emailTemplates">Email Templates</a></li>
+                <li class="navButton"><a href="#qResponseByUser">Query: Responsibilities by UserName</a></li>
+                <li class="navButton"><a href="#qResponseByEmail">Query: Responsibilities by Email Address</a></li>
+                <li class="navButton"><a href="#massProxy">Mass Update of Proxy Assignments</a></li>
+                <li class="navButton"><a href="#people">Team Miscellany</a></li>
+                <li class="navButton"><a href="#configuration">Update Configuration</a></li>
+                <li class="navButton"><a href="#image">Add or Update Image Version</a></li>
+                <li class="navButton"><a href="#orderImportFailures">Order Import Failure Report</a></li>
+                <li class="navButton"><a href="#obieeAccess">OBIEE Access</a></li>
+                <li class="navButton"><a href="#storeXref">Store Cross Reference</a></li>
+                <li class="navButton"><a href="#eusPpsRollover">EUS-PPS Rollover Issues</a></li>                <li class="navButton"><a href="#noosh">NOOSH Pictures</a></li>                <li class="navButton"><a href="#wfvcquarterly">WFVC Quarterly Report</a></li>
+            </ul>
+        </nav>
+
+        <article id="urlList" class="collapsible"> <!-- Bookmarks -->
+            <a id="#bookmarks"></a>
+            <header>
+                <h1><label for="bookmarks">Bookmarks</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="bookmarks" />
+            <section> <!-- WMS Storefront -->
+                <h1>WMS Storefront Support</h1>
+                <section>
+                    <ul>
+                        <li class="navButton"><a href="http://wmsstorefront.hosting.wellsfargo.com/StorefrontQueue.aspx" target="_blank">Prod<span class="printOnly"> - http://wmsstorefront.hosting.wellsfargo.com/StorefrontQueue.aspx</span></a></li>
+                        <li class="navButton"><a href="http://wmsstorefront-uat.hosting.wellsfargo.com/Default.aspx" target="_blank">UAT<span class="printOnly"> - http://wmsstorefront-uat.hosting.wellsfargo.com/Default.aspx</span></a></li>
+                    </ul>
+                    <section class="noprint">
+                        <h1>WMS Ticket Lookup</h1>
+                        <form action="http://wmsstorefront.hosting.wellsfargo.com/StorefrontEdit.aspx?TicketID=TicketID" method="get" target="_blank">
+                            <p>
+                                <label for="wmsResetButton">Ticket</label>: <input type="text" name="TicketID" />
+                                <input type="submit" value="Go" />
+                                <input class="hidden" type="reset" id="wmsResetButton" />
+                                <!-- sneaky! -->
+                            </p>
+                        </form>
+                        <h1>ACD Ticket Lookup</h1>
+                        <form action="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/curriculum/Lists/PoD/DispForm.aspx?ID=ID" method="get" target="_blank">
+                            <p>
+                                <label for="acdResetButton">Ticket</label>: <input type="text" name="ID" />
+                                <input type="submit" value="Go" />
+                                <input class="hidden" type="reset" id="acdResetButton" />
+                                <!-- sneaky! -->
+                            </p>
+                        </form>
+                    </section>
+                </section>
+            </section>
+            <section class="collapsible"> <!-- FIPP -->
+                <h1>
+                    <a href="http://sharedservices.hosting.wellsfargo.com/links/" target="_blank">FIPP</a> - <label for="fipp">Oracle Applications</label><span class="printOnly"> - http://sharedservices.hosting.wellsfargo.com/links/</span>
+                </h1>
+                    <input id="fipp" class="noprint" type="checkbox" />
+                <section>
+                    <h1>R12</h1>
+                    <ul>
+                        <li class="navButton"><a href="https://cppra01a0100.wellsfargo.com:4523/OA_HTML/AppsLogin" target="_blank">Prod<span class="printOnly"> - https://cppra01a0100.wellsfargo.com:4523/OA_HTML/AppsLogin</span></a></li>
+                        <li class="navButton"><a href="https://cupra01a0100.wellsfargo.com:4523/OA_HTML/AppsLogin" target="_blank">UAT<span class="printOnly"> - https://cupra01a0100.wellsfargo.com:4523/OA_HTML/AppsLogin</span></a></li>
+                        <li class="navButton"><a href="https://eus-storefront-dev.wellsfargo.com:4523/OA_HTML/AppsLogin" target="_blank">DEV<span class="printOnly"> - https://eus-storefront-dev.wellsfargo.com:4523/OA_HTML/AppsLogin</span></a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Punchout (Preview)</h1>
+                    <ul>
+                        <li class="navButton"><a href="https://cppra01a0100.wellsfargo.com:4523/OA_HTML/XXWFC_Punchout_Login.html" target="_blank">Prod<span class="printOnly"> - https://cppra01a0100.wellsfargo.com:4523/OA_HTML/XXWFC_Punchout_Login.html</span></a></li>
+                        <li class="navButton"><a href="http://cupra01a0100.wellsfargo.com:8080/OA_HTML/XXWFC_Punchout_Login.html" target="_blank">UAT<span class="printOnly"> - http://cupra01a0100.wellsfargo.com:8080/OA_HTML/XXWFC_Punchout_Login.html</span></a></li>
+                        <li class="navButton"><a href="https://cdpra01a0100.wellsfargo.com:4523/OA_HTML/XXWFC_Punchout_Login.html" target="_blank">DEV<span class="printOnly"> - https://cdpra01a0100.wellsfargo.com:4523/OA_HTML/XXWFC_Punchout_Login.html</span></a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>ePro</h1>
+                    <ul>
+                        <li class="navButton"><a href="https://procurement.wellsfargo.com/" target="_blank">Prod<span class="printOnly"> - https://procurement.wellsfargo.com/</span></a></li>
+                        <li class="navButton"><a href="https://procurement-uat.wellsfargo.com/" target="_blank">UAT<span class="printOnly"> - https://procurement-uat.wellsfargo.com/</span></a></li>
+                        <li class="navButton"><a href="https://procurement-test.wellsfargo.com/" target="_blank">TEST<span class="printOnly"> - https://procurement-test.wellsfargo.com/</span></a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>OBIEE</h1>
+                    <ul>
+                        <li class="navButton"><a href="https://istobi.wellsfargo.com:9804/analytics" target="_blank">Prod<span class="printOnly"> - https://istobi.wellsfargo.com:9804/analytics</span></a></li>
+                        <li class="navButton"><a href="https://istobi-uat.wellsfargo.com:9804/analytics" target="_blank">UAT<span class="printOnly"> - https://istobi-uat.wellsfargo.com:9804/analytics</span></a></li>
+                        <li class="navButton"><a href="https://istobi-dev.wellsfargo.com:9804/analytics" target="_blank">DEV<span class="printOnly"> - https://istobi-dev.wellsfargo.com:9804/analytics</span></a></li>
+                    </ul>
+                </section>
+            </section>
+            <section> <!-- Queues -->
+                <h1>Queues</h1>
+                <ul>
+                    <li class="navButton"><a href="http://wmsstorefront.hosting.wellsfargo.com/StorefrontQueue.aspx" target="_blank">WMS Storefront Support<span class="printOnly"> - http://wmsstorefront.hosting.wellsfargo.com/StorefrontQueue.aspx</span></a></li>
+                    <li class="navButton"><a href="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/curriculum/Lists/PoD/AllItems.aspx" target="_blank">PoD Queue<span class="printOnly"> - http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/curriculum/Lists/PoD/AllItems.aspx</span></a></li>
+                </ul>
+            </section>
+            <section> <!-- Support & Documentation -->
+                <h1>Support &amp; Documentation</h1>
+                <ul>
+                    <li class="navButton"><a href="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-512/OpsPMTPortal/Lists/EUS/WMSSuppt.aspx" target="_blank">PMT Docs<span class="printOnly"> - http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-512/OpsPMTPortal/Lists/EUS/WMSSuppt.aspx</span></a></li>
+                    <li class="navButton"><a href="http://lookup.wellsfargo.com/AdvancedSearch.aspx" target="_blank">Team Member Lookup<span class="printOnly"> - http://lookup.wellsfargo.com/AdvancedSearch.aspx</span></a></li>
+                    <li class="navButton"><a href="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/default.aspx" target="_blank">EUS Storefront Onboarding<span class="printOnly"> - http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/default.aspx</span></a></li>
+                    <li class="navButton"><a href="http://divts.hosting.wellsfargo.com/" target="_blank">EUS Division Technical Support<span class="printOnly"> - http://divts.hosting.wellsfargo.com/</span></a></li>
+                    <li class="navButton"><a href="http://eusdts.hosting.wellsfargo.com/Default.aspx" target="_blank">DTS Service Requests<span class="printOnly"> - http://eusdts.hosting.wellsfargo.com/Default.aspx</span></a></li>
+                    <li class="navButton"><a href="http://portal.teamworks.wellsfargo.com/tog/TC/Pages/default.aspx" target="_blank">Technology Connection<span class="printOnly"> - http://portal.teamworks.wellsfargo.com/tog/TC/Pages/default.aspx</span></a></li>
+                </ul>
+            </section>
+            <section> <!-- Administrivia -->
+                <h1>Administrivia</h1>
+                <ul>
+                    <li class="navButton"><a href="http://divisionsupport.hosting.wellsfargo.com/EnterHours.aspx" target="_blank">Report Hours<span class="printOnly"> - http://divisionsupport.hosting.wellsfargo.com/EnterHours.aspx</span></a></li>
+                    <li class="navButton"><a href="http://hop.wellsfargo.com/twsc_timetracker" target="_blank">Time Away<span class="printOnly"> - http://hop.wellsfargo.com/twsc_timetracker</span></a></li>
+                    <li class="navButton"><a href="http://portal.teamworks.wellsfargo.com/1/GCR/Pages/Wells-Fargo-Volunteers.aspx" target="_blank">WF Volunteers<span class="printOnly"> - http://portal.teamworks.wellsfargo.com/1/GCR/Pages/Wells-Fargo-Volunteers.aspx</span></a></li>
+                    <li class="navButton"><a href="https://nc-sils-vvcp01-e1.infra.wellsfargo.net/ucmuser/main" target="_blank">Cisco Phone<span class="printOnly"> - https://nc-sils-vvcp01-e1.infra.wellsfargo.net/ucmuser/main</span></a></li>
+                </ul>
+            </section>
+            <section> <!-- Miscellany -->
+                <h1>Miscellany</h1>
+                <p>Production <span class="program">Telnet</span> destination: <span class="fixed">162.101.134.53&nbsp;9193</span></p>
+                <p>UAT <span class="program">Telnet</span> destination: <span class="fixed">162.102.145.205&nbsp;9193</span></p>
+                <p>SIT <span class="program">Telnet</span> destination: <span class="fixed">162.102.145.203&nbsp;9193</span></p>
+                <p>Dev <span class="program">Telnet</span> destination: <span class="fixed">162.102.145.201&nbsp;9193</span></p>
+            </section>
+            <section> <!-- Documents -->
+                <h1>Documents</h1>
+                <p><a href="file:///S:/iStore/Proxy%20Users/Proxy%20Users%20with%20Responsibilities%20and%20Store%20Access.docx">Proxy Users with Responsibilities and Store Access</a></p>
+                <p><a href="file:///S:/iStore/Catalog%20Sections">Storefront Catalog Section List (directory)</a></p>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Update Storefront User -->
+            <a id="#updateStorefrontUser"></a>
+            <header>
+                <h1><label for="updateStorefrontUser">Update Storefront User</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="updateStorefrontUser" />
+            <aside>
+                <p>Documentation: <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=21732">PMT&nbsp;21732&nbsp;&ndash;&nbsp;Handling Storefront Access Issues and Proxy Assignments Requests</a></p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="#addHrRecord">Add HR Record</a></li>
+                    <li><a href="#addOracleRecord">Add Oracle Record</a></li>
+                    <li><a href="#emailTemplates">Email Templates</a></li>
+                </ul>
+            </aside>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>Using <span class="program">Oracle E-Business Suite</span>, choose <b>System Administrator &gt; Security &gt; User &gt; Define</b></li>
+                    <li>Find user. If using Employee ID, left pad with zeroes to 11 characters or prefix with %.</li>
+                    <li>To updated an email address, go to the Office Details tab.</li>
+                    <li>To change the proxy, click on the flex field to the right of Latest Start Date, then select from there.<br /><b>Note</b>: Access to the <i>WFVC Storefront</i> (WFC_WFCC_TRAINING) requires permission from <a href="mailto:Katharine.M.Partridge@wellsfargo.com">Katharine Partridge</a>.</li>
+                    <li>Check address against email footer or Teamworks and correct as necessary.</li>
+                    <li>Save and exit.</li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Add Oracle Record -->
+            <a id="#addOracleRecord"></a>
+            <header>
+                <h1><label for="addOracleRecord">Add Oracle Record</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="addOracleRecord" />
+            <aside>
+                <p>Documentation: <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=21680">PMT&nbsp;21680&nbsp;&ndash;&nbsp;Adding and Deactivating Oracle R12 (ORION) Users</a></p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="#updateStorefrontUser">Update Storefront User</a></li>
+                    <li><a href="#addHrRecord">Add HR Record</a></li>
+                    <li><a href="#emailTemplates">Email Templates</a></li>
+                </ul>
+            </aside>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>Using <span class="program">R12</span>, <b>System Administrator &gt; Security &gt; User &gt; Define</b></li>
+                    <li>Enter AD-ENT ID in User Name, hit Tab.</li>
+                    <li>Password: welcome, tab, welcome, tab.</li>
+                    <li>Description: First Last ELID-A<i>nnnnnn</i>. <b>If you do not key the information in the specified format, the Account Certification Tool (ACT) will find an error on the user's record when the information is passed to ACT.</b></li>
+                    <li>Password Expiration: None.</li>
+                    <li>Click on Ellipsis in Person field</li>
+                    <li>If found, select and OK. Otherwise Cancel and leave email, person blank.</li>
+                    <li>Direct Responsibilities: Click in Responsibility, then the ellipsis. Add responsibilities, effective dates</li>
+                    <li>Save</li>
+                    <li>If User Name has been repopluated with Name, done. Otherwise, <a href="#addHrRecord">add HR Record to R12. PMT 21724</a></li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Add HR Record -->
+            <a id="#addHrRecord"></a>
+            <header>
+                <h1><label for="addHrRecord">Add HR Record</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="addHrRecord" />
+            <aside>
+                <p>Documentation: <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=21724">PMT&nbsp;21724&nbsp;&ndash;&nbsp;Adding an HR Record to R12</a></p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="#updateStorefrontUser">Update Storefront User</a></li>
+                    <li><a href="#emailTemplates">Email Templates</a></li>
+                </ul>
+            </aside>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>Confirm user isn't there</li>
+                    <li>Last, First, Initial (if known) in all Uppercase</li>
+                    <li>Gender. Guess if you don't know.</li>
+                    <li>Action: Create Employment</li>
+                    <li>Identification: Employee, 11 digits</li>
+                    <li>SSAN: 99999, OK to ignore warning</li>
+                    <li>Birthday: 01-JAN-1900</li>
+                    <li>Proxy: ADVISOR</li>
+                    <li>Email in Office Details tab</li>
+                    <li>Enter Address from email or Teamworks</li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Creating a New Store -->
+            <a id="#newStore"></a>
+            <header>
+                <h1><label for="newStore">Create a New Store</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="newStore" />
+            <aside>
+                <p>Documentation: <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=28654">PMT&nbsp;28654&nbsp;&ndash;&nbsp;Creating a New Store</a></p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=28856">PMT&nbsp;28856&nbsp;&ndash;&nbsp;Creating and updating Storefront Home Pages</a></li>
+                    <li><a href="file:///S:/iStore/Proxy%20Users/Proxy%20Users%20with%20Responsibilities%20and%20Store%20Access.docx">Proxy Users with Responsibilities and Store Access</a></li>
+                </ul>
+            </aside>
+            <p>The official PMT documentation for creating a new store has some spaghetti code that I have removed here. Most of the steps below are high-level and can be expanded for more detail by clicking on them.</p>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li class="collapsed"><label for="nsStep01">Create responsibility</label>
+                        <input id="nsStep01" class="noprint" type="checkbox" />
+                        <ul>
+                            <li>In <span class="program">Oracle R12</span>, choose <b>System Administrator &gt; Security &gt; Responsibility &gt; Define</b></li>
+                            <li>Responsibility Name: WFC Store Name.</li>
+                            <li>Application: iStore</li>
+                            <li>Responsibility Key: WFC_STORE_NAME (no spaces)</li>
+                            <li>Available From: Oracle Applications</li>
+                            <li>Data Group: Name: "Standard"<br />Data Group: Application: "iStore"</li>
+                            <li>Menu: "iStore Customer UI Menu Root"</li>
+                            <li>Menu Exclusions tab: Ignore, leave blank, whatever. Updated later.</li>
+                            <li>Leave blank:
+                                <ul>
+                                    <li>Description</li>
+                                    <li>Web Host Name</li>
+                                    <li>Web Agent Name</li>
+                                    <li>Request Group: Name</li>
+                                    <li>Request Group: Application</li>
+                                    <li>Menu Exclusions tab: Name</li>
+                                    <li>Menu Exclusions tab: Description</li>
+                                    <li>Excluded Items tab</li>
+                                    <li>Securing Attributes tab</li>
+                                </ul>
+                            </li>
+                            <li>Save and close</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep02">Specify EUS Logo</label>
+                        <input id="nsStep02" class="noprint" type="checkbox" />
+                        <ul>
+                            <li><b>System Administrator &gt; Profile &gt; System</b></li>
+                            <li>Click on Responsibility, then key in Responsibility Name (not Key)</li>
+                            <li>Click on Profile. Key "WFC: iStore Store Identifier" and Find.</li>
+                            <li>If logo then Responsibility = Y else N</li>
+                            <li>Save and close</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep03">Create New Root Catalog section</label>
+                        <input id="nsStep03" class="noprint" type="checkbox" />
+                        <ul>
+                            <li><b>iStore Administrator &gt; iStore Merchant &gt; Catalog &gt; Sections &gt; Hierarchy</b></li>
+                            <li>Select Root, then click Create Section</li>
+                            <li>Section Name: Store Name (max 120)</li>
+                            <li>Section Code: STORE_NAME (no spaces)</li>
+                            <li>Parent: Confirm Root, else search glass to find</li>
+                            <li>Status: Published</li>
+                            <li>Start Date: Today unless otherwise specified</li>
+                            <li>Leave blank and unchecked everything else:
+                                <ul>
+                                    <li>Short Description</li>
+                                    <li>Long Description</li>
+                                    <li>Keywords</li>
+                                    <li>End Date</li>
+                                    <li>Featured Section</li>
+                                    <li>Apply status to all subsections</li>
+                                    <li>Enable Product Comparison</li>
+                                </ul>
+                            </li>
+                            <li>Click Apply.</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep04">Create New Store Site</label>
+                        <input id="nsStep04" class="noprint" type="checkbox" />
+                        <ul>
+                            <li><b>iStore Administrator &gt; iStore Merchant &gt; Sites &gt; Summary &gt; Summary</b></li>
+                            <li>Create a Site, then Go
+                                <ul>
+                                    <li>Site Name: Store name. This is what shows up in the Storefront list.</li>
+                                    <li>Site Code (max 240, no spaces): Responsibility Key</li>
+                                    <li>Description: Storefront blurb. This is what shows up in the Storefront list.</li>
+                                    <li>Start Date: today</li>
+                                    <li>Default Language: American English</li>
+                                    <li>Default Currency: USD</li>
+                                    <li>Default Walk-in Price List: Search and find WFC Storefront Price List</li>
+                                    <li>Catalog Root Section: Catalog Root Section created above</li>
+                                    <li>Check: Restrict customer access</li>
+                                    <li>Leave blank: End Date.</li>
+                                    <li>Unchecked:
+                                        <ul>
+                                            <li>Allow un-registered users to browse the site</li>
+                                            <li>Allow customers to check item availability</li>
+                                            <li>Enable Threshold for Payment Types</li>
+                                            <li>Enable Reporting</li>
+                                            <li>Enable Traffic Filter</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Click Apply.</li>
+                            <li>Click Shipping, then Add Shipping Methods.
+                                <ul>
+                                    <li>FedEx 2-Day (2 business days by 10:30 AM)</li>
+                                    <li>FedEx Ground (3-5 days)</li>
+                                    <li>FedEx Priority Overnight (1 business day by 10:30 AM)</li>
+                                    <li>FedEx Saturday</li>
+                                    <li>MAC MAIL / STANDARD (5-8 days)</li>
+                                    <li>USPS (5-8 business days)</li>
+                                </ul>
+                            </li>
+                            <li>Click Responsibility.</li>
+                            <li>Remove IBE_CUSTOMER row. (Or don't. This never sticks and it gets end-dated later.)</li>
+                            <li>Add Responsibility. Search by name to find the new store's responsibility.</li>
+                            <li>Click Select and Apply.</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep05">Create Proxy Users (restricted stores only)</label>
+                        <input id="nsStep05" class="noprint" type="checkbox" />
+                        <ul>
+                            <li>
+                                <table>
+                                    <tr>
+                                        <th>Store</th>
+                                        <th>Link</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Production</td>
+                                        <td><a href="http://cppra01a0100.wellsfargo.com:8080/OA_HTML/ibeCAcpSSOReg.jsp" target="_BLANK">http://cppra01a0100.wellsfargo.com:8080/OA_HTML/ibeCAcpSSOReg.jsp</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>UAT</td>
+                                        <td><a href="http://cupra01a0100.wellsfargo.com:8080/OA_HTML/ibeCAcpSSOReg.jsp" target="_BLANK">http://cupra01a0100.wellsfargo.com:8080/OA_HTML/ibeCAcpSSOReg.jsp</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SIT</td>
+                                        <td><a href="http://eus-storefront-sit.wellsfargo.com:8080/OA_HTML/ibeCAcpSSOReg.jsp" target="_BLANK">http://eus-storefront-sit.wellsfargo.com:8080/OA_HTML/ibeCAcpSSOReg.jsp</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DEV</td>
+                                        <td><a href="https://eus-storefront-dev.wellsfargo.com:4523/OA_HTML/ibeCAcpSSOReg.jsp" target="_BLANK">https://eus-storefront-dev.wellsfargo.com:4523/OA_HTML/ibeCAcpSSOReg.jsp</a></td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>Register as a user of an existing company.</li>
+                            <li>Registry ID: 1082</li>
+                            <li>First Name: Store Name, <u>no spaces</u></li>
+                            <li>Last Name: WF</li>
+                            <li>Email: storename@wellsfargo.com (ficticious)</li>
+                            <li>User Name: Proxy user's name, <u>no spaces</u></li>
+                            <li>Password: WFstore01, then confirm it</li>
+                            <li>Leave blank or unchecked
+                                <ul>
+                                    <li>Middle Name</li>
+                                    <li>Business Phone Number</li>
+                                    <li>Personal Phone Number</li>
+                                    <li>Fax Number</li>
+                                    <li>Please send me e-mail about special offers and products</li>
+                                </ul>
+                            </li>
+                            <li>Submit. Ignore "Choose Your Store: Warning"</li>
+                            <li><strike>Repeat for all states if appropriate</strike></li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep06">Approving Proxy Users</label>
+                        <input id="nsStep06" class="noprint" type="checkbox" />
+                        <ul>
+                            <li>In <span class="program">R12</span>, <b>CRM HTML Administrator &gt; Setup &gt; Users &gt; Registration &gt; Pending Approvals</b></li>
+                            <li><u>Click the link under User Name</u>. <b>Do <u>not</u> check Select and then Accept. If you do, Oracle assigns a new account number, which Storefront will not recognize.</b></li>
+                            <li>Click Next in the User Details screen</li>
+                            <li>In Account Assignment, click next to 1000 in Account Number, then Next</li>
+                            <li>Comments: Approved or something</li>
+                            <li>Click Accept</li>
+                            <li>Repeat for other proxy users</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep07">Updating Proxy Users for a New Store</label>
+                        <input id="nsStep07" class="noprint" type="checkbox" />
+                        <ul>
+                            <li><b>System Administrator &gt; Security &gt; User &gt; Define</b></li>
+                            <li>Click User Name, then Flashlight</li>
+                            <li>Key new store proxy into Find then click Find</li>
+                            <li>Click the proxy in the User Name section, then OK</li>
+                            <li>Description: iStore Proxy User ELID-PROXY_NAME <b>Note</b>: This string of text matters. The case-sensitive "iStore Proxy..." is how the list proxies is generated, and the string past "ELID-" is how it's listed (no spaces).</li>
+                            <li>If IBE_CUSTOMER is listed&mdash;it probably will be&mdash;enter the current date into Effective Dates: To field; otherwise, move on.</li>
+                            <li>For any of the following not listed, add them:
+                                <ul>
+                                    <li>The new store</li>
+                                    <li>iSupport Site: Business User</li>
+                                    <li>WFC General Store</li>
+                                    <li>WFC Advisor</li>
+                                    <li>WFC Consumer Credit Solutions</li>
+                                    <li>WFC ISA Store</li>
+                                    <li>WFC Regional Bank L&amp;D</li>
+                                    <li>WFC Wholesale Mkt</li>
+                                    <li>WFC_WF_AT_WORK</li>
+                                    <li>WFC Merchant Services Departments</li>
+                                    <li><strike>All States Proxy if appropriate</strike></li>
+                                </ul>
+                            </li>
+                            <li>Save</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep15">Adding Proxy Users to the System IDs Value Set</label>
+                        <input id="nsStep15" class="noprint" type="checkbox" />
+                        <ul>
+                            <li><b>System Administrator &gt; Application &gt; Flexfield &gt; Key &gt; Values</b></li>
+                            <li>Click Value Set, key wfc_system_ids in Name, then click Find</li>
+                            <li>For each new proxy user:
+                                <ul>
+                                    <li>Click somewhere in the Value column, then click New</li>
+                                    <li>Key the new proxy name in Value, then hit Tab. TV field is popped</li>
+                                    <li>Key iStore Proxy User in Description</li>
+                                </ul>
+                            </li>
+                            <li>Save</li>
+                        </ul>
+                    </li>
+                    <li class="collapsed"><label for="nsStep08">Create a Home Page</label>
+                        <input id="nsStep08" class="noprint" type="checkbox" />
+                        <ul>
+                            <li><b>iStore Administrator &gt; iStore Merchant &gt; Catalog &gt; Sections &gt; Hierarchy</b></li>
+                            <li>On the line with the new store, click the Create Section icon.
+                                <ul>
+                                    <li>Section Name: Home</li>
+                                    <li>Parent Section: verify; locate and fix if wrong</li>
+                                    <li>Status: Published</li>
+                                    <li>Start date: Today or when scheduled</li>
+                                </ul>
+                            </li>
+                            <li>Leave blank/unchecked:
+                                <ul>
+                                    <li>Section Code</li>
+                                    <li>Short Description</li>
+                                    <li>Long Description</li>
+                                    <li>Keywords</li>
+                                    <li>Featured Section</li>
+                                    <li>Apply status to all subsections</li>
+                                    <li>End Date</li>
+                                    <li>Enable Product Comparisons</li>
+                                </ul>
+                            </li>
+                            <li>Click Apply</li>
+                            <li>Click Content</li>
+                            <li>Search the Section Additional Information field for WFC Store Home Page</li>
+                            <li>Click Apply.</li>
+                            <li><b>Templates &gt; Layout: Fixed</b> Go. Apply</li>
+                            <li><b>Templates &gt; Display Template</b> Section Contains Products Only, Go</li>
+                            <li>Radio Button: Product multi-select with drill down.</li>
+                            <li>Click Apply.</li>
+                        </ul>
+                    </li>
+                    <li>Refer to <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=28856">PMT&nbsp;28856&nbsp;&ndash;&nbsp;Creating and updating Storefront Home Pages</a> to add images or other "content".</li>
+                    <li class="collapsed"><label for="nsStep10">Creating Catalog Sections</label>
+                        <input id="nsStep10" class="noprint" type="checkbox" />
+                        <ol>
+                            <li><b>iStore Administration &gt; iStore Merchant &gt; Catalog &gt; Sections &gt; Hierarchy</b></li>
+                            <li>◦On the line with the new store, click the Create Section icon.
+                                <ul>
+                                    <li>Section Name: Store or Catalog Section name if one of those; "Products" otherwise. Every store must have a Products section.</li>
+                                    <li>Long description: Blank if not specified. 4k characters</li>
+                                    <li>Parent section: Verify</li>
+                                    <li>Featured Section: Check only if Products section</li>
+                                    <li>Status: Published</li>
+                                    <li>Start Date</li>
+                                    <li>Blank/unchecked:
+                                        <ul>
+                                            <li>Section Code</li>
+                                            <li>Keywords</li>
+                                            <li>End Date</li>
+                                            <li>Enable Product Comparison</li>
+                                            <li>Apply status to all subsections</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Click Apply</li>
+                            <li><b>Templates &gt; Layout: Fixed</b>, Apply</li>
+                            <li><b>Templates &gt; Display Template</b>
+                                <ul>
+                                    <li>If Nav Section, no products: Default Template</li>
+                                    <li>If Nav section with products but no navigational subsections: Selection Contains Featured Selections, Go, Custom Display Template<br /><b>Note</b>: WFC Product Detail Containing Featured Subsections is the only available custom template.</li>
+                                    <li>If Nav section neither products nor subsections: Selection Contains Featured Selections, Go, Custom Display Template. <b>Yes, this is the same as the line above.</b> (What good is a nav section with nothing in it?)</li>
+                                    <li>If Product list: Default</li>
+                                    <li>If Nav section with both products and navigational subsections: Nope. Can't be done with the current setup. Confirmed 2016-10-12 working around the International store. You can add a Products section, but the items in it will be invisible.</li>
+                                </ul>
+                            </li>
+                            <li>Click Apply.</li>
+                        </ol>
+                    </li>
+                    <li class="collapsed"><label for="nsStep11">Setting Display Order</label>
+                        <input id="nsStep11" class="noprint" type="checkbox" />
+                        <ol>
+                            <li><b>iStore Administration &gt; Catalog &gt; Sections &gt; Hierarchy</b></li>
+                            <li>Next to section: Update</li>
+                            <li>Display Order:
+                                <ul>
+                                    <li>If user specified, use Reorder List</li>
+                                    <li>Order by item name: Description in Order by Clause field</li>
+                                    <li>Order by item number: segment1 in the Order by Clause field</li>
+                                </ul>
+                            </li>
+                            <li>Apply</li>
+                        </ol>
+                    </li>
+                    <li>After the tasks above Add proxy SUPERPREVIEW to the new store. (<b>System Administrator &gt; Security &gt; User &gt; Define</b>)</li>
+                    <li><strike>If L&amp;D, add LEARNING_P iStore proxy.</strike></li>
+                    <li>Update iStore proxy user ADMIN to add new store</li>
+                    <li class="collapsed"><label for="nsStep16">Announce the Launch</label>
+                        <input id="nsStep16" class="noprint" type="checkbox" />
+                        <ul>
+                            <li>Customer Service Team: Anthony Reid, Sharanda Farmer, Cliff Moulton</li>
+                            <li>EUS Business: Cathy Tobias, Missy Dyson</li>
+                            <li>WMS/SF Support: Team, Dave Oman</li>
+                            <li>If Print on Demand: Mary Ogut, Tod Rasar, Daisy Zeigler-Wrenn, Tammy Rogers, Lucie Miller</li>
+                            <li><b>And for God's sake, make sure you tell Janis Brannon (Data Maintenance)!</b></li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsed"> <!-- Color Palatte -->
+            <a id="#wfColors"></a>
+            <header>
+                <h1><label for="wfColors">Wells Fargo Color Palette</label></h1>
+                <p>These are the acceptable colors to use when creating branded type. Note that for Storefront or other pages, we need images from whoever is requesting the branding approach. We don't have the tools or skillset here to create appropriately professional and legally defensible materials within the team.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="wfColors" />
+            <section>
+                <table class="wfColorsTable">
+                    <tr>
+                        <th>Color</th>
+                        <th>RGB</th>
+                        <th>Hex</th>
+                        <th class="noprint">Sample</th>
+                    </tr>
+                    <tr>
+                        <td>Black</td>
+                        <td>(0,0,0)</td>
+                        <td>#000000</td>
+                        <td class="noprint c000000">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Brown</td>
+                        <td>(179,98,36)</td>
+                        <td>#B06224</td>
+                        <td class="noprint cB06224">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Cool Gray Dark</td>
+                        <td>(68,70,74)</td>
+                        <td>#44464A</td>
+                        <td class="noprint c44464A">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Cool Gray Light</td>
+                        <td>(217,217,214)</td>
+                        <td>#D9D9D6</td>
+                        <td class="noprint cD9D9D6">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Cool Gray Medium</td>
+                        <td>(192,192,190)</td>
+                        <td>#BFC0BE</td>
+                        <td class="noprint cBFC0BE">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Brown</td>
+                        <td>(115,70,38)</td>
+                        <td>#734626</td>
+                        <td class="noprint c734626">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Ebony</td>
+                        <td>(87,69,55)</td>
+                        <td>#574537</td>
+                        <td class="noprint c574537">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Eggplant</td>
+                        <td>(108,43,70)</td>
+                        <td>#6C2B46</td>
+                        <td class="noprint c6C2B46">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Green</td>
+                        <td>(0,115,55)</td>
+                        <td>#007337</td>
+                        <td class="noprint c007337">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Magenta</td>
+                        <td>(130,24,97)</td>
+                        <td>#821861</td>
+                        <td class="noprint c821861">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Orange</td>
+                        <td>(206,76,0)</td>
+                        <td>#CE4C00</td>
+                        <td class="noprint cCE4C00">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Plum</td>
+                        <td>(77,59,101)</td>
+                        <td>#4D3B65</td>
+                        <td class="noprint c4D3B65">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Red</td>
+                        <td>(174,30,35)</td>
+                        <td>#AE1E23</td>
+                        <td class="noprint cAE1E23">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dark Teal</td>
+                        <td>(0,105,140)</td>
+                        <td>#00698C</td>
+                        <td class="noprint c00698C">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Ebony</td>
+                        <td>(122,104,85)</td>
+                        <td>#7A6855</td>
+                        <td class="noprint c7A6855">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Eggplant</td>
+                        <td>(137,59,103)</td>
+                        <td>#893B67</td>
+                        <td class="noprint c893B67">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Green</td>
+                        <td>(70,160,51)</td>
+                        <td>#46A033</td>
+                        <td class="noprint c46A033">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Hyperlink Blue (internal facing)</td>
+                        <td>(81,116,184)</td>
+                        <td>#5174B8</td>
+                        <td class="noprint c5174B8">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Magenta</td>
+                        <td>(174,37,115)</td>
+                        <td>#AE2573</td>
+                        <td class="noprint cAE2573">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>(237,136,0)</td>
+                        <td>#ED8800</td>
+                        <td class="noprint cED8800">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Plum</td>
+                        <td>(112,47,138)</td>
+                        <td>#702F8A</td>
+                        <td class="noprint c702F8A">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Stone</td>
+                        <td>(215,211,199)</td>
+                        <td>#D7D3C7</td>
+                        <td class="noprint cD7D3C7">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Teal</td>
+                        <td>(0,149,200)</td>
+                        <td>#0095C8</td>
+                        <td class="noprint c0095C8">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Warm Red</td>
+                        <td>(236,28,41)</td>
+                        <td>#EC1C29</td>
+                        <td class="noprint cEC1C29">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Wells Fargo Red</td>
+                        <td>(187,8,38)</td>
+                        <td>#BB0826</td>
+                        <td class="noprint cBB0826">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Wells Fargo Yellow</td>
+                        <td>(252,198,10)</td>
+                        <td>#FCC60A</td>
+                        <td class="noprint cFCC60A">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>White</td>
+                        <td>(255,255,255)</td>
+                        <td>#FFFFFF</td>
+                        <td class="noprint cFFFFFF">&nbsp;</td>
+                    </tr>
+                </table>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Configuration Report -->
+            <a id="#configReport"></a>
+            <header>
+                <h1><label for="configReport">Configuration Report</label></h1>
+                <p>Calling this a <i>Configuration Report</i> a bit of a misnomer. The task is a matter of refreshing the <span class="program">Access</span> database used for Configurations Pricing. It is refreshed about every two weeks, typically on payday Friday. After refreshing the database, you should generate and update the new <a href="#itemList">SharePoint Item List</a>.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="configReport" />
+            <aside>
+                <p>Documentation: <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL/Configuration%20Report%20R12.docx">Configuration Report R12.docx</a></p>
+                <p>See also: <a href="#itemList">SharePoint Item List</a></p>
+            </aside>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>In <span class="program">Oracle SQL Developer</span>, run the indicated query and export each <span class="program">Excel</span> workbook to the filename in <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL/Access%20Data%20Load"><span class="folder">Access Data Load</span></a>:
+                        <table>
+                            <tr>
+                                <th>Script</th>
+                                <th>Export File</th>
+                            </tr>
+                            <tr>
+                                <td class="filename"><a href="file:///S:/SQL%20-%20Curated/R12%20PTO%20Inventory%20with%20LOB.sql">R12 PTO Inventory with LOB.sql</a></td>
+                                <td class="filename">R12 PTO Inventory with LOB.xlsx</td>
+                            </tr>
+                            <tr>
+                                <td class="filename"><a href="file:///S:/SQL%20-%20Curated/PTO%20POC%20Models.sql">PTO POC Models.sql</a></td>
+                                <td class="filename">PTO POC models.xlsx</td>
+                            </tr>
+                            <tr>
+                                <td class="filename"><a href="file:///S:/SQL%20-%20Curated/Config%20Bill%20of%20Materials.sql">Config Bill of Materials.sql</a></td>
+                                <td class="filename">Bill of Materials.xlsx</td>
+                            </tr>
+                            <tr>
+                                <td class="filename"><a href="file:///S:/SQL%20-%20Curated/Feature.sql">Feature.sql</a></td>
+                                <td class="filename">Feature.xlsx</td>
+                            </tr>
+                            <tr>
+                                <td class="filename"><a href="file:///S:/SQL%20-%20Curated/CZ_RULES.sql">CZ_RULES.sql</a></td>
+                                <td class="filename">CZ Rules.xlsx</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>Open <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL"><span class="folder">S:/iStore/Configuration/Configuration Models/Access DB and Configuration SQL</span>.</a></li>
+                    <li>Copy the <span class="program">Access</span> database <span class="filename">R12 Configuration Database.accdb</span> to the <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL/Access%20Database%20Backups"><span class="folder">Access Database Backups</span></a> folder as <span class="filename">YYYY-MM-DD&nbsp;-&nbsp;R12 Configuration Database.accdb</span>.</li>
+                    <li>Open <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL/R12%20Configuration%20Database.accdb"><span class="filename">R12 Configuration Database.accdb</span></a>.</li>
+                    <li>Empty the tables:
+                        <ul>
+                            <li>Bill of Materials</li>
+                            <li>CZ Rules</li>
+                            <li>Feature</li>
+                            <li>PTO POC models</li>
+                            <li>R12 PTO Inventory with LOB in catalog</li>
+                        </ul>
+                        <b>Note:</b> There is a macro in the database, <i>Clear Tables</i>, that will quickly empty all five tables.
+                    </li>
+                    <li>In <span class="program">Access</span>, under <b>External Data &gt; Saved Imports</b>, run:
+                        <ul>
+                            <li>Import-R12 PTO Inventory with LOB</li>
+                            <li>Import-Feature<br />
+                                <b>Note:</b> This import generates some errors, but you can ignore them. You can safely delete the generated table <i>'Export&nbsp;Worksheet$'_ImportErrors</i>.</li>
+                            <li>Import-CZ Rules</li>
+                            <li>Import-Bill of Materials</li>
+                            <li>Import-PTO POC models</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- SharePoint Item List -->
+            <a id="#itemList"></a>
+            <header>
+                <h1><label for="itemList">SharePoint Item List</label></h1>
+                <p>This workbook should be created and updated on the Onboarding site after updating the <a href="#configReport">Configuration Report</a>.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="itemList" />
+            <aside>
+                <p>Documentation: <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=21679">PMT 021679&nbsp;&ndash;&nbsp;Updating the SharePoint Item List</a></p>
+                <p>See also: <a href="#configReport">Configuration Report</a></p>
+            </aside>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>Open the <span class="program">Access</span> file <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL/R12%20Configuration%20Database.accdb"><span class="filename">R12 Configuration Database.accdb</span></a>.</li>
+                    <li>In <span class="program">Access</span>, under <b>External Data &gt; Saved Exports</b>, run <i>Export-Sharepoint Item List Step B</i>.</li>
+                    <li>In <span class="program">Access</span>, under <b>External Data &gt; Saved Exports</b>, run <i>Export-Sharepoint Item List Step C</i>.</li>
+                    <li>In <span class="program">Oracle SQL Developer</span>, run <a href="file:///S:/SQL%20-%20Curated/Item%20Numbers%20used%20in%20Configuration%20R12.sql"><span class="filename">Item Numbers used in Configuration R12.sql</span></a>.</li>
+                    <li>Export the file to an <span class="program">Excel</span> file in <a href="file:///S:/iStore/Configuration/Curriculum/ITEM_LIST"><span class="folder">S:/iStore/Configuration/Curriculum/ITEM_LIST</span></a> with a filename indicating the current date.</li>
+                    <li>Open the new workbook as well as <a href="file:///S:/iStore/Configuration/Curriculum/ITEM_LIST/Sharepoint%20Item%20List%20Step%20B.xlsx"><span class="filename">Sharepoint Item List Step B.xlsx</span></a> and <a href="file:///S:/iStore/Configuration/Curriculum/ITEM_LIST/Sharepoint%20Item%20List%20Step%20C.xlsx"><span class="filename">Sharepoint Item List Step C.xlsx</span></a> in the same directory.</li>
+                    <li>Move and combine the data from Sharepoint Item List Step B and Sharepoint Item List Step C into a tab in the new workbook. Remove duplicates and sort. Label the tab <i>All Items</i>.</li>
+                    <li>Label the tab with the big query <i>Attachments</i>.</li>
+                    <li>Format as necessary for readability. Delete the <i>SQL</i> tab.</li>
+                    <li>Update the price list announcement and attach the workbook on the <a href="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/default.aspx" target="_blank">Storefront Onboarding SharePoint site</a>.</li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Email Templates -->
+            <a id="#emailTemplates"></a>
+            <header>
+                <h1><label for="emailTemplates">Email Templates</label></h1>
+                <p>Use this text for closing EUS Storefront access reqests and the like.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="emailTemplates" />
+            <aside>
+                <p>Documentation: <b>Adapted from</b> <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=21732">PMT&nbsp;21732&nbsp;&ndash;&nbsp;Handling Storefront Access Issues and Proxy Assignments Requests</a>, <i>et al.</i></p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="#updateStorefrontUser">Update Storefront User</a></li>
+                    <li><a href="#addHrRecord">Add HR Record</a></li>
+                    <li><a href="#addOracleRecord">Add Oracle Record</a></li>
+                    <li><a href="#emailTemplates">Email Templates</a></li>
+                </ul>
+            </aside>
+            <section> <!-- Bad Email -->
+                <h1>EUS Storefront &ndash; Bad Email Address</h1>
+                <p><b>(User Name)</b>, the error you encountered when trying to access EUS Storefront was caused by an email address mismatch between the Storefront and ePro applications. I updated your record. Please try again. You should now have access to Storefront. This request has been closed; however, if you still cannot access Storefront, please notify me as soon as possible. I will reopen the request and investigate.</p>
+            </section>
+            <section> <!-- Missing Account -->
+                <h1>EUS Storefront &ndash; Missing Account</h1>
+                <p><b>(User Name)</b>, the error you encountered when trying to access EUS Storefront was caused because you did not yet have an account in the underlying database. I have created that record and updated it with the appropriate information. Please try again. You should now have access to Storefront. This request has been closed; however, if you cannot still access Storefront, please notify me as soon as possible. I will reopen the request and investigate.</p>
+            </section>
+            <section> <!-- Bad Mailing Address -->
+                <h1>Incorrect Mailing Address</h1>
+                <p><b>(User Name)</b>, your Storefront record had not been updated with your current location. I updated your record. Please try again; you should now be access the items for your state. This request has been closed. However, if you cannot still access your state’s item, please notify me as soon as possible; I will reopen it and investigate.</p>
+            </section>
+            <section> <!-- Specific Store -->
+                <h1>Specific Store Access</h1>
+                <p><b>(User Name)</b>, I updated your Storefront record to grant you access to the specific store. You should now have the access requested. This request has been closed; however, if you do not have the system access requested, please notify me as soon as possible. I will reopen the request and investigate.</p>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsed"> <!-- Query: Responsibilities by UserName -->
+            <a id="#sqlCode01"></a><a id="#qResponseByUser"></a>
+            <header>
+                <h1><label for="sqlCode01">Query: Search Responsibilities by UserName</label></h1>
+                <p>This query is used to retrieve all the responsibility names for the user name entered in the variable. This allows you to pull a list of all the responsibilities that a new user needs to be set up for in Oracle R12 when the requestor does not provide the name of each responsibility.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="sqlCode01" />
+            <aside>
+                <p><b>Note</b>: This is Anthony's not Fritz's. There may be a better or more current version someplace.</p>
+            </aside>
+            <section>
+                <!-- Updated 2016-05-19 -->
+                <pre class="sqlCode">
+
+/*  ********************************
+    ********************************
+OVERVIEW
+    Query Owner:    Anthony Garcia
+    Run Time:       ~5 seconds
+
+PURPOSE				
+This query is used to retrieve all the responsibility names for the user name entered in the variable.
+This allows you to pull a list of all the responsibilities that a new user needs to be set up for in Oracle R12
+when the requestor does not provide the name of each responsibility.
+        
+REVISIONS
+    04/11/16    v1.01   - Anthony Garcia
+                        - Initial development.
+
+DEVELOPER NOTES
+    Hit Ctrl-A to select all the text, then Ctrl-Enter to put the results into grid.
+    The query will prompt the user to enter the User Name.
+********************************
+********************************  */
+
+/*  ********************************
+    ********************************
+Top query only for data validation as needed.
+
+ACCEPT ModelUserName CHAR PROMPT 'Enter a User Name:  '
+
+SELECT 
+    FU.USER_NAME,
+    FU.DESCRIPTION,
+    FU.EMAIL_ADDRESS,
+    FU.USER_ID,
+    RESP.USER_ID,
+    RESP.RESPONSIBILITY_ID,
+    RLNAME.RESPONSIBILITY_ID,
+    RLNAME.RESPONSIBILITY_NAME
+FROM 
+    APPLSYS.FND_USER FU 
+    INNER JOIN 
+        APPS.FND_USER_RESP_GROUPS_DIRECT RESP 
+        ON FU.USER_ID = RESP.USER_ID
+    INNER JOIN
+        APPS.FND_RESPONSIBILITY_TL RLNAME
+        ON RLNAME.RESPONSIBILITY_ID = RESP.RESPONSIBILITY_ID
+WHERE 
+    FU.USER_NAME= '&&ModelUserName';
+
+********************************
+********************************  */
+
+ACCEPT ModelUserName CHAR PROMPT 'Enter an E-mail Address:  '
+
+SELECT 
+    FU.USER_NAME,
+    RLNAME.RESPONSIBILITY_NAME,
+    FU.END_DATE
+FROM 
+    APPLSYS.FND_USER FU 
+        INNER JOIN 
+            APPS.FND_USER_RESP_GROUPS_DIRECT RESP 
+            ON FU.USER_ID = RESP.USER_ID
+        INNER JOIN
+            APPS.FND_RESPONSIBILITY_TL RLNAME
+            ON RLNAME.RESPONSIBILITY_ID = RESP.RESPONSIBILITY_ID
+WHERE 
+    lower(FU.EMAIL_ADDRESS) = lower('&&ModelUserName')
+    AND
+    (   FU.END_DATE IS NULL 
+     OR
+        FU.END_DATE > CURRENT_DATE
+    )
+ORDER BY
+    RLNAME.RESPONSIBILITY_NAME;
+/* Removing the substitution variable from memory so that the query can be ran repeatedly. */
+UNDEFINE ModelUserName
+</pre>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsed"> <!-- Query: Responsibilities by Email -->
+            <a id="#sqlCode02"></a><a id="#qResponseByEmail"></a>
+
+            <header>
+                <h1><label for="sqlCode02">Query: Search Responsibilities by Email Address</label></h1>
+                <p>This query is used to retrieve all the responsibility names for the user name entered in the variable. This allows you to pull a list of all the responsibilities that a new user needs to be set up for in Oracle R12 when the requestor does not provide the name of each responsibility.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="sqlCode02" />
+            <aside>
+                <p><b>Note</b>: This is Anthony's not Fritz's. There may be a better or more current version someplace.</p>
+            </aside>
+            <section>
+                <!-- Updated 2016-05-19 -->
+                <pre class="sqlCode">
+
+/*  ********************************
+    ********************************
+OVERVIEW
+    Query Owner:    Anthony Garcia
+    Run Time:       ~1 seconds
+
+PURPOSE				
+    This query is used to retrieve all the responsibility names for the user
+    name entered in the variable. This allows you to pull a list of all the
+    responsibilities that a new user needs to be set up for in Oracle R12
+    when the requestor does not provide the name of each responsibility.
+    
+REVISIONS
+    04/11/16	v1.01	- Anthony Garcia
+    - Initial development.
+
+DEVELOPER NOTES
+    Hit Ctrl-A to select all the text, then Ctrl-Enter to put the results into grid.
+    The query will prompt the user to enter the User Name.
+********************************
+********************************  */
+
+/*  ********************************
+    ********************************
+Top query only for data validation as needed.
+
+ACCEPT ModelUserName CHAR PROMPT 'Enter a User Name:  '
+
+SELECT 
+    FU.USER_NAME,
+    FU.DESCRIPTION,
+    FU.EMAIL_ADDRESS,
+    FU.USER_ID,
+    RESP.USER_ID,
+    RESP.RESPONSIBILITY_ID,
+    RLNAME.RESPONSIBILITY_ID,
+    RLNAME.RESPONSIBILITY_NAME
+FROM 
+    APPLSYS.FND_USER FU 
+        INNER JOIN 
+            APPS.FND_USER_RESP_GROUPS_DIRECT RESP 
+            ON FU.USER_ID = RESP.USER_ID
+        INNER JOIN
+            APPS.FND_RESPONSIBILITY_TL RLNAME
+            ON RLNAME.RESPONSIBILITY_ID = RESP.RESPONSIBILITY_ID
+WHERE 
+    FU.USER_NAME= '&&ModelUserName';
+
+********************************
+********************************  */
+
+ACCEPT ModelUserName CHAR PROMPT 'Enter a User Name:  '
+
+SELECT 
+    FU.USER_NAME,
+    RLNAME.RESPONSIBILITY_NAME,
+    FU.END_DATE
+FROM 
+    APPLSYS.FND_USER FU 
+        INNER JOIN 
+            APPS.FND_USER_RESP_GROUPS_DIRECT RESP 
+            ON FU.USER_ID = RESP.USER_ID
+        INNER JOIN
+            APPS.FND_RESPONSIBILITY_TL RLNAME
+            ON RLNAME.RESPONSIBILITY_ID = RESP.RESPONSIBILITY_ID
+WHERE 
+    lower(FU.USER_NAME) = lower('&&ModelUserName')
+    AND
+    (   FU.END_DATE IS NULL 
+        OR
+        FU.END_DATE > CURRENT_DATE
+    )
+ORDER BY
+    RLNAME.RESPONSIBILITY_NAME;
+    
+/* Removing the substitution variable from memory so that the query can be ran repeatedly. */
+UNDEFINE ModelUserName
+</pre>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsed"> <!-- Mass Proxy Update -->
+            <a id="#massProxy"></a>
+            <header>
+                <h1><label for="massProxy">Mass Update of Proxy Assignments</label></h1>
+                <p>To avoid having to manually key large numbers of updates, there is a concurrent program to update proxy user assignment on Global HRMS Manager records.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="massProxy" />
+            <aside>
+                <p>Documentation: <span class="filename">Mass Update of Proxy Assignments.docx</span></p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="#updateStorefrontUser">Update Storefront User</a></li>
+                    <li><a href="#addHrRecord">Add HR Record</a></li>
+                    <li><a href="#addOracleRecord">Add Oracle Record</a></li>
+                </ul>
+            </aside>            <section>            <p>This query will identify duplicate email addresses, but it probably needs a developer to be able to see the table:<pre>    SELECT email_address, count(email_address)    FROM per_all_people_f pap    WHERE 1=1    --upper(pap.email_address) = upper('Rupinder.Kaur@wellsfargo.com')    AND pap.effective_start_date &lt;= SYSDATE    AND pap.effective_end_date &gt;= SYSDATE    group by email_address    having count(email_address) &gt; 1;</pre></p>            </section>
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>
+                        Create an <span class="program">Excel</span> file:
+                        <ul>
+                            <li>No column headings</li>
+                            <li>Column A: email address</li>
+                            <li>Column B: proxy</li>
+                        </ul>
+                    </li>
+                    <li>Save file as CSV <b>with no spaces in the filename</b>.</li>
+                    <li>Edit the CSV in Notepad or similar. Mass delete all extraneous spaces. There can be no spaces between fields, no delimiters for the data: <b>datum, comma, datum</b> NOT quote, datum, quote, comma, space, quote, datum, quote.</li>
+                    <li>In <span class="program">R12</span>, <b>iStore Administrator &gt; iStore Merchant &gt; Content &gt; My Content</b></li>
+                    <li><i>Proxy Users</i> folder</li>
+                    <li>Create Item
+                        <ul>
+                            <li>Content type: File</li>
+                            <li>Name: Anything (no spaces)</li>
+                            <li>Description: optional</li>
+                            <li>Location: /iStore Directory/Proxy Users</li>
+                        </ul>
+                        <ol>
+                            <li>Continue</li>
+                            <li>Browse and find the file</li>
+                            <li>Submit for approval</li>
+                        </ol>
+                    </li>
+                    <li><b>My Content &gt; Request Summary</b></li>
+                    <li>Submit Request</li>
+                    <li>New Request. Program name = WFC Update iStore Proxy User Assignment. Next.</li>
+                    <li>Search <i>Content Folder</i> to find the Proxy Users folder</li>
+                    <li>Search <i>Mapping File</i> to find the input File media object created above.</li>
+                    <li>Click Submit (2 of 7). Click Submit (7 of 7). Click OK.</li>
+                    <li>Refresh until job completes. Upon successful completion, two items listed: WFC Update iStore Proxy User Assignment and 2. Load iStore Proxy User Assignment (WFC Load iStore Proxy User Assignment)</li>
+                    <li>When completed, click on the icon under Output for the job.</li>
+                    <li>Check for and handle errors</li>
+                    <li>Remove the input file (CSV)</li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Team Miscellany -->
+            <a id="#people"></a>
+            <header>
+                <h1><label for="people">Team Miscellany</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="people" />
+            <section>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>AD-ENT</th>
+                        <th>Mobile</th>
+                        <th>Birthday</th>
+                    </tr>
+                    <tr>
+                        <td>Anthony Garcia</td>
+                        <td class="fixed">N8003211</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Alison Glasgow</td>
+                        <td class="fixed">A170464</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Jon Hampton</td>
+                        <td class="fixed">A550567</td>
+                        <td>&nbsp;</td>
+                        <td>May&nbsp;7</td>
+                    </tr>
+                    <tr>
+                        <td>Fritz Knack</td>
+                        <td class="fixed">A562789</td>
+                        <td>704-900-1920</td>
+                        <td>July&nbsp;22</td>
+                    </tr>
+                    <tr>
+                        <td>Manish Kothare</td>
+                        <td class="fixed">A103822</td>
+                        <td>&nbsp;</td>
+                        <td>June&nbsp;25</td>
+                    </tr>
+                    <tr>
+                        <td>Dave Oman</td>
+                        <td class="fixed">D523806</td>
+                        <td>704-467-5204</td>
+                        <td>June&nbsp;6</td>
+                    </tr>
+                    <tr>
+                        <td>Dave Rogers</td>
+                        <td class="fixed">A028832</td>
+                        <td>704-315-7239</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Debbie Steffy</td>
+                        <td class="fixed">A906805</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Ashley Wilson</td>
+                        <td class="fixed">X575062</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Roger Wilson</td>
+                        <td class="fixed">A089019</td>
+                        <td>&nbsp;</td>
+                        <td>November 30</td>
+                    </tr>
+                    <tr class="deprecated">
+                        <td>Susan Schroeder</td>
+                        <td class="fixed">C99371</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr class="deprecated">
+                        <td>Ann Wilkerson</td>
+                        <td class="fixed">A042820</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsible"> <!-- Update Configuration -->
+            <a id="#configuration"></a>
+            <header>
+                <h1><label for="configuration">Update Configuration</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="configuration" />
+            <aside>
+                <p>Documentation:</p>
+                <p>See also:</p>
+                <ul>
+                    <li><a href="#itemList">SharePoint Item List</a></li>
+                    <li><a href="#configReport">Configuration Report</a></li>
+                    <li><a href="#createConfiguration">Create Configuration</a></li>
+                </ul>
+            </aside>
+            <section>
+                <ol>
+                    <li>End date the item(s) and any orderable children.</li>
+                    <li>Unlock the item(s) and any children.</li>
+                    <li>Update Bill of Materials</li>
+                    <li>Update Rule</li>
+                    <li>Generate Logic</li>
+                    <li>Click User Interface, then the Refresh icon on the UI line. Yes to the question.</li>
+                    <li>Test Model, Next, Finish</li>
+                    <li>Confirm changes took, then Finish, and Return to Configurator Developer</li>
+                    <li>Repository, then Publications, Simple Search for item</li>
+                    <li>Select and Republish</li>
+                    <li><b>Oracle Configurator Administrator &gt; Concurrent Programs &gt; Schedule</b></li>
+                    <li>In Program Name, find Process Pending Publications</li>
+                    <li>Submit, Submit, OK</li>
+                    <li>Refresh until completed</li>                    <li>Verify in Preview store</li>                    <li>Email for approval and update ACD record status</li>                    <li>Upon approval, attach approval and price list to ACD record.</li>                    <li>End date the Preview Store version; activate the customer-facing Storefront version.</li>                    <li>Change ACD record status to Completed.</li>                    <li>Run the ACD Completed workflow.</li>
+                </ol>
+            </section>
+            <footer class="backToTop"><p><a href="#top">Back to Top</a></p></footer>
+        </article>
+
+        <article class="collapsible"> <!-- Add or Update Image -->
+            <a id="#image"></a>
+            <header>
+                <h1><label for="image">Add or Update Image</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="image" />
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>In <span class="program">FastStone Image Viewer</span>, open the folder with the images to be resized.</li>
+                    <li>Select images, then F3 ((Batch Convert)</li>
+                    <li>Navigate to an output folder.</li>
+                    <li>Under advanced options, resize the images and select "Frame 2" with a width of 1.
+                        <ul>
+                            <li>Big images should be sized to 218 pixels square plus a 1px border.</li>
+                            <li>Small images should be sized to 108 pixels square plus a 1px border.</li>
+                        </ul>
+                    </li>
+                    <li>For Big images, prefix with <span class="fixed">B-</span>, for Small ones, <span class="fixed">S-</span>.</li>
+                    <li><b>iStore Administrator &gt; iStore Merchant &gt; Content &gt; My Content</b></li>
+                    <li>Navigate to the directory in which the image(s) will be loaded.</li>
+                    <li><b>Update</b>: Browse Items, Simple Search to find item, Create New Version</li>
+                    <li><b>New</b>: Create Item</li>
+                    <li>Go</li>
+                    <li>If updating, Clear the image attachment</li>
+                    <li>Browse and select new file</li>
+                    <li>Save</li>
+                    <li>Submit for Approval</li>
+                </ol>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+
+        <article class="collapsed"> <!-- Order Import Failure Report -->
+            <a id="#orderImportFailures"></a>
+            <header>
+                <h1><label for="orderImportFailures">Order Import Failure Report</label></h1>
+                <p>Run daily after 1400 Eastern.</p>
+            </header>
+            <input class="noprint" type="checkbox" id="orderImportFailures" />
+            <section>
+                <h1>Steps</h1>
+                <ol>
+                    <li>From <span class="program">Oracle SQL Developer</span>, run
+                    <pre>
+    SELECT
+        EH_ID,
+        CREATION_DATE,
+        ERR_MESSAGE
+    FROM
+        apps.XXWFC_SOA_ERRHD_HEADERS;</pre>
+                    </li>
+                    <li>If there are errors, export the result to an <span class="program">Excel</span> workbook.</li>
+                    <li>If there are no errors, send a message to that effect to the distribution, and you're done.</li>
+                    <li>In <span class="program"><a href="https://procurement.wellsfargo.com/psp/epro/?cmd=login" target="_blank">ePro</a></span>, <b>Main Menu &gt; Reporting Tools &gt; Query &gt; Query Viewer</b></li>
+                    <li>Run EUS_PO_INFO_BY_PO_ID and view it in <span class="program">Excel</span>.</li>
+                    <li>Create a Report workbook with the <a href="file:///C:/Users/A562789/AppData/Roaming/Microsoft/Templates/Order%20Entry%20Failure.xltx">Order Entry Failure template</a>.</li>
+                    <li>For each line in the <span class="program">SQL Developer</span> export:
+                        <ol>
+                            <li>Copy the EH_ID and timestamp to first two fields of the Report workbook.</li>
+                            <li>Copy the PO Number in the ERR_MESSAGE to the Report workbook.</li>
+                            <li>Copy the full error message into the ERR_MESSAGE field.</li>
+                            <li>Look up the PO from the <span class="program">ePro</span> screen.</li>
+                            <li>For each line of the PO:
+                                <ol>
+                                    <strike><li>Copy data rows from column A through W (Req Date through Address 2) to the fields F through AB in the Report workbook.</li>
+                                    <li>Copy data rows from column Z through AC (City through Phone) to the fields AC through AF in the Report workbook.</li></strike>                                    <li>Delete columns X and Y (Address 2 and 3) from the ePro output.</li>                                    <li>Copy columns A through AA from the ePro output to columns F through AF in the outgoing  workbook.</li>
+                                    <li>In the <span class="program">OBIEE</span> EUS Storefront Support Dashboard, look up the <i>Vnd Itm ID</i> in the Warehouse Items report to determine the cause of failure.</li>
+                                    <li>Identify and document each cause of the error in the Notes field of the Report workbook.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Make necessary cosmetic adjustments to the Report workbook.</li>
+                    <li>Save the Report workbook as <span class="filename">Details - PO Failures_MM.DD.YY.xslx</span>, where the date is yesterday's.</li>
+                    <li>Create an email message from the Storefront Support account to be sent to:<br />                    <span class="fixed">Achanta, Sree &lt;sree.achanta@wellsfargo.com&gt;; Belongia, Eric &lt;eric.belongia@wellsfargo.com&gt;; Efird, Carla &lt;carla.efird@wellsfargo.com&gt;; EUS-PPS &lt;EUS-PPS@wellsfargo.com&gt;; G=WMS Support &lt;WMSSupport@wellsfargo.com&gt;; Grant, Jon P &lt;jon.grant@wellsfargo.com&gt;; Hightower, David P. &lt;David.P.Hightower@wellsfargo.com&gt;; Pope, Joe &lt;Joe.J.Pope@wellsfargo.com&gt;; PROCURE OFFICE SUPPLIES &lt;PROCUREOFFICESUPPLIES@wellsfargo.com&gt;; Sharpe, Dean &lt;dean.sharpe@wellsfargo.com&gt;; Storefront Support &lt;StorefrontSupport@wellsfargo.com&gt;; Reid, Anthony D &lt;anthony.reid@wellsfargo.com&gt;</span></li>
+                    <li>Subject Line: EUS Order Failures for Month Day</li>
+                    <li>Into the body of the message, copy the headings and contents of the first five columns (EH_ID through NOTES) of the Report workbook.</li>
+                    <li>Attach the Report workbook, and send.</li>
+                    <li>Store the received copy of the message in the dated mailbox folder.</li>
+                    <li>In <span class="program">R12</span>, <b>XXWFC Custom &gt; Run Requests &gt;</b>, then select Single Request</li>
+                    <li>Find <i>WFC SOA Error Handling Console</i>, and enter it with Action Type of DELETE and a Creation Date of yesterday</li>
+                    <li>Submit</li>
+                    <li>View Requests, Find, the Refresh until complete</li>
+                </ol>
+            </section>
+            <footer class="backToTop"><p><a href="#top">Back to Top</a></p></footer>
+        </article>
+
+        <article class="collapsible"> <!-- OBIEE Access -->
+            <a id="#obieeAccess"></a>
+            <header>
+                <h1><label for="obieeAccess">OBIEE Access</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="obieeAccess" />
+            <aside>
+                <p>Documentation: <a href="https://strongbox.wellsfargo.com/attachmentview.aspx?atype=pmt&adoctype=M&adocnum=21720">PMT&nbsp;21720 &ndash; Com&shy;plet&shy;ing OBIEE U&shy;ser Main&shy;ten&shy;ance</a></p>
+            </aside>
+            <section class="collapsed"> <!-- New Role -->
+                <h1><label for="obieeNewRole">Steps &ndash; New Role</label></h1>
+                <input id="obieeNewRole" class="noprint" type="checkbox" />
+                <ol>
+                    <li><a href="https://istobi.wellsfargo.com:7002/em">Oracle Enterprise Manager 11g</a> <span class="printOnly">&nbsp;&ndash;&nbsp;https://istobi.wellsfargo.com:7002/em</span></li>
+                    <li><span class="fixed">istadmin/Admin123</span>, then Login</li>
+                    <li><b>Business Intelligence &gt; Coreapplication</b></li>
+                    <li><b>Security &gt; Single Sign On &gt; Configure and Manage Application Roles</b></li>
+                    <li>Click an existing row, Create Like, enter the new Role Name</li>
+                </ol>
+            </section>
+            <section class="collapsed"> <!-- New Group -->
+                <h1><label for="obieeNewGroup">Steps &ndash; New Group</label></h1>
+                <input id="obieeNewGroup" class="noprint" type="checkbox" />
+                <aside><h1>Groups &ndash; Don't Mess With:</h1>
+                        <ul>
+                            <li>BIAdministrator</li>
+                            <li>BIAuthor</li>
+                            <li>BIConsumer</li>
+                            <li>Authenticated role</li>
+                        </ul>
+                </aside>
+                <ol>
+                    <li>Go to <a href="https://istobi.wellsfargo.com:9804/analytics" target="_blank">https://istobi.wellsfargo.com:9804/analytics</a>.</li>
+                    <li>Log in.</li>
+                    <li><b>Dashboard &gt; Admin &gt; Groups &amp; Users</b></li>
+                    <li>Group tab.</li>
+                    <li>Update, then key the new group. The name should match the Role created above.</li>
+                    <li>If the role should go to all users, key <span class="fixed">1</span> in the ISDEFAULT column.</li>
+                    <li>To remove a group, key <span class="fixed">Yes</span> in the ISDELETE collumn.</li>
+                    <li>Apply</li>
+                    <li>Click Done.</li>
+                </ol>
+            </section>
+            <section class="collapsed"> <!-- New User -->
+                <h1><label for="obieeNewUser">Steps &ndash; New User</label></h1>
+                <input id="obieeNewUser" class="noprint" type="checkbox" />
+                <ol>
+                    <li>Go to <a href="https://istobi.wellsfargo.com:9804/analytics" target="_blank">https://istobi.wellsfargo.com:9804/analytics</a>.</li>
+                    <li>Log in.</li>
+                    <li><b>Dashboard &gt; Admin &gt; Groups &amp; Users</b></li>
+                    <li>Users tab.</li>
+                    <li>Go to the bottom of the user list.</li>
+                    <li>Update, then key the new user's AD-ENT ID, Tab</li>
+                    <li>To remove a user, key <span class="fixed">Yes</span> in the ISDELETE collumn.</li>
+                    <li>Apply</li>
+                    <li>Click Done.</li>
+                    <li>Send the new user the information in the <span class="program">Outlook</span> template <span class="filename">Information for new OBIEE User.oft</span></li>
+                </ol>
+            </section>
+            <footer class="backToTop"><p><a href="#top">Back to Top</a></p></footer>
+        </article>
+
+        <article class="collapsible"> <!-- Store Cross-Reference -->
+            <a id="#storeXref"></a>
+            <header>
+                <h1><label for="storeXref">Store and Proxy Cross Reference</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="storeXref" />
+            <section>
+                <table>
+                    <tr>
+                        <th>Store Name</th>
+                        <th>Section Code</th>
+                        <th>Responsibility Name</th>
+                        <th>Responsibility Key</th>                        <th>Proxy</th>                        <th>Approval / Owner</th>
+                        <th>End Date</th>
+                    </tr>
+                    <tr>
+                        <td>Abbot Downing Markenting Materials</td>
+                        <td>ABBOT_DOWNING</td>
+                        <td>WFC ABBOT DOWNING</td>
+                        <td>WFC_ABBOT_DOWNING</td>                        <td>ABBOT_DOWNING</td>                        <td>Stephanie Elkins. Anyone with @abbotdowning.com is okay.</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Business Banking</td>
+                        <td>BBU</td>
+                        <td>WFC Business Banking University</td>
+                        <td>WFC_BBU </td>
+                        <td>COMMUNITY_BANK_LD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Business Direct</td>
+                        <td>BUSINESS_DIRECT</td>
+                        <td>WFC BUSINESS DIRECT</td>
+                        <td>WFC_BUSINESS_DIRECT</td>
+                        <td>COMMUNITY_BANK_LD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Business Payroll Services</td>
+                        <td>BUSINESS_PAYROLL</td>
+                        <td>WFC Business Payroll Services Store</td>
+                        <td>WFC_BUSI_PAY_SERVICES_STORE</td>
+                        <td>COMMUNITY_BANK_LD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Consumer Credit Solutions</td>
+                        <td>CONSUMER_CREDIT_SOLU</td>
+                        <td>WFC Consumer Credit Solutions</td>
+                        <td>WFC_CONSUMER_CREDIT_SOLU</td>
+                        <td>ADVISOR</td>                        <td>Laura Kelly</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>DCG</td>
+                        <td>DCG_STORE</td>
+                        <td>WFC DCG Store</td>
+                        <td>WFC_DCG_STORE</td>
+                        <td>COMMUNITY_BANK_LD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Dealer Services</td>
+                        <td>DEALER_SERVICES</td>
+                        <td>WFC Dealer Services</td>
+                        <td>WFC_DEALER_SERVICES</td>
+                        <td>DEALER_SERVICES</td>                        <td>Bill Kaucher / Sandra Walker</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Eastern Regional Marketing</td>
+                        <td>EASTERN_REGIONAL_MARKETING</td>
+                        <td>WFC Eastern Regional Marketing</td>
+                        <td>WFC_EASTERN_REGIONAL_MARKETING</td>
+                        <td>EASTERN_REGIONAL_MARKETING</td>                        <td>Cathy Tobias</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise L&amp;D</td>
+                        <td>WFC_ENTERPRISE_LD</td>
+                        <td>WFC Enterprise L&amp;D</td>
+                        <td>WFC_ENTERPRISE_LD</td>
+                        <td>LEARNING</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise L&amp;D P2W</td>
+                        <td>L&amp;D_P2W</td>
+                        <td>WFC Enterprise L&amp;D P2W</td>
+                        <td>WFC_L&amp;D_P2W</td>
+                        <td>LEARNING</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>EUS Restricted</td>
+                        <td>EUS_RESTRICTED</td>
+                        <td>WFC EUS Division</td>
+                        <td>WFC_EUS_DIVISION</td>
+                        <td>EUS</td>                        <td>Carol Rolfs / Missy Dyson</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>General</td>
+                        <td>GENERAL</td>
+                        <td>WFC General Store</td>
+                        <td>WFC_GENERAL_STORE</td>
+                        <td>ADVISOR</td>                        <td>Carol Rolfs / Missy Dyson</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>In Store Advertising Marketing Materials</td>
+                        <td>WFC_ISA_STORE</td>
+                        <td>WFC ISA Store</td>
+                        <td>WFC_ISA_STORE</td>
+                        <td>ADVISOR</td>                        <td>Susie B. Hicks</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Merchant Services Departments</td>
+                        <td>WFC_MERCH_SVC_DEPTS</td>
+                        <td>WFC Merchant Services Departments</td>
+                        <td>WFC_MERCH_SVC_DEPTS</td>
+                        <td>ADVISOR</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Merchant Services Learning & Development</td>
+                        <td>MERCHANT_SERV_L&amp;D</td>
+                        <td>WFC Merchant Services L&amp;D</td>
+                        <td>WFC_MERCHANT_SERVICES_STORE</td>
+                        <td>COMMUNITY_BANK_LD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Pacific Midwest Marketing</td>
+                        <td>PACIFIC_MIDWEST_MARKETING</td>
+                        <td>WFC Pacific Midwest Marketing</td>
+                        <td>WFC_PACIFIC_MIDWEST_MARKETING</td>
+                        <td>PACIFIC_MIDWEST_MARKETING</td>                        <td>Cathy Tobias</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Portfolio by Wells Fargo</td>
+                        <td>PORTFOLIO_BY_WF</td>
+                        <td>WFC Portfolio by Wells Fargo</td>
+                        <td>WFC_PORTFOLIO_BY_WELLS_FARGO</td>
+                        <td>PORTFOLIO_BY_WELLS_FARGO</td>                        <td>Cathy Tobias</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Preview</td>
+                        <td>WFC_PREVIEW</td>
+                        <td>WFC Preview Storefront</td>
+                        <td>WFC_PREVIEW_STORE</td>
+                        <td>N/A. Availble only through the punchout preview.</td>                        <td>&nbsp;</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Regional Banking</td>
+                        <td>REGIONAL_BANKING</td>
+                        <td>WFC Regional Bank L&amp;D</td>
+                        <td>WFC_REGION_BANK_LD</td>
+                        <td>ADVISOR</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Restricted Client Store</td>
+                        <td>WFC_RESTRICTED_CLIENT</td>
+                        <td>WFC Restricted Client Store</td>
+                        <td>WFC_RESTRICTED_CLIENT</td>
+                        <td>RESTRICTED_CLIENT</td>                        <td>Cathy Tobias</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Retail MAC</td>
+                        <td>RETAIL_MAC</td>
+                        <td>WFC Retail MAC</td>
+                        <td>WFC_RETAIL_MAC</td>
+                        <td>WFC_RETAIL_MAC</td>                        <td>Cathy Tobias</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Southeast Small Business</td>
+                        <td>SOUTHEAST_SM_BUSINESS</td>
+                        <td>WFC_SOUTHEAST_SM_BUSINESS</td>
+                        <td>WFC_SOUTHEAST_SM_BUSINESS</td>
+                        <td>SE_SM_BUS</td>                        <td>Eric Barry Smith</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Southwest Region</td>
+                        <td>WS_REGION_NEW_HIRE</td>
+                        <td>WFC SW Regional New Hire</td>
+                        <td>WFC_SW_REGIONAL_NEW_HIRE</td>
+                        <td>SW_REGIONAL_NEW_HIRE</td>                        <td>Glorianna (Glory) Perez</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Soutwest Regional Marketing</td>
+                        <td>REGIONAL_MARKETING</td>
+                        <td>WFC Regional Marketing</td>
+                        <td>WFC_REGIONAL_MARKETING</td>
+                        <td>REGIONAL_MARKETING</td>                        <td>Stephanie Tan</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Supplier Diversity</td>
+                        <td>SUPP_DIVERSITY</td>
+                        <td>WFC Supplier Diversity</td>
+                        <td>WFC_SUPP_DIVERSITY</td>                        <td>SUPP_DIVERSITY</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>WBR L&amp;D</td>
+                        <td>WFC_WBR_LD</td>
+                        <td>WFC WBR L&amp;D</td>
+                        <td>WFC_WBR_LD</td>
+                        <td>WBRLD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Wells Fargo At Work/Worldwide Military Banking Marketing Center</td>
+                        <td>WF_AT_WORK</td>
+                        <td>WFC_WF_AT_WORK</td>
+                        <td>WFC_WF_AT_WORK</td>
+                        <td>ADVISOR</td>                        <td>Leticia Turnbull-Mason</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Wells Fargo Insurance</td>
+                        <td>WELLS_FARGO_INSURANCE</td>
+                        <td>WFC Wells Fargo Insurance</td>
+                        <td>WFC_WELLS_FARGO_INSURANCE</td>
+                        <td>WFC_WELLS_FARGO_INSURANCE</td>                        <td>Diane Vierkant</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Wells Fargo Virtual Channels Marketing</td>
+                        <td>WFVC_MARKETING</td>
+                        <td>WFC Wells Fargo Virtual Channels Marketing</td>
+                        <td>WFC_WFVC_MARKETING</td>
+                        <td>WFC_WFVC_MARKETING</td>                        <td>&nbsp;</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>WFA</td>
+                        <td>ADVISOR</td>
+                        <td>WFC Advisor</td>
+                        <td>WFC_ADVISOR</td>
+                        <td>ADVISOR</td>                        <td>Shelly Martin</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>WFCL L&amp;D</td>
+                        <td>HCFG_CSCL_LD</td>
+                        <td>WFC HCFG / CSCL L&amp;D</td>
+                        <td>WFC_LEARNING_CENTER</td>
+                        <td>HCFG_CSCL</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>WFVC Training</td>
+                        <td>WFCC_TRAINING</td>
+                        <td>WFCC Training</td>
+                        <td>WFC_WFCC_TRAINING</td>
+                        <td>WFCCLD</td>                        <td>Mary Ogut</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Wholesale Marketing</td>
+                        <td>WHOLESALE</td>
+                        <td>WFC Wholesale Mkt</td>
+                        <td>WFC_WHOLESALE_MKT</td>
+                        <td>ADVISOR</td>                        <td>Joanne Lasnier</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>WFC iStore Customer for All Items</td>
+                        <td>WFC_IBE_CUST_ALL_ITEMS</td>
+                        <td>N/A. Functional proxy everything has.</td>                        <td>&nbsp;</td>                        <td>&nbsp;</td>
+                    </tr>
+                    <tr class="deprecated">
+                        <td>All State Proxies</td>
+                        <td>varies</td>
+                        <td>varies</td>
+                        <td>varies</td>
+                        <td>Anything ending in _P</td>
+                        <td>N/A</td>
+                        <td>2016&#8209;07, 2016&#8209;08&#8209;25, and earlier.</td>
+                    </tr>
+                    <tr class="deprecated">
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>WFC Student Loan Store</td>
+                        <td>WFC_STUDENT_LOAN</td>
+                        <td>ZZDISCONTINUED-STUDENT_LOAN</td>                        <td>&nbsp;</td>                        <td>2015&#8209;10&#8209;19</td>
+                    </tr>
+                    <tr class="deprecated">
+                        <td>&nbsp;</td>
+                        <td>please_disregard</td>
+                        <td>WFC bogus please delete</td>
+                        <td>WFC_SUPPLIER_DIVERSITY</td>
+                        <td>ZZBOGUS-SUPPLIER_DIVERISTY</td>                        <td>&nbsp;</td>                        <td>2016&#8209;06&#8209;03</td>
+                    </tr>
+                </table>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+        <article class="collapsed"> <!-- EUS-PPS Rollover Issues -->            <a id="#eusPpsRollover"></a>            <header>                <h1><label for="eusPpsRollover">EUS-PPS Rollover Issues</label></h1>                <p>When the EUS-PPS Customer Service Team leaves for the day, they roll their help contact number (877-483-9877) to a different office in Richmond, Virginia. If a Storefront user reports that the phone support is unreachable, use this contact information.</p>            </header>            <input class="noprint" type="checkbox" id="eusPpsRollover" />                <section>                    <h1>EUS-PPS Customer Service Contacts</h1>                    <section>                    <h1>Anthony Reid – Primary Contact</h1>                    <p>Business Cell: 704-488-7163<br />                        Personal Cell: 980-428-2590</p>                    <p><b>Clifford Moulton</b>: 980-322-3663</p>                </section>                <section>                    <h1>Interoffice Mail Contacts</h1>                    <p><b>Alberta Stradling</b>: 804-747-2777<br />                    <b>Robert Morrow</b>: 404-684-4818</p>                    <p><b>Tech Support Contact</b>: Awaiting this information</p>                </section>            </section>            <footer class="backToTop">                <p><a href="#top">Back to Top</a></p>            </footer>        </article>        <article class="collapsed"> <!-- NOOSH Pictures -->            <a id="#noosh"></a>            <header>                <h1><label for="noosh">NOOSH Pictures</label></h1>            </header>            <input class="noprint" type="checkbox" id="noosh" />            <section>                <h1>NOOSH Pictures</h1>                <p>                    ID: storefront<br />                    PW: images4sf                </p>                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a neque elit. Mauris at ipsum pulvinar, sodales sem sit amet, egestas sapien. Mauris rutrum, magna quis posuere molestie, lectus lacus ultricies felis, vitae posuere diam dolor et dui. Vestibulum dignissim convallis lorem vel elementum. Donec et est enim. Vestibulum tristique vehicula justo, porta consequat libero rutrum quis. Vestibulum aliquam sit amet ligula sed dignissim. Etiam aliquam massa nec blandit auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam consequat nulla vel elit lobortis rutrum. Sed interdum elit magna, at faucibus lacus suscipit in.</p>            </section>            <footer class="backToTop">                <p><a href="#top">Back to Top</a></p>            </footer>        </article>
+        <article class="collapsed"> <!-- WFVC Quarterly Report -->
+            <a id="#wfvcquarterly"></a>
+            <header>
+                <h1><label for="wfvcquarterly">WFVC Quarterly Report</label></h1>
+            </header>
+            <input class="noprint" type="checkbox" id="wfvcquarterly" />
+            <section>
+                <h1>WFVC Quarterly Report</h1>
+                <p>Create a current version of the workbooks that live on the Storefront Onboarding site in the <a href="http://teamsites.teamworks.wellsfargo.net/sites/tog-ops-321/Shared%20Documents/Forms/AllItems.aspx">Documents</a> folder.</p>
+                <ul>
+                    <li>Tod's team should produce a schedule and/or indicate when this report is due for each quarter. If you don't hear anything by the end of the first month of the quarter, ping someone. It's supposed to be in the Release Schedule that's among the folders there.</li>
+                    <li>Open <a href="file:///S:/iStore/Configuration/Configuration%20Models/Access%20DB%20and%20Configuration%20SQL/R12%20Configuration%20Database.accdb"><span class="filename">R12 Configuration Database.accdb</span></a>.</li>
+                    <li>Run the <span class="program">All Models - WFVC</span> report.</li>
+                    <li>Export it and make it look like the others in the folder. Filter out the Bill of Materials rows, extra columns. Rename and relabel as appropriate. Target is "fairly consisten". They're looking for a report of all of their PTO items withou the Direct Cost and other noise (mylar tabs, binding, etc.).</li>
+                </ul>
+            </section>
+            <footer class="backToTop">
+                <p><a href="#top">Back to Top</a></p>
+            </footer>
+        </article>
+        <footer class="backToTop">
+            <p><a href="#top">Back to Top</a></p>
+        </footer>
+        <footer>
+            <p>Content last updated: 2016-09-02</p>
+        </footer>
+    </body>
+
+<!--
+{{{Other things to eventually include}}}
+It's not just you
+    Oracle system crashes for no good reason.
+    Error messages that come up what they mean (e.g., that one that appears when you try to use the wrong inventory list)
+Abbreviations
+    R12
+    DTS - Data Tools & Services
+    EUS - Enterprise Utility Services
+    EUC - 
+Procedures
+    OBIEE license
+    Resize Image
+    Update Image
+    Configuration
+    Noosh pictures
+-->
+
+    <!-- Templates
+Nav entry:
+<li class="navButton"><a href="#title">Title</a></li>
+
+Article:
+<article> {include comment}
+    <a id="#"></a>
+    <header>
+        <h1>Title</h1>
+        <aside>
+            <p>Documentation:</p>
+            <p>See also:</p>
+        </aside>
+    </header>
+    <section>
+        <h1>Steps</h1>
+        <ol>
+            <li></li>
+            <li></li>
+        </ol>
+    </section>
+    <footer class="backToTop"><p><a href="#top">Back to Top</a></p></footer>
+</article>
+-->
+
+</html>

@@ -1,0 +1,16 @@
+* {
+    float: none;
+    background: #FFFFFF;
+    color: #00001A;
+}
+h1, h1, h3,
+h4, h5, h6 {
+	font-weight: normal;
+}
+
+
+.oneline li {
+    display:                inline-block;
+    padding:                0 1ex 0 0;
+    text-size:  150%;
+}

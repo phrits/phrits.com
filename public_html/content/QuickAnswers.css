@@ -1,0 +1,329 @@
+/*
+--* QuickAnswers.css
+--*
+--* Author: Fritz Knack
+--* 2016-04-18. First "public" launch. There's no intention to maintain
+--* a comprehensive changelog with this. What you see is what you get.
+--*
+--* Last update: 2016-06-08
+--*
+--* Description
+--* -----------
+--* Formatting for S:\WMS Support Fritz Knack\QuickAnswers.html
+*/
+
+
+* {
+    margin:                 0;
+    padding:                0;
+    max-width:              100%; /* Keeps pictures, etc. within their boxes. */
+    color:                  #734626;
+}
+
+body {
+    font-family:            sans-serif;
+    max-width:              80em;
+}
+body > h1 {
+    text-align:             center;
+}
+p {
+    margin-bottom:          1ex;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom:          1ex;
+    margin-top:             1ex;
+    font-family:            serif;
+    color:                  #BB0826;
+}
+ol, ul {
+    list-style-position:    outside;
+    padding-left:           1em;
+    margin-left:            1em;
+}
+li {
+    margin-top:             2px;
+}
+ol {
+    list-style:             decimal;
+}
+table {
+    border-collapse:        collapse;
+    empty-cells:            hide;
+    margin:                 auto;
+    margin-top:             5px;
+    margin-bottom:          5px;
+}
+table, th, td {
+    border:                 1px solid black;
+    padding:                1ex;
+}
+th, td {
+    font-size:              90%;
+}
+th {
+    color:                  #FCC60A;
+    background:             #574537;
+}
+b {
+    font-weight:            bold;
+}
+
+/* HTML 5 Elements */
+article,
+nav {
+    border:                 4px ridge #574537;
+    border-right:           0;
+    border-left:            0;
+    clear:                  both;
+    margin:                 2% 3% 2% 3%;
+    padding:                0  2% 0  2%;
+}
+article {
+    font-size:              80%;
+    box-shadow:             -5px 5px 13px 3px #574537;
+    overflow:               auto;
+    background:             #D9D9D6;
+}
+nav {
+    box-shadow:             -5px 5px 13px 3px #574537;
+    color:                  #574537;
+    background-color:       #7A6855;
+    font-size:              70%;
+}
+nav ul{
+    margin:                 0;
+    padding:                0;
+    text-align:             center;
+}
+nav ul li {
+    color:                  #893B67;
+    display:                inline-block;
+    list-style-type:        none;
+    box-shadow:             -2px 2px 3px 1px #574537;
+    margin:                 1ex;
+    padding:                1ex;
+    font-weight:            bold;
+    background-color:       #574537 !important;
+}
+nav > ul > li > a {
+    text-decoration:        none;
+    color:                  #FCC60A;
+}
+aside {
+    clear:                  both;
+    float:                  right;
+    max-width:              30%;
+    border:                 1px dotted;
+    padding:                1ex;
+    margin-left:            1em;
+    margin-top:             1em;
+}
+footer {
+    clear:                  both;
+    float:                  right;
+    font-size:              60%;
+    font-style:             italic;
+    margin-right:           1em;
+}
+
+footer.backToTop {
+    font-size:              100%;
+    float:                  none;
+    text-align:             center;
+}
+
+.filename,
+.folder {
+    font-weight:            bold;
+    font-family:            "Courier New", monospace;
+}
+.filename {
+    font-size:              110%;
+}
+.program {
+    font-weight:            bold;
+    font-style:             italic;
+    color:                  #CE4C00;
+}
+
+.wfColorsTable td:nth-child(2),
+.wfColorsTable td:nth-child(3) {
+    color:                  #000000;
+    background:             #FFFFFF;
+    font-family:            "Courier New", monospace;
+    font-weight:            bold;
+}
+.sqlCode {
+    font-family:            "Courier New", monospace;
+    font-size:              90%;
+    font-weight:            bold;
+}
+
+.collapsed > input ~ *,
+.collapsedUntested > input ~ *,
+.collapsibleUntested > input:checked ~ *,
+.collapsible > input:checked ~ * {
+    display:                none;
+}
+.collapsed > input:checked ~ *,
+.collapsible > input ~ * {
+    display:                block;
+}
+
+.collapsed > input,
+.collapsedUntested > input,
+.collapsibleUntested > input,
+.collapsible > input { /* hide the checkbox doing the work */
+    display:                none;
+}
+.collapsed label,
+.collapsedUntested label,
+.collapsibleUntested label,
+.collapsible label {
+    cursor:                 pointer;
+    color:                  inherit;
+}
+
+.collapsedUntested ,
+.deprecated,
+.untested {
+    font-size:              80% !important; /* Doesn't work with collapsed. Dunno why. */
+    background:             #D7D3C7;
+    color:                  #6C2B46;
+}
+
+#urlList > section > section {
+    margin-left:            2%;
+}
+#urlList ul{
+    margin:                 0;
+    padding:                0;
+}
+#urlList ul li{
+    margin:                 1ex;
+    padding:                1ex;
+    font-weight:            bold;
+    display:                inline-block;
+    list-style-type:        none;
+    box-shadow:             -2px 2px 3px 1px #574537;
+}
+#urlList ul li a {
+    text-decoration:        none;
+}
+
+li:last-of-type {
+    margin-bottom:          1ex;
+} 
+
+.printOnly {
+    display:                none;
+}
+a {
+    color:                  #5174B8;
+}
+a:hover,
+a *:hover,
+input[type=submit]:hover {
+    text-decoration:        none;
+    color:                  #FCC60A;
+    background-color:       #BB0826;
+}
+li.navButton {
+    background-color:       #BFC0BE;
+}
+li.navButton a:hover {
+    border-bottom:          1px solid #FCC60A;
+    border-left:            1px solid #FCC60A;
+    padding:                1ex;
+    margin:                 -1ex;
+}
+input[type=submit] {
+    color:                  #FCC60A;
+    background-color:       #574537;
+    padding:                1ex;
+}
+
+.hidden {
+    display:                none;
+}
+.fixed {
+    font-family:            "Courier New", monospace;
+}
+.inline {
+    display:                inline;
+}
+
+/* Wells Fargo Color Palatte
+CSS background-color rather than deprecated td bgcolor */
+.c000000 {background-color: #000000;} /* Black*/ 
+.cB06224 {background-color: #B06224;} /* Brown*/ 
+.c44464A {background-color: #44464A;} /* Cool Gray Dark*/ 
+.cD9D9D6 {background-color: #D9D9D6;} /* Cool Gray Light*/ 
+.cBFC0BE {background-color: #BFC0BE;} /* Cool Gray Medium*/ 
+.c734626 {background-color: #734626;} /* Dark Brown*/ 
+.c574537 {background-color: #574537;} /* Dark Ebony*/ 
+.c6C2B46 {background-color: #6C2B46;} /* Dark Eggplant*/ 
+.c007337 {background-color: #007337;} /* Dark Green*/ 
+.c821861 {background-color: #821861;} /* Dark Magenta*/ 
+.cCE4C00 {background-color: #CE4C00;} /* Dark Orange*/ 
+.c4D3B65 {background-color: #4D3B65;} /* Dark Plum*/ 
+.cAE1E23 {background-color: #AE1E23;} /* Dark Red*/ 
+.c00698C {background-color: #00698C;} /* Dark Teal*/ 
+.c7A6855 {background-color: #7A6855;} /* Ebony*/ 
+.c893B67 {background-color: #893B67;} /* Eggplant*/ 
+.c46A033 {background-color: #46A033;} /* Green*/ 
+.c5174B8 {background-color: #5174B8;} /* Hyperlink Blue (internal facing)*/ 
+.cAE2573 {background-color: #AE2573;} /* Magenta*/ 
+.cED8800 {background-color: #ED8800;} /* Orange*/ 
+.c702F8A {background-color: #702F8A;} /* Plum*/ 
+.cD7D3C7 {background-color: #D7D3C7;} /* Stone*/ 
+.c0095C8 {background-color: #0095C8;} /* Teal*/ 
+.cEC1C29 {background-color: #EC1C29;} /* Warm Red*/ 
+.cBB0826 {background-color: #BB0826;} /* Wells Fargo Red*/ 
+.cFCC60A {background-color: #FCC60A;} /* Wells Fargo Yellow*/ 
+.cFFFFFF {background-color: #FFFFFF;} /* White*/ 
+
+@media print {
+/*  I feel like I shouldn't have to have all these !important declarations for
+    the @media to work properly, but it doesn't seem to be picking it up
+    otherwise. Dunno if that's an author problem or an IE quirk.
+*/
+    html,
+    body,
+    article    {
+        font-family:            serif !important;
+        background:             #FFFFFF !important;
+        color:                  #000000 !important;
+        margin:                 0 !important; /* printer and browser do it */
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family:            sans-serif !important;
+    }
+    article {
+        border:                 none !important;
+        border-top:             4px ridge !important;
+
+    }
+    a {
+        text-decoration:        none !important;
+    }
+    .collapsed *,
+    .collapsible *{
+        display:                block !important;
+    }
+    .noprint,
+    .backToTop {
+        display:                none !important;
+    }
+    .printOnly {
+        display:                inline !important;
+    }
+    
+    #urlList ul li{
+        margin:                 0 !important;
+        padding:                0 !important;
+        display:                initial !important;
+    }
+}
+
