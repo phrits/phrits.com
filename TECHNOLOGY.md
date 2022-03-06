@@ -1,6 +1,10 @@
-# Components
+# Technology
 
 Everything has details to track. This document should probably be databased instead.
+
+## Virtual Environments
+
+## Database
 
 ## Django
 
