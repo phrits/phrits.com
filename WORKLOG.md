@@ -8,13 +8,15 @@ Got git set up with cPanel. Lots easier with a public repo. Above board indeed.
 
 Decided against worrying about getting virtualenv set up on the linux side of things, at least for now. Deleted what I could find of that and other remnants including the django folder, virtualenv folder. I'll end up reinstalling fresh if I need it later anyway, so the remaining bin files sticking around aren't hurting anything.
 
+Added a LICENSE to the repo. CC 1.0 Universal, or something similar.
+
 I had yet another hard drive crash, and the usual flailing about with Dropbox fucked up my installed programs. Thus:
 
 ### Fresh
 
 - Python (3.10.10)
 
-- Anaconda (pending. Giant installation.)
+- Anaconda (4.10.3. Giant installation.)
 
 - pgAdmin (pending)
 
