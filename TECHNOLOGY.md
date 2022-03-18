@@ -6,6 +6,8 @@ Everything has details to track. This document should probably be databased inst
 
 ## Database
 
+Server: PostgreSQL 8.4.20
+
 ## Django
 
 ### urls
