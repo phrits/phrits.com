@@ -1,6 +1,6 @@
 # WorkLog
 
-## 2022-03-17
+## 2022-03-17/18
 
 Finally got the last Archive Disclaimer banner working. Geez, I had hard calls to the old init.php for days!
 
@@ -18,13 +18,21 @@ I had yet another hard drive crash, and the usual flailing about with Dropbox fu
 
 - Anaconda (4.10.3. Giant installation.)
 
-- pgAdmin (pending)
+- PostgreSQL
 
-- Flask (pending)
+- pgAdmin
 
-- Django (pending)
+- Flask
 
-- Jupyter (pending)
+- Django
+
+- Jupyter
+
+- pandas
+
+- SQLAlchemy
+
+See [`2022-03-18.requirements.txt`](2022-03-18.requirements.txt) for specifics.
 
 ### Not Updated
 
