@@ -19,8 +19,41 @@ html_str = '''
   </head>
   <body class="bg_frame">
 
-    <div class="container p-1 m-3 bg_frame"> <!-- Everything but the sticky footer. -->
-      <div class="container p-1 m-3">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand phrits phrits-light" href="#"><img src="./static/images/logo-white-small.png"</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Other Stuff
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+            <li><a class="dropdown-item" href="#">Hire Me</a></li>
+            <li><a class="dropdown-item" href="#">Content Licensing</a></li>
+            <li><a class="dropdown-item" href="#">Site Information</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container-fluid p-1 m-3 bg_frame"> <!-- Everything but the sticky footer. -->
+      <div class="container-fluid p-1 m-3">
           <h1 class="display-1 bg_frame_title">Your Friend in the Kitchen: FAT TOM</h1>
           <p class="lead">In a restaurant kitchen, or your own, food <i>should</i> be healthful. But it <strong>must</strong> be safe. Food safety includes protection from physical hazards: Think fish pin bones or tiny shards of metal from a can lid, for example. It also includes concern for chemical hazards: Cleaning supplies don&#8217;t belong in the pantry, and we don&#8217;t cook in galvanized&mdash;zinc-plated&mdash;pots and pans. But the concern that gets most of our attention is biological, the things that cause <a href="http://en.wikipedia.org/wiki/Foodborne_illness">foodborne illnesses</a> or &quot;food poisoning&quot;.</p>
           <p class="bg_frame_p">We worry about <span class="phrits_light">viruses</span> such as <a href="http://www.foodborneillness.com/hepatitis_food_poisoning/">Hepatitis A</a> being transmitted from food handlers to eaters, but dangerous bacteria&mdash;pathogens&mdash;are the real bad guys, bringing all sorts of fun games to the party: <a href="http://www.cruisecritic.com/articles.cfm?ID=71">Norovirus</a>, <a href="http://en.wikipedia.org/wiki/Jack_in_the_Box#E._coli_disaster">E. coli</a>, <a href="http://en.wikipedia.org/wiki/Ciguatera">ciguatera</a>, <a href="http://www.about-salmonella.com/">salmonella</a>, and <a href="http://en.wikipedia.org/wiki/Bacillus_cereus"><span class="foreign">bacillus cereus</span></a> are just a few. What can you do? <a href="http://www.ehow.com/how_5137788_wash-hands-food-safety.html">Wash your hands.</a> Avoid <a href="http://www.essortment.com/all/crosscontamina_rubw.htm">cross-contamination</a>. And learn about FAT TOM.<span id="more-929"></span> FAT TOM is a mnemonic to help you remember the critical factors in allowing good food to become dangerous: <strong>F</strong>ood, <strong>A</strong>cidity, <strong>T</strong>emperature, <strong>T</strong>ime, <strong>O</strong>xygen, and <strong>M</strong>oisture.</p>
@@ -37,6 +70,17 @@ html_str = '''
           <p class="bg_frame_p">With some exceptions&mdash;<a href="http://en.wikipedia.org/wiki/Clostridium_botulinum">botulism-causing bacteria</a> being perhaps the most familiar&mdash;foodborne pathogens are <a href="http://en.wikipedia.org/wiki/Aerobic_organism">aerobic</a>; i.e., they need oxygen to survive and reproduce. That&#8217;s why covered food lasts longer and why you should squeeze the air out of (or &quot;<a href="http://order.tupperware.com/coe/app/home">burp</a>&quot;) your leftovers&#8217; storage containers. It&#8217;s also why many meats are now shipped and sold in <a href="http://en.wikipedia.org/wiki/Modified_atmosphere">modified atmosphere packaging</a> (MAP), and why <a href="http://www.thespaceshop.com/neopicecream.html">freeze-dried ice cream</a> lasts nearly forever unopened. Oxygen is the culprit when an open bottle of wine starts to taste like vinegar or vegetable oil goes <a href="http://www.cip.ukcentre.com/Rancidity.htm">rancid</a>.</p>
           <h2 class="display-2 bg_frame_header">Moisture</h2>
           <p class="bg_frame_p">Without water, there is no life. Generally speaking, moist foods&mdash;almost everything on your dinner table, for example&mdash;spoil, and dry foods or ingredients (sugar, flour, cornstarch, dried herbs, etc.) do not. Beef jerky is almost entirely protein, but it&#8217;s exceptionally resistant to spoilage because it is dry: The heavy application of salt causes osmosis to draw almost all of the water out of the meat, leaving any pathogens dead or inert. Jams and jellies use sugar for the same effect (<a href="http://www.amazon.com/Food-Cooking-Science-Lore-Kitchen/dp/0684800012/">McGee</a>, &quot;Sugar Preserves&quot;). And dry, aged cheeses such as Parmesan last considerably longer than soft, moist ones such as Brie.</p>
+          <div class="container-fluid p-1 m-3">
+              <h1 class="display-1 bg_frame_title">Writing</h1>
+              <p class="lead">Versions of almost everything here have appeared elsewhere. I've made a few revisions here and there, but the contents are faithful to the originals.</p>
+          </div> <!-- class="container-fluid" -->
+            <h2 class="display-2 bg_frame_header">Food and Cooking</h2>
+            <p><i><a href="/content/popcorn_post.php">The Popcorn Post</a></i>
+                <br />An article I first posted on <a href="#" title="http://analytical-life.com">Analytical Life</a>. What popcorn is, its history, how to prepare it, etc. I've loved this stuff longer than I could talk. I did allow myself to wax geek.</p>
+            <p><i><a href="/content/fat_tom.php">Your Friend in the Kitchen: FAT TOM</a></i>
+                <br />An article I wrote for <a href="#" title="http://analytical-life.com">Analytical Life</a> about avoiding foodborne illnesses.</p>
+            <p>A <a href="http://www.reddit.com">Reddit</a> comment answering the question <a href="/content/meat_safety.php">"What should I know about meat and food safety?"</a></p>
+
       </div> <!-- class="container" -->
     </div>
 
@@ -54,7 +98,7 @@ html_str = '''
 # background: #663333;
 # box-shadow: 14.41px 14.41px 44px #582C2C, -14.41px -14.41px 44px #743A3A;
 # box-shadow: 14.41px 14.41px 44px #000055, -14.41px -14.41px 44px #0000FF;
-
+# background-image: linear-gradient(to bottom, #000034, #090930, #10102d, #161529, #1b1a25, #251f31, #31233b, #402744, #682150, #92064a, #b60033, #cc0000);
 
 @app.route("/")
 def hello_world():

@@ -1,15 +1,20 @@
 .phrits,
-.phrits_light {
+.phrits_light,
+.phrits_dark {
     font-family:            "Courier New", Courier, monospace !important;
     font-weight:            bold !important;
-    color:                  #000000 !important;
     text-decoration:        none !important;
     border:                 0 0 0 0 !important;
     text-transform:         lowercase !important;
+    color:                  #000000;
 }
 
 .phrits_light {
     color:                  #FFFFFF !important;
+}
+
+.phrits_dark {
+    color:                  #000000 !important;
 }
 
 #board          {
@@ -17,6 +22,12 @@
     height: 32px;
 }
 
+nav {
+    background-color: #660000;
+    background-image: linear-gradient(to right bottom,#890043, #cc0000, #b1002f, #5a0019, #660000, #5c1545, #330000, #480725, #331027, #250817, #321a36, #2d0310, #1d0b19, #24172d, #201322, #150e17, #191323, #19121e, #0f0b19, #120f19, #110e15, #0c0c12, #0e0d12, #0e0820, #090914, #0c0c0e, #0c0526, #060616, #09090e, #07022d, #03030d, #06060e, #030318, #00000d, #000034, #00001a);
+
+
+}
 
 /* Messing around with neumorphism */
 
@@ -24,18 +35,25 @@
 .bg_frame_header {
     background: #000033;
     color: #DDDDDD;
-    border-radius: 20px;
+    /* background-image: linear-gradient(to left top, #00001a, #1e0827, #3b0229, #56001d, #660000);     */
     box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F;
     box-shadow: 14.41px 14.41px 19px #000080, -14.41px -14.41px 19px #0000D4;
     box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
     box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
 }
 
-.bg_frame_header {
+.bg_frame_header,
+.innerband {
     padding-left: 20px;
     margin-top: 1em;
     box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
     margin-bottom: 1ex;
+    margin-right: 10px;
+
+}
+
+.innerband {
+    padding-top: 20px;
 }
 
 .bg_frame_title {
@@ -48,10 +66,11 @@
     box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
     box-shadow: 6px 6px 0px #000048, -6px -6px 0px #000084;
     box-shadow: 6px 6px 0px #000036, -6px -6px 0px #000072;
+
     padding-left: 1ex;
     padding-right: 1ex;
+    margin-right: 10px;
 }
-
 p,
 .bg_frame_p {
     border-radius: 20px;
@@ -60,6 +79,18 @@ p,
     box-shadow: 6px 6px 0px #000036, -6px -6px 0px #000072;
     box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
     padding: 1em;
+    border: 1px solid rgba( 221, 221, 221, 0.30 );
+    margin-right: 10px;
+    text-align: left;
+}
+
+.bg_frame_title,
+.bg_frame_header {
+    background-image: linear-gradient(to bottom right, #00001a, #000027, #1e0827,#2c0739, #5a003a, #56001d, #660000);
+    background-image: linear-gradient(to bottom right,#000034, #090930, #10102d, #161529, #1b1a25, #251f31, #31233b, #402744, #682150, #92064a, #b60033, #cc0000);
+    background-image: linear-gradient(to right bottom, #00001a, #09081b, #10101c, #15151d, #1a1a1e, #23202c, #302439, #402744, #682150, #92064a, #b60033, #cc0000);    border-radius: 20px;
+    background-image: linear-gradient(to right bottom,#00001a, #000034, #00000d, #030318, #06060e, #03030d, #07022d, #09090e, #060616, #0c0526, #0c0c0e, #090914, #0e0820, #0e0d12, #0c0c12, #110e15, #120f19, #0f0b19, #19121e, #191323, #150e17, #201322, #24172d, #1d0b19, #2d0310, #321a36, #250817, #331027, #480725, #330000, #5c1545, #660000, #5a0019, #b1002f, #cc0000, #890043);
+    border-radius: 20px;
 }
 
 p.lead {
@@ -67,4 +98,9 @@ p.lead {
     box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
 }
 
+
 /* box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F; */
+/*
+background-image: linear-gradient(to right bottom, #00001a, #09081b, #10101c, #15151d, #1a1a1e, #23202c, #302439, #402744, #682150, #92064a, #b60033, #cc0000);
+background-image: linear-gradient(to right bottom, #402744, #38273f, #302638, #2a2532, #25232a, #27222c, #29212e, #2c1f2f, #3d1a32, #4f102b, #5e021d, #660000);
+*/
