@@ -5,13 +5,16 @@
 Screenshots of WIP.
 
 - Pixel5 with the Menu open
+
 ![](meta_images\20220319-pixel5_menu_open.png)
 
 
 - Pixel5 with the content visible
+
 ![](meta_images\20220319-pixel_5_article_screen.png)
 
 - Web Page in Chrome
+
 ![](meta_images\20220319-web_article_page.png)
 
 - The ripple effect in the header backgrounds is from messing around with gradients.
