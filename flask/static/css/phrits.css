@@ -1,4 +1,5 @@
-.phrits {
+.phrits,
+.phrits_light {
     font-family:            "Courier New", Courier, monospace !important;
     font-weight:            bold !important;
     color:                  #000000 !important;
@@ -7,28 +8,63 @@
     text-transform:         lowercase !important;
 }
 
+.phrits_light {
+    color:                  #FFFFFF !important;
+}
+
 #board          {
-    height:                 32px;
-    width:                  100%;
-    margin-top:             -32px;  /* negative margin-top equals height of #board */
-    background:             url("/images/board.png");
-    /* board image: http://farm4.static.flickr.com/3254/2779025080_c38653e1a5.jpg */
+    background:             url("../images/board.png");
+    height: 32px;
 }
 
 
 /* Messing around with neumorphism */
 
-.bg_frame {
-    background: #663333;
-    border-radius: 30%;
+.bg_frame,
+.bg_frame_header {
+    background: #000033;
+    color: #DDDDDD;
+    border-radius: 20px;
     box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F;
+    box-shadow: 14.41px 14.41px 19px #000080, -14.41px -14.41px 19px #0000D4;
+    box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+    box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
 }
 
-.bg_frame_blue {
-/*    background: #0000AA; */
-background: linear-gradient(145deg, #000091, #0000C4);
-border-radius: 15%;
-box-shadow: 14.41px 14.41px 19px #000080, -14.41px -14.41px 19px #0000D4;
+.bg_frame_header {
+    padding-left: 20px;
+    margin-top: 1em;
+    box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+    margin-bottom: 1ex;
 }
 
-box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F;
+.bg_frame_title {
+    text-align: center;
+    background: transparent;
+    color: #DDDDDD;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 20px;
+    box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+    box-shadow: 6px 6px 0px #000048, -6px -6px 0px #000084;
+    box-shadow: 6px 6px 0px #000036, -6px -6px 0px #000072;
+    padding-left: 1ex;
+    padding-right: 1ex;
+}
+
+p,
+.bg_frame_p {
+    border-radius: 20px;
+    box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+    box-shadow: 6px 6px 0px #000048, -6px -6px 0px #000084;
+    box-shadow: 6px 6px 0px #000036, -6px -6px 0px #000072;
+    box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
+    padding: 1em;
+}
+
+p.lead {
+    margin: 2.5em;
+    box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+}
+
+/* box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F; */
