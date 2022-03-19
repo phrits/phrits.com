@@ -1,5 +1,11 @@
 # WorkLog
 
+## 2022-03/18
+
+![](meta_images/20220319-proto_schreenshot.jpg)
+
+It's ugly, but it's a start.
+
 ## 2022-03-17/18
 
 Finally got the last Archive Disclaimer banner working. Geez, I had hard calls to the old init.php for days!
