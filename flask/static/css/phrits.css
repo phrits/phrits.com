@@ -30,7 +30,6 @@ nav {
 }
 
 /* Messing around with neumorphism */
-
 .bg_frame,
 .bg_frame_header {
     background: #000033;
@@ -40,6 +39,16 @@ nav {
     box-shadow: 14.41px 14.41px 19px #000080, -14.41px -14.41px 19px #0000D4;
     box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
     box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.bg_frame_red {
+    background: linear-gradient(145deg, #780000, #540000);
+    box-shadow: 11.71px 11.71px 15px #5D0000, -11.71px -11.71px 15px #6F0000;
+    box-shadow: 11.71px 11.71px 15px #3A0000, -11.71px -11.71px 15px #920000;
+    border-radius: 20px;
 }
 
 .bg_frame_header,
@@ -48,7 +57,7 @@ nav {
     margin-top: 1em;
     box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
     margin-bottom: 1ex;
-    margin-right: 10px;
+    margin-right: 20px;
 
 }
 
@@ -69,7 +78,7 @@ nav {
 
     padding-left: 1ex;
     padding-right: 1ex;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 p,
 .bg_frame_p {
@@ -80,8 +89,7 @@ p,
     box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
     padding: 1em;
     border: 1px solid rgba( 221, 221, 221, 0.30 );
-    margin-right: 10px;
-    text-align: left;
+    margin-right: 20px;
 }
 
 .bg_frame_title,
@@ -91,6 +99,7 @@ p,
     background-image: linear-gradient(to right bottom, #00001a, #09081b, #10101c, #15151d, #1a1a1e, #23202c, #302439, #402744, #682150, #92064a, #b60033, #cc0000);    border-radius: 20px;
     background-image: linear-gradient(to right bottom,#00001a, #000034, #00000d, #030318, #06060e, #03030d, #07022d, #09090e, #060616, #0c0526, #0c0c0e, #090914, #0e0820, #0e0d12, #0c0c12, #110e15, #120f19, #0f0b19, #19121e, #191323, #150e17, #201322, #24172d, #1d0b19, #2d0310, #321a36, #250817, #331027, #480725, #330000, #5c1545, #660000, #5a0019, #b1002f, #cc0000, #890043);
     border-radius: 20px;
+    margin-right: 20px;
 }
 
 p.lead {
