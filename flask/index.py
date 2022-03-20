@@ -57,17 +57,17 @@ html_str = '''
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <p class="bg_frame_p">We worry about viruses such as <a href="http://www.foodborneillness.com/hepatitis_food_poisoning/">Hepatitis A</a> being transmitted from food handlers to eaters, but dangerous bacteria&mdash;pathogens&mdash;are the real bad guys, bringing all sorts of fun games to the party: <a href="http://www.cruisecritic.com/articles.cfm?ID=71">Norovirus</a>, <a href="http://en.wikipedia.org/wiki/Jack_in_the_Box#E._coli_disaster">E. coli</a>, <a href="http://en.wikipedia.org/wiki/Ciguatera">ciguatera</a>, <a href="http://www.about-salmonella.com/">salmonella</a>, and <a href="http://en.wikipedia.org/wiki/Bacillus_cereus"><span class="foreign">bacillus cereus</span></a> are just a few. What can you do? <a href="http://www.ehow.com/how_5137788_wash-hands-food-safety.html">Wash your hands.</a> Avoid <a href="http://www.essortment.com/all/crosscontamina_rubw.htm">cross-contamination</a>. And learn about FAT TOM.<span id="more-929"></span> FAT TOM is a mnemonic to help you remember the critical factors in allowing good food to become dangerous: <strong>F</strong>ood, <strong>A</strong>cidity, <strong>T</strong>emperature, <strong>T</strong>ime, <strong>O</strong>xygen, and <strong>M</strong>oisture.</p>
+      <p class="bg_frame_p">We worry about viruses such as <a href="http://www.foodborneillness.com/hepatitis_food_poisoning/">Hepatitis A</a> being transmitted from food handlers to eaters, but dangerous bacteria&mdash;pathogens&mdash;are the real bad guys, bringing all sorts of fun games to the party: <a href="http://www.cruisecritic.com/articles.cfm?ID=71">Norovirus</a>, <a href="http://en.wikipedia.org/wiki/Jack_in_the_Box#E._coli_disaster">E. coli</a>, <a href="http://en.wikipedia.org/wiki/Ciguatera">ciguatera</a>, <a href="http://www.about-salmonella.com/">salmonella</a>, and <a href="http://en.wikipedia.org/wiki/Bacillus_cereus"><span class="foreign">bacillus cereus</span></a> are just a few. What can you do? <a href="http://www.ehow.com/how_5137788_wash-hands-food-safety.html">Wash your hands.</a> Avoid <a href="http://www.essortment.com/all/crosscontamina_rubw.htm">cross-contamination</a>. And learn about FAT TOM. <span class="lead"><strong>FAT TOM</strong> is a mnemonic to help you remember the critical factors in allowing good food to become dangerous: <strong>F</strong>ood, <strong>A</strong>cidity, <strong>T</strong>emperature, <strong>T</strong>ime, <strong>O</strong>xygen, and <strong>M</strong>oisture.</span></p>
     </div>
     <div class="col bg_frame_red p-4">
-      <ul style="text-align: center; list-style-type: none; line-height: 2em;">
+      <ul style="list-style-type: none; line-height: 2em;">
         <h4 class="display-4 fw-bolder">FAT&nbsp;TOM</h4>
-        <li><span class="fw-bolder">F</span>ood</li>
-        <li><span class="fw-bolder">A</span>cidity</li>
-        <li><span class="fw-bolder">T</span>emperature</li>
-        <li><span class="fw-bolder">T</span>ime</li>
-        <li><span class="fw-bolder">O</span>xygen</li>
-        <li><span class="fw-bolder">M</span>oisture</li>
+        <li style="padding-left: 12%;"><span class="fw-bolder">F</span>ood</li>
+        <li style="padding-left: 12%;"><span class="fw-bolder">A</span>cidity</li>
+        <li style="padding-left: 12%;"><span class="fw-bolder">T</span>emperature</li>
+        <li style="padding-left: 12%;"><span class="fw-bolder">T</span>ime</li>
+        <li style="padding-left: 12%;"><span class="fw-bolder">O</span>xygen</li>
+        <li style="padding-left: 12%;"><span class="fw-bolder">M</span>oisture</li>
       </ul>
     </div>
   </div>
