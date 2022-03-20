@@ -1,22 +1,9 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css);
-html {
-  font-family: sans-serif;
-  background: #eee;
-  padding: 1rem;
-}
-
-body {
-  max-width: 960px;
-  margin: 0 auto;
-  background: white;
-}
-
-h1 {
-  font-family: serif;
-  color: #377ba8;
-  margin: 1rem 0;
-}
-
+/*
+html { font-family: sans-serif; background: #eee; padding: 1rem; }
+body { max-width: 960px; margin: 0 auto; background: white; }
+h1 { font-family: serif; color: #377ba8; margin: 1rem 0; }
+*/
 a {
   color: #377ba8;
 }
