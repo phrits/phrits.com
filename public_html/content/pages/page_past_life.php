@@ -1,5 +1,5 @@
 <?php
-require("/home/brobip/public_html/cgi-bin/init.php");
+require("/home/xxxredactedxxx/public_html/cgi-bin/init.php");
 
 doctype();
 ?>

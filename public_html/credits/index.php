@@ -1,3 +1,3 @@
 <?php
-include('/home/brobip/public_html/content/credits.php');
+include('/home/xxxredactedxxx/public_html/content/credits.php');
 ?>

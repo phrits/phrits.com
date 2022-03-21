@@ -1,3 +1,3 @@
 <?php
-    include("/home/brobip/public_html/recipes/pages/page_whipped_cream.php");
+    include("/home/xxxredactedxxx/public_html/recipes/pages/page_whipped_cream.php");
 ?>
