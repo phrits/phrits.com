@@ -62,6 +62,8 @@
 
 .innerband {
   padding-top: 20px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#000000ff), color-stop(#101010ff), color-stop(#202020ff), color-stop(#303030ff), color-stop(#404040ff), color-stop(#505050ff), color-stop(#606060ff), color-stop(#707070ff), color-stop(#808080ff), color-stop(#909090ff), color-stop(#a0a0a0ff), color-stop(#b0b0b0ff), color-stop(#c0c0c0ff), color-stop(#d0d0d0ff), color-stop(#e0e0e0ff), to(#f0f0f0ff));
+  background-image: linear-gradient(to right bottom, #000000ff, #101010ff, #202020ff, #303030ff, #404040ff, #505050ff, #606060ff, #707070ff, #808080ff, #909090ff, #a0a0a0ff, #b0b0b0ff, #c0c0c0ff, #d0d0d0ff, #e0e0e0ff, #f0f0f0ff);
 }
 
 .bg_frame_title,
@@ -103,6 +105,11 @@ p.lead {
 .bg_frame_title,
 .bg_frame_header {
   margin-right: 20px;
+}
+
+.cwysted {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00ff0fff), color-stop(#11ee1eee), color-stop(#22dd2ddd), color-stop(#44bb4bbb), color-stop(#55aa5aaa), color-stop(#66996999), color-stop(#33cc3ccc), color-stop(#99669666), color-stop(#aa55a555), color-stop(#dd22d222), color-stop(#77887888), color-stop(#88778777), color-stop(#ee11e111), color-stop(#ff00f000), color-stop(#bb44b444), to(#cc33c333));
+  background-image: linear-gradient(to right bottom, #00ff0fff, #11ee1eee, #22dd2ddd, #44bb4bbb, #55aa5aaa, #66996999, #33cc3ccc, #99669666, #aa55a555, #dd22d222, #77887888, #88778777, #ee11e111, #ff00f000, #bb44b444, #cc33c333);
 }
 
 /* box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F; */

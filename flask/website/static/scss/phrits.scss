@@ -60,6 +60,7 @@
 }
 .innerband /* deprecated */ {
     padding-top: 20px;
+    background-image: linear-gradient(to right bottom,#000000ff, #101010ff, #202020ff, #303030ff, #404040ff, #505050ff, #606060ff, #707070ff, #808080ff, #909090ff, #a0a0a0ff, #b0b0b0ff, #c0c0c0ff, #d0d0d0ff, #e0e0e0ff, #f0f0f0ff);
 }
 
 .bg_frame_title,
@@ -100,7 +101,11 @@ p.lead {
     margin-right: 20px;
 }
 
-
+.cwysted {
+    background-image: linear-gradient(to right bottom,
+    #00ff0fff, #11ee1eee, #22dd2ddd, #44bb4bbb, #55aa5aaa, #66996999, #33cc3ccc, #99669666, #aa55a555, #dd22d222, #77887888, #88778777, #ee11e111, #ff00f000, #bb44b444, #cc33c333
+    );
+}
 
 /* box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F; */
 /*
