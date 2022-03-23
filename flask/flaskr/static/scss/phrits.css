@@ -1,0 +1,99 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css);
+.phrits,
+.phrits_inverted {
+  font-family: "Courier New", Courier, monospace !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  border: 0 0 0 0 !important;
+  text-transform: lowercase !important;
+  color: #000000 !important;
+}
+
+.phrits {
+  color: #000000 !important;
+}
+
+.phrits_inverted {
+  color: #FFFFFF !important;
+}
+
+#board {
+  background: url("../images/board.png");
+  height: 32px;
+}
+
+/* Messing around with neumorphism */
+.content {
+  background: #00001A;
+}
+
+.bg_frame,
+.bg_frame_header {
+  background: #000033;
+  color: #DDDDDD;
+  border-radius: 20px;
+  margin-top: 1em;
+  margin-right: 20px;
+  margin-bottom: 1ex;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+          box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+}
+
+.bg_frame_red {
+  background: linear-gradient(145deg, #780000, #540000);
+  -webkit-box-shadow: 11.71px 11.71px 15px #3A0000, -11.71px -11.71px 15px #920000;
+          box-shadow: 11.71px 11.71px 15px #3A0000, -11.71px -11.71px 15px #920000;
+}
+
+.bg_frame_title {
+  text-align: center;
+  border-right: none;
+  border-bottom: none;
+  -webkit-box-shadow: 6px 6px 0px #000048, -6px -6px 0px #000084;
+          box-shadow: 6px 6px 0px #000048, -6px -6px 0px #000084;
+}
+
+.bg_frame_title,
+.bg_frame_header {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00001a), color-stop(#000034), color-stop(#00000d), color-stop(#030318), color-stop(#06060e), color-stop(#03030d), color-stop(#07022d), color-stop(#09090e), color-stop(#060616), color-stop(#0c0526), color-stop(#0c0c0e), color-stop(#090914), color-stop(#0e0820), color-stop(#0e0d12), color-stop(#0c0c12), color-stop(#110e15), color-stop(#120f19), color-stop(#0f0b19), color-stop(#19121e), color-stop(#191323), color-stop(#150e17), color-stop(#201322), color-stop(#24172d), color-stop(#1d0b19), color-stop(#2d0310), color-stop(#321a36), color-stop(#250817), color-stop(#331027), color-stop(#480725), color-stop(#330000), color-stop(#5c1545), color-stop(#660000), color-stop(#5a0019), color-stop(#b1002f), color-stop(#cc0000), to(#890043));
+  background-image: linear-gradient(to right bottom, #00001a, #000034, #00000d, #030318, #06060e, #03030d, #07022d, #09090e, #060616, #0c0526, #0c0c0e, #090914, #0e0820, #0e0d12, #0c0c12, #110e15, #120f19, #0f0b19, #19121e, #191323, #150e17, #201322, #24172d, #1d0b19, #2d0310, #321a36, #250817, #331027, #480725, #330000, #5c1545, #660000, #5a0019, #b1002f, #cc0000, #890043);
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.cwysted {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00001a), color-stop(#000034), color-stop(#00000d), color-stop(#030318), color-stop(#06060e), color-stop(#03030d), color-stop(#07022d), color-stop(#09090e), color-stop(#060616), color-stop(#0c0526), color-stop(#0c0c0e), color-stop(#090914), color-stop(#0e0820), color-stop(#0e0d12), color-stop(#0c0c12), color-stop(#110e15), color-stop(#120f19), color-stop(#0f0b19), color-stop(#19121e), color-stop(#191323), color-stop(#150e17), color-stop(#201322), color-stop(#24172d), color-stop(#1d0b19), color-stop(#2d0310), color-stop(#321a36), color-stop(#250817), color-stop(#331027), color-stop(#480725), color-stop(#330000), color-stop(#5c1545), color-stop(#660000), color-stop(#5a0019), color-stop(#b1002f), color-stop(#cc0000), to(#890043));
+  background-image: linear-gradient(to right bottom, #00001a, #000034, #00000d, #030318, #06060e, #03030d, #07022d, #09090e, #060616, #0c0526, #0c0c0e, #090914, #0e0820, #0e0d12, #0c0c12, #110e15, #120f19, #0f0b19, #19121e, #191323, #150e17, #201322, #24172d, #1d0b19, #2d0310, #321a36, #250817, #331027, #480725, #330000, #5c1545, #660000, #5a0019, #b1002f, #cc0000, #890043);
+}
+
+p,
+.bg_frame_p {
+  border: 1px solid rgba(221, 221, 221, 0.3);
+  padding: 1em;
+  -webkit-box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
+          box-shadow: 11.71px 11.71px 15px #000024, -11.71px -11.71px 15px #000048;
+}
+
+p.lead {
+  margin: 2em;
+  font-size: 125%;
+  -webkit-box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+          box-shadow: 11.71px 11.71px 15px #000048, -11.71px -11.71px 15px #000084;
+}
+
+/*
+.cwysted {
+    background-image: linear-gradient(to right bottom,
+    #00ff0fff, #11ee1eee, #22dd2ddd, #44bb4bbb, #55aa5aaa, #66996999, #33cc3ccc, #99669666, #aa55a555, #dd22d222, #77887888, #88778777, #ee11e111, #ff00f000, #bb44b444, #cc33c333
+    );
+}
+*/
+/* box-shadow: 14.41px 14.41px 19px #4D2727, -14.41px -14.41px 19px #7F3F3F; */
+/*
+background-image: linear-gradient(to right bottom, #00001a, #09081b, #10101c, #15151d, #1a1a1e, #23202c, #302439, #402744, #682150, #92064a, #b60033, #cc0000);
+background-image: linear-gradient(to right bottom, #402744, #38273f, #302638, #2a2532, #25232a, #27222c, #29212e, #2c1f2f, #3d1a32, #4f102b, #5e021d, #660000);
+*/
+/*# sourceMappingURL=phrits.css.map */

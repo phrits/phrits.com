@@ -1,24 +1,29 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='scss/style.css') }}">
-<nav>
-  <h1>Flaskr</h1>
-  <ul>
-    {% if g.user %}
-      <li><span>{{ g.user['username'] }}</span>
-      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
-    {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
-    {% endif %}
-  </ul>
-</nav>
-<section class="content">
-  <header>
-    {% block header %}{% endblock %}
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
-</section>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}{% endblock %} - phrits.com</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='scss/phrits.css') }}">
+  <link rel="shortcut icon" type="text/css" href="{{ url_for('static', filename='images/phrits-favicon.ico') }}" />
+</head>
+<body>
+  <div class="header">
+    <h1><span class="phrits">phrits.com</span></h1>
+  </div>
+  <div class="content">
+    <header>
+      {% block header %}{% endblock %}
+    </header>
+  <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+  <a href="#">
+    <footer id="board" class="mt-auto">
+      <!-- The board image tiles across the bottom. -->
+    </footer>
+  </a>
+</body>
