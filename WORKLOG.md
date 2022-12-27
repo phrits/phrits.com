@@ -1,5 +1,11 @@
 # WorkLog
 
+## 2022-12-27
+
+I saved a branch and nuked 'most everything here. I'm not going to be a web implementer; knowing how Django works is enough for my purposes. Time to find something I can just copy.
+
+I'd thought it was going to be Wix or one of the other builders, but that's not what I'm looking for. Between W3School's Bootstrap template and the shiny stuff at [html5up.net](http://html5up.net/), though, I think I can make a landing page that isn't trying too  hard.
+
 ## 2022-03-17/18
 
 Finally got the last Archive Disclaimer banner working. Geez, I had hard calls to the old init.php for days!

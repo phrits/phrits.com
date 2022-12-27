@@ -1,0 +1,68 @@
+/* My customizations, particularly for the font format stuff on my name. */
+
+.phrits {
+    font-family:            "Courier New", Courier, monotype !important;
+    font-size:              105%;
+    font-weight:            bold;
+    color:                  #000000 !important;
+    text-decoration:        none !important;
+    border:                 0 0 0 0 !important;
+}
+
+.foreign {
+    font-style:             italic;
+}
+
+.dietary {
+    font-variant:           small-caps;
+    font-weight:            bold;
+}
+
+/* Page */
+#above_board        {
+    min-height:             100%;
+    margin: 0 auto;
+}
+#board          {
+    height:                 32px;
+    width:                  100%;
+    margin-top:             -32px;  /* negative margin-top equals height of #board */
+    background:             url("/images/board.png");
+    /* board image: http://farm4.static.flickr.com/3254/2779025080_c38653e1a5.jpg */
+}
+
+.noscreen {
+    display: none !important;
+}
+
+
+@media print {
+    html,
+    body {
+        font-family:            Times, "Times New Roman", serif;
+        background:             #FFFFFF;
+        color:                  #000000;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .noprint {
+        display: none !important;
+    }
+
+    #top_menu,
+    #board,
+    .colorband {
+        display: none !important;
+    }
+    #content_pad {
+        padding-top:            0;  /* Reset #board adjustment. */
+    }
+
+    #footer {
+        margin-bottom:          0;  /* Reset #board adjustment. */
+    }
+
+}
