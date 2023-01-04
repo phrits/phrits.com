@@ -18,3 +18,31 @@
     background-repeat:		repeat-x;
     height:		 			100px;
 }
+span.dietary {
+/* Not working yet.     */
+    font-variant:           small-caps !important;
+    font-weight:            bold !important;
+}
+p.wrapper {
+    padding: 1em;
+}
+
+ul.recipe {
+    /* display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex; */
+    cursor: default;
+    list-style: none;
+    /* margin-left: -1em; */
+    padding: 1em;
+}
+
+ul.recipe li {
+    margin: 1ex;
+    list-style: none;
+}
+div.recipe {
+    margin:        2em 1em 0 1em;
+    padding:       1ex 1em 1em 1em;
+}
