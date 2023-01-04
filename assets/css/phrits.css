@@ -28,13 +28,12 @@ p.wrapper {
 }
 
 ul.recipe {
-    /* display: -moz-flex;
+    display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
-    display: flex; */
+    display: flex;
     cursor: default;
     list-style: none;
-    /* margin-left: -1em; */
     padding: 1em;
 }
 
@@ -46,3 +45,21 @@ div.recipe {
     margin:        2em 1em 0 1em;
     padding:       1ex 1em 1em 1em;
 }
+
+ul.welcome {
+    list-style: none;
+}
+
+    ul.welcome > li {
+        margin:         3em 0 3em 3em;
+    }
+        ul.welcome > li > h3 {
+            text-align:     left;
+        }
+        ul.welcome > li > p {
+            text-align:     left;
+        }
+
+        ul.welcome > li:first-child {
+            margin-top: -2em;
+        }
