@@ -4,6 +4,7 @@
 .API_TOKENS
 CONFIG/
 ftp-kr.json 
+ftp-sync.json
 
 # **************************************************************
 # GitHub Template .gitignore
