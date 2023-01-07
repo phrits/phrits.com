@@ -19,9 +19,9 @@
     height:		 			100px;
 }
 span.dietary {
-/* Not working yet.     */
     font-variant:           small-caps !important;
     font-weight:            bold !important;
+    color:                  #FFFFFF;
 }
 p.wrapper {
     padding: 1em;
@@ -61,5 +61,10 @@ ul.welcome {
         }
 
         ul.welcome > li:first-child {
-            margin-top: -2em;
+            margin-top: -1em;
         }
+
+#footer p {
+    margin: 1em 2em 1em 1em;
+}
+
