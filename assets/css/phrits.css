@@ -27,27 +27,23 @@ p.wrapper {
     padding: 1em;
 }
 
-ul.recipe {
+.recipe.ul {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     cursor: default;
-    list-style: none;
-    padding: 1em;
 }
 
-ul.recipe li {
-    margin: 1ex;
-    list-style: none;
-}
+
 div.recipe {
-    margin:        2em 1em 0 1em;
-    padding:       1ex 1em 1em 1em;
+    margin:        1em;
+    padding:       1em;
 }
 
+li.welcome,
 ul.welcome {
-    list-style: none;
+    list-style: none !important;
 }
 
     ul.welcome > li {
@@ -65,6 +61,24 @@ ul.welcome {
         }
 
 #footer p {
-    margin: 1em 2em 1em 1em;
+    margin: 2em 2em 1em 1em;
 }
 
+.ingredient {
+    list-style-type: none;
+    text-indent: -1.5em;
+  }
+  
+li.ingredient::before {
+    display: inline-block;
+    width: 2em;
+  }
+
+.emph {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+hr.recipe {
+    margin: 0;
+}

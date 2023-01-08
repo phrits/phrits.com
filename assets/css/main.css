@@ -1,14 +1,7 @@
 @import url(fontawesome-all.min.css);
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-/* I made changes to the original. If you base your stuff on this version, remember to
-   include my CC license, too. Chances are, you're not allowed to make money off this
-   version without my permission.
+/* I made changes to the original. If you base anything on this version, remember to
+   include my CC license, too.
 */
 
 html, body, div, span, applet, object,
@@ -121,7 +114,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
+		color: rgba(255, 255, 255, 0.65);
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -3054,7 +3047,7 @@ input, select, textarea {
 			-ms-justify-content: center;
 			justify-content: center;
 			width: 50em;
-			-ms-flex: 1;
+			/* -ms-flex: 1; */
 		}
 
 			.spotlights > section > .content > .inner {
