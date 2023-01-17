@@ -82,3 +82,43 @@ li.ingredient::before {
 hr.recipe {
     margin: 0;
 }
+
+img.credits,
+img.writing {
+    max-height: 128px;
+    max-width: 128px;
+}
+
+
+.features section .writing,
+.features section .credits {
+    -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
+    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    -moz-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+    -ms-transition-delay: 1s;
+    transition-delay: 1s;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+h1.credits, h1.writing,
+h2.credits, h2.writing,
+h3.credits, h3.writing,
+h4.credits, h4.writing,
+h5.credits, h5.writing,
+h6.credits, h6.writing,
+            p.writing {
+    margin-left: 3%;
+}
+
+aside.r {
+    float:                  right;
+    margin-left:            1ex;
+    border: 2ex #FFFFFF !important;
+}

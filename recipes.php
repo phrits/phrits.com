@@ -8,24 +8,14 @@
 	</head>
 
 	<body class="is-preload">
-		<!-- Header -->
-		<header id="header">
-			<a href="/" class="title phrits-invert">phrits.com</a>
-			<nav>
-				<ul>
-					<li><a href="/">Welcome</a></li>
-					<li><a href="/index.php#itProfessional">IT Professional</a></li>
-					<li><a href="/index.php#foodGeek" class="active">Food Geek</a></li>
-					<li><a href="/index.php#miscellany">Miscellany</a></li>
-				</ul>
-			</nav>
-		</header>
+	<?php include 'recipes_header.html'; ?>
 
+	
 		<!-- Wrapper -->
 		<div id="wrapper">
 				<!-- Main -->
 			<section id="main" class="wrapper">
-				<h1 class="major">Recipes</h1>
+				<h1 class="major credits">Recipes</h1>
 				<span class="image fit"><img src="/images/board_and_knife.jpg" /></span>
 
 				<!-- Blue Cheese Dip-->

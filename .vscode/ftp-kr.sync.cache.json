@@ -1,6 +1,12 @@
 {
   "ftp://brobip@ftp.phrits.com:21": {
     "sandbox": {
+      ".gitignore": {
+        "type": "-",
+        "size": 2527,
+        "lmtime": 1673901026000,
+        "modified": false
+      },
       ".htaccess": {
         "type": "-",
         "size": 24,
@@ -9,31 +15,402 @@
       },
       "assets": {
         "css": {
-          "images": {},
+          "images": {
+            "intro.svg": {
+              "type": "-",
+              "size": 862,
+              "lmtime": 1673911820000,
+              "modified": false
+            }
+          },
           "main.css": {
             "type": "-",
-            "size": 69454,
-            "lmtime": 1673184126000,
+            "size": 73362,
+            "lmtime": 1673911820000,
+            "modified": false
+          },
+          "main.css.php": {
+            "type": "-",
+            "size": 73362,
+            "lmtime": 1673911820000,
             "modified": false
           },
           "noscript.css": {
             "type": "-",
-            "size": 895,
-            "lmtime": 0,
+            "size": 937,
+            "lmtime": 1673911820000,
             "modified": false
           },
           "phrits.css": {
             "type": "-",
-            "size": 1630,
-            "lmtime": 1673201002000,
+            "size": 2397,
+            "lmtime": 1673911206000,
+            "modified": false
+          }
+        },
+        "js": {
+          "breakpoints.min.js": {
+            "type": "-",
+            "size": 2440,
+            "lmtime": 1673911822000,
+            "modified": false
+          },
+          "browser.min.js": {
+            "type": "-",
+            "size": 2052,
+            "lmtime": 1673911822000,
+            "modified": false
+          },
+          "jquery.min.js": {
+            "type": "-",
+            "size": 89503,
+            "lmtime": 1673911822000,
+            "modified": false
+          },
+          "jquery.scrollex.min.js": {
+            "type": "-",
+            "size": 2257,
+            "lmtime": 1673911822000,
+            "modified": false
+          },
+          "jquery.scrolly.min.js": {
+            "type": "-",
+            "size": 831,
+            "lmtime": 1673911822000,
+            "modified": false
+          },
+          "main.js": {
+            "type": "-",
+            "size": 4061,
+            "lmtime": 1673911822000,
+            "modified": false
+          },
+          "util.js": {
+            "type": "-",
+            "size": 12433,
+            "lmtime": 1673911822000,
+            "modified": false
+          }
+        },
+        "sass": {
+          "base": {
+            "_page.scss": {
+              "type": "-",
+              "size": 988,
+              "lmtime": 1673911812000,
+              "modified": false
+            },
+            "_reset.scss": {
+              "type": "-",
+              "size": 1570,
+              "lmtime": 1673911812000,
+              "modified": false
+            },
+            "_typography.scss": {
+              "type": "-",
+              "size": 3436,
+              "lmtime": 1673911812000,
+              "modified": false
+            }
+          },
+          "components": {
+            "_actions.scss": {
+              "type": "-",
+              "size": 1789,
+              "lmtime": 1673911820000,
+              "modified": false
+            },
+            "_box.scss": {
+              "type": "-",
+              "size": 532,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_button.scss": {
+              "type": "-",
+              "size": 2084,
+              "lmtime": 1673911820000,
+              "modified": false
+            },
+            "_contact.scss": {
+              "type": "-",
+              "size": 312,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_features.scss": {
+              "type": "-",
+              "size": 2001,
+              "lmtime": 1673911816000,
+              "modified": false
+            },
+            "_form.scss": {
+              "type": "-",
+              "size": 5208,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_icon.scss": {
+              "type": "-",
+              "size": 1210,
+              "lmtime": 1673911816000,
+              "modified": false
+            },
+            "_icons.scss": {
+              "type": "-",
+              "size": 423,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_image.scss": {
+              "type": "-",
+              "size": 886,
+              "lmtime": 1673911816000,
+              "modified": false
+            },
+            "_list.scss": {
+              "type": "-",
+              "size": 909,
+              "lmtime": 1673911816000,
+              "modified": false
+            },
+            "_menu.scss": {
+              "type": "-",
+              "size": 609,
+              "lmtime": 1673911816000,
+              "modified": false
+            },
+            "_row.scss": {
+              "type": "-",
+              "size": 631,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_section.scss": {
+              "type": "-",
+              "size": 744,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_split.scss": {
+              "type": "-",
+              "size": 1490,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_spotlights.scss": {
+              "type": "-",
+              "size": 2473,
+              "lmtime": 1673911816000,
+              "modified": false
+            },
+            "_table.scss": {
+              "type": "-",
+              "size": 1398,
+              "lmtime": 1673911818000,
+              "modified": false
+            },
+            "_wrapper.scss": {
+              "type": "-",
+              "size": 2409,
+              "lmtime": 1673911818000,
+              "modified": false
+            }
+          },
+          "layout": {
+            "_footer.scss": {
+              "type": "-",
+              "size": 618,
+              "lmtime": 1673911814000,
+              "modified": false
+            },
+            "_header.scss": {
+              "type": "-",
+              "size": 1592,
+              "lmtime": 1673911812000,
+              "modified": false
+            },
+            "_intro.scss": {
+              "type": "-",
+              "size": 627,
+              "lmtime": 1673911812000,
+              "modified": false
+            },
+            "_sidebar.scss": {
+              "type": "-",
+              "size": 3771,
+              "lmtime": 1673911812000,
+              "modified": false
+            },
+            "_wrapper.scss": {
+              "type": "-",
+              "size": 522,
+              "lmtime": 1673911812000,
+              "modified": false
+            }
+          },
+          "libs": {
+            "_breakpoints.scss": {
+              "type": "-",
+              "size": 4577,
+              "lmtime": 1673911814000,
+              "modified": false
+            },
+            "_functions.scss": {
+              "type": "-",
+              "size": 1957,
+              "lmtime": 1673911814000,
+              "modified": false
+            },
+            "_html-grid.scss": {
+              "type": "-",
+              "size": 2840,
+              "lmtime": 1673911814000,
+              "modified": false
+            },
+            "_mixins.scss": {
+              "type": "-",
+              "size": 2218,
+              "lmtime": 1673911814000,
+              "modified": false
+            },
+            "_vars.scss": {
+              "type": "-",
+              "size": 1040,
+              "lmtime": 1673911814000,
+              "modified": false
+            },
+            "_vendor.scss": {
+              "type": "-",
+              "size": 7355,
+              "lmtime": 1673911814000,
+              "modified": false
+            }
+          },
+          "main.scss": {
+            "type": "-",
+            "size": 1367,
+            "lmtime": 1673911812000,
+            "modified": false
+          },
+          "noscript.scss": {
+            "type": "-",
+            "size": 916,
+            "lmtime": 1673911810000,
+            "modified": false
+          }
+        },
+        "webfonts": {
+          "fa-brands-400.eot": {
+            "type": "-",
+            "size": 134294,
+            "lmtime": 1673911824000,
+            "modified": false
+          },
+          "fa-brands-400.svg": {
+            "type": "-",
+            "size": 751644,
+            "lmtime": 1673911830000,
+            "modified": false
+          },
+          "fa-brands-400.ttf": {
+            "type": "-",
+            "size": 133988,
+            "lmtime": 1673911828000,
+            "modified": false
+          },
+          "fa-brands-400.woff": {
+            "type": "-",
+            "size": 89988,
+            "lmtime": 1673911824000,
+            "modified": false
+          },
+          "fa-brands-400.woff2": {
+            "type": "-",
+            "size": 76736,
+            "lmtime": 1673911826000,
+            "modified": false
+          },
+          "fa-regular-400.eot": {
+            "type": "-",
+            "size": 34034,
+            "lmtime": 1673911826000,
+            "modified": false
+          },
+          "fa-regular-400.svg": {
+            "type": "-",
+            "size": 145515,
+            "lmtime": 1673911824000,
+            "modified": false
+          },
+          "fa-regular-400.ttf": {
+            "type": "-",
+            "size": 33736,
+            "lmtime": 1673911824000,
+            "modified": false
+          },
+          "fa-regular-400.woff": {
+            "type": "-",
+            "size": 16276,
+            "lmtime": 1673911826000,
+            "modified": false
+          },
+          "fa-regular-400.woff2": {
+            "type": "-",
+            "size": 13224,
+            "lmtime": 1673911826000,
+            "modified": false
+          },
+          "fa-solid-900.eot": {
+            "type": "-",
+            "size": 203030,
+            "lmtime": 1673911828000,
+            "modified": false
+          },
+          "fa-solid-900.svg": {
+            "type": "-",
+            "size": 924025,
+            "lmtime": 1673911830000,
+            "modified": false
+          },
+          "fa-solid-900.ttf": {
+            "type": "-",
+            "size": 202744,
+            "lmtime": 1673911828000,
+            "modified": false
+          },
+          "fa-solid-900.woff": {
+            "type": "-",
+            "size": 101648,
+            "lmtime": 1673911826000,
+            "modified": false
+          },
+          "fa-solid-900.woff2": {
+            "type": "-",
+            "size": 78268,
+            "lmtime": 1673911826000,
             "modified": false
           }
         }
       },
+      "credits": {
+        "error_log": {
+          "type": "-",
+          "size": 11015,
+          "lmtime": 1673911830000,
+          "modified": false
+        },
+        "index.php": {
+          "type": "-",
+          "size": 39,
+          "lmtime": 1673911830000,
+          "modified": false
+        }
+      },
       "credits.php": {
         "type": "-",
-        "size": 2606,
-        "lmtime": 1673191432000,
+        "size": 5940,
+        "lmtime": 1673911130000,
         "modified": false
       },
       "elements.html": {
@@ -42,10 +419,38 @@
         "lmtime": 1646598096000,
         "modified": false
       },
+      "fat_tom": {
+        "index.php": {
+          "type": "-",
+          "size": 46,
+          "lmtime": 1673911832000,
+          "modified": false
+        }
+      },
+      "food_resources": {
+        "index.php": {
+          "type": "-",
+          "size": 46,
+          "lmtime": 1673911832000,
+          "modified": false
+        }
+      },
+      "food_resources.php": {
+        "type": "-",
+        "size": 1011,
+        "lmtime": 1673902458000,
+        "modified": false
+      },
+      "food_resources_header.html": {
+        "type": "-",
+        "size": 625,
+        "lmtime": 1673901622000,
+        "modified": false
+      },
       "footer.html": {
         "type": "-",
-        "size": 1196,
-        "lmtime": 1673192170000,
+        "size": 1204,
+        "lmtime": 1673902566000,
         "modified": false
       },
       "generic.html": {
@@ -57,7 +462,13 @@
       "head.html": {
         "type": "-",
         "size": 749,
-        "lmtime": 1673138176000,
+        "lmtime": 1673205148000,
+        "modified": false
+      },
+      "header.html": {
+        "type": "-",
+        "size": 390,
+        "lmtime": 1673902750000,
         "modified": false
       },
       "hyperspace_index.html": {
@@ -87,8 +498,8 @@
         },
         "board_and_knife.jpg": {
           "type": "-",
-          "size": 215527,
-          "lmtime": 0,
+          "size": 309741,
+          "lmtime": 1673204706000,
           "modified": false
         },
         "by-nc-sa.jpg": {
@@ -117,8 +528,8 @@
         },
         "ink.jpg": {
           "type": "-",
-          "size": 1363441,
-          "lmtime": 1672790696000,
+          "size": 94019,
+          "lmtime": 1673902330000,
           "modified": false
         },
         "phrits-favicon.ico": {
@@ -186,6 +597,12 @@
           "size": 17570,
           "lmtime": 1672774908000,
           "modified": false
+        },
+        "spice_jars.jpg": {
+          "type": "-",
+          "size": 131720,
+          "lmtime": 1673902362000,
+          "modified": false
         }
       },
       "index.php": {
@@ -196,10 +613,11 @@
       },
       "main.html": {
         "type": "-",
-        "size": 6129,
-        "lmtime": 1673137194000,
+        "size": 6190,
+        "lmtime": 1673911422000,
         "modified": false
       },
+      "other_resources": {},
       "recipes": {
         "avocado_salad": {
           "index.php": {
@@ -225,8 +643,8 @@
         },
         "barbecue_sauce.php": {
           "type": "-",
-          "size": 1930,
-          "lmtime": 1673199842000,
+          "size": 1598,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "blue_cheese_dip": {
@@ -245,8 +663,8 @@
         },
         "blue_cheese_dip.php": {
           "type": "-",
-          "size": 2060,
-          "lmtime": 1673194102000,
+          "size": 1713,
+          "lmtime": 1673204754000,
           "modified": false
         },
         "charleston_grits": {
@@ -259,8 +677,8 @@
         },
         "charleston_grits.php": {
           "type": "-",
-          "size": 2192,
-          "lmtime": 1673199842000,
+          "size": 1860,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "country_ham": {
@@ -273,8 +691,8 @@
         },
         "country_ham.php": {
           "type": "-",
-          "size": 7076,
-          "lmtime": 1673199842000,
+          "size": 6744,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "crazy_cake": {
@@ -287,8 +705,8 @@
         },
         "crazy_cake.php": {
           "type": "-",
-          "size": 2370,
-          "lmtime": 1673199842000,
+          "size": 2038,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "eggs_in_bologna_cups": {
@@ -301,8 +719,8 @@
         },
         "eggs_in_bologna_cups.php": {
           "type": "-",
-          "size": 2982,
-          "lmtime": 1673200126000,
+          "size": 2650,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "error_log": {
@@ -321,8 +739,8 @@
         },
         "flour_tortillas.php": {
           "type": "-",
-          "size": 2594,
-          "lmtime": 1673199880000,
+          "size": 2262,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "french_fried_onions": {
@@ -335,8 +753,8 @@
         },
         "french_fried_onions.php": {
           "type": "-",
-          "size": 6122,
-          "lmtime": 1673200338000,
+          "size": 5790,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "german_red_cabbage": {
@@ -349,8 +767,8 @@
         },
         "german_red_cabbage.php": {
           "type": "-",
-          "size": 2889,
-          "lmtime": 1673199842000,
+          "size": 2557,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "gizzards": {
@@ -391,8 +809,8 @@
         },
         "guacamole.php": {
           "type": "-",
-          "size": 2681,
-          "lmtime": 1673200464000,
+          "size": 2349,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "index.php": {
@@ -411,8 +829,8 @@
         },
         "london_broil.php": {
           "type": "-",
-          "size": 4132,
-          "lmtime": 1673199842000,
+          "size": 3800,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "microwave_lunch": {
@@ -425,8 +843,8 @@
         },
         "microwave_lunch.php": {
           "type": "-",
-          "size": 5157,
-          "lmtime": 1673199842000,
+          "size": 4825,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "pernil": {
@@ -439,8 +857,8 @@
         },
         "pernil.php": {
           "type": "-",
-          "size": 3759,
-          "lmtime": 1673199842000,
+          "size": 3427,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "popcorn": {
@@ -453,8 +871,8 @@
         },
         "popcorn.php": {
           "type": "-",
-          "size": 5982,
-          "lmtime": 1673201108000,
+          "size": 5650,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "pumpkin_mini_muffins": {
@@ -467,8 +885,8 @@
         },
         "pumpkin_mini_muffins.php": {
           "type": "-",
-          "size": 3779,
-          "lmtime": 1673199842000,
+          "size": 3447,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "quickle": {
@@ -481,8 +899,8 @@
         },
         "quickle.php": {
           "type": "-",
-          "size": 3035,
-          "lmtime": 1673201282000,
+          "size": 2703,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "quickle_variations": {
@@ -495,8 +913,8 @@
         },
         "quickle_variations.php": {
           "type": "-",
-          "size": 11443,
-          "lmtime": 1673201252000,
+          "size": 11111,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "restaurant_style_salsa": {
@@ -509,8 +927,8 @@
         },
         "restaurant_style_salsa.php": {
           "type": "-",
-          "size": 3680,
-          "lmtime": 1673199842000,
+          "size": 3348,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "savory_butternut_soup": {
@@ -523,8 +941,8 @@
         },
         "savory_butternut_soup.php": {
           "type": "-",
-          "size": 7685,
-          "lmtime": 1673199842000,
+          "size": 7353,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "stuffed_shells": {
@@ -537,8 +955,8 @@
         },
         "stuffed_shells.php": {
           "type": "-",
-          "size": 4724,
-          "lmtime": 1673199842000,
+          "size": 4392,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "sugarplums": {
@@ -551,8 +969,8 @@
         },
         "sugarplums.php": {
           "type": "-",
-          "size": 5703,
-          "lmtime": 1673199842000,
+          "size": 5371,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "tomato_sauce": {
@@ -565,8 +983,8 @@
         },
         "tomato_sauce.php": {
           "type": "-",
-          "size": 2682,
-          "lmtime": 1673199842000,
+          "size": 2350,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "turkey_gizzards": {
@@ -579,8 +997,8 @@
         },
         "turkey_gizzards.php": {
           "type": "-",
-          "size": 3962,
-          "lmtime": 1673199842000,
+          "size": 3630,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "wassail": {
@@ -593,8 +1011,8 @@
         },
         "wassail.php": {
           "type": "-",
-          "size": 2897,
-          "lmtime": 1673201654000,
+          "size": 2565,
+          "lmtime": 1673204498000,
           "modified": false
         },
         "whipped_cream": {
@@ -607,15 +1025,21 @@
         },
         "whipped_cream.php": {
           "type": "-",
-          "size": 5510,
-          "lmtime": 1673201780000,
+          "size": 5178,
+          "lmtime": 1673204498000,
           "modified": false
         }
       },
       "recipes.php": {
         "type": "-",
-        "size": 10933,
-        "lmtime": 1673194140000,
+        "size": 10583,
+        "lmtime": 1673911370000,
+        "modified": false
+      },
+      "recipes_header.html": {
+        "type": "-",
+        "size": 625,
+        "lmtime": 1673911764000,
         "modified": false
       },
       "scripts.html": {
@@ -624,16 +1048,10 @@
         "lmtime": 1673137202000,
         "modified": false
       },
-      "template.html": {
-        "type": "-",
-        "size": 1653,
-        "lmtime": 1673137502000,
-        "modified": false
-      },
       "template.php": {
         "type": "-",
-        "size": 1656,
-        "lmtime": 1673191414000,
+        "size": 1302,
+        "lmtime": 1673903224000,
         "modified": false
       }
     }

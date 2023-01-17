@@ -5,6 +5,8 @@
 CONFIG/
 ftp-kr.json 
 ftp-sync.json
+*copy*
+*New*
 
 # **************************************************************
 # GitHub Template .gitignore

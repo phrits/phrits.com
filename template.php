@@ -3,24 +3,12 @@
 	<head>
 		<title>phrits.com &ndash; Recipes</title>
 
-<?php include '/head.html'; ?>
+<?php include 'head.html'; ?>
 
 	</head>
 
 	<body class="is-preload">
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="title phrits-invert">phrits.com</a>
-			<nav>
-				<ul>
-					<li><a href="/">Welcome</a></li>
-					<li><a href="#itProfessional">IT Professional</a></li>
-					<li><a href="#foodGeek" class="active">Food Geek</a></li>
-					<li><a href="#miscellany">Miscellany</a></li>
-				</ul>
-			</nav>
-		</header>
-
+<?php include 'header.html'; ?>
 		<!-- Wrapper -->
 		<div id="wrapper">
 				<!-- Main -->
@@ -45,9 +33,9 @@
 			</section>
 	</div> <!-- wrapper -->
 
-<?php include '/footer.html'; ?>
+<?php include 'footer.html'; ?>
 
-<?php include '/scripts.html'; ?>
+<?php include 'scripts.html'; ?>
 
 	</body>
 </html>
