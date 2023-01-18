@@ -1,1 +1,1 @@
-<?php include 'turkey_gizzards.php'; ?>
+<?php include 'turkey_gizzards.php'; ?>

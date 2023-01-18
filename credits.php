@@ -38,7 +38,6 @@
 			</div>
 
 			<h2 class="credits" id="images">Images</h2>
-
 			<div class="features">
 
 				<!-- apple_tree -->
@@ -89,6 +88,18 @@
 					</div> <!-- class="row" -->
 				</section>
 
+				<!-- Books -->
+				<section>
+					<div class="row">
+						<div class="col-5-small">
+							<a class="credits" href="/food_books/" alt="books"><img class="credits left" src="/images/books.jpg" /></a>
+						</div>
+						<div class="col-7">
+							Books at the top of <a href="/food_books/">Good Books about Food</a>. <a href="https://www.flickr.com/photos/shutterhacks/4474421855">Photo</a> by user <a href="https://www.flickr.com/photos/shutterhacks/">Christopher</a> on <a href="https://flickr.com/">flickr</a>. License: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
+						</div>
+					</div> <!-- class="row" -->
+				</section>
+
 				<!-- cooking fire -->
 				<section>
 					<div class="row">
@@ -96,7 +107,7 @@
 							<a class="credits" href="/glossary/" alt="roasting meat"><img class="credits left" src="/images/roasting_meat.jpg" /></a>
 						</div>
 						<div class="col-7">
-							Meat roasting on a fire at the top of <a href="/glossary/">Food and Cooking Terms</a>. <a href="https://commons.wikimedia.org/wiki/File:Roasting_meat_at_Hampton_Court_Palace.JPG">Chiswick Chap</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons.
+							Meat roasting on a fire at the top of <a href="/glossary/">Food and Cooking Terms</a>. <a href="https://commons.wikimedia.org/wiki/File:Roasting_meat_at_Hampton_Court_Palace.JPG">Photo</a> licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.
 						</div>
 					</div> <!-- class="row" -->
 				</section>
@@ -149,6 +160,18 @@
 					</div> <!-- class="row" -->
 				</section>
 
+				<!-- north carolina seal -->
+				<section>
+					<div class="row">
+						<div class="col-5-small">
+							<a class="credits" href="/notary/" alt="NC Seal"><img class="credits left" src="/images/nc_seal.jpg" title="Esse quam videri." /></a>
+						</div>
+						<div class="col-7">
+							Seal of the State of North Carolina for the <a href="/notary/">Notary Public</a> page. <a href="https://www.flickr.com/photos/internetarchivebookimages/14581078429/">Photo</a> by <a href="https://www.flickr.com/photos/internetarchivebookimages/">user "Internet Archive Book Images"</a> on <a href="https://flickr.com">flickr</a>. Licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA 2.0</a>.
+						</div>
+					</div> <!-- class="row" -->
+				</section>
+				
 				<!-- open road -->
 				<section>
 					<div class="row">
@@ -184,6 +207,19 @@
 						</div>
 					</div> <!-- class="row" -->
 				</section>
+
+				<!-- Renaissance Man -->
+				<section>
+					<div class="row">
+						<div class="col-5-small">
+							<a class="credits" href="/interests/" alt="Renaissance Man"><img class="credits left" src="/images/renaissance_man.jpg" /></a>
+						</div>
+						<div class="col-7">
+							"A 'Renaissance man' gestures coolly at all the knowledge tha Wellcome" at the top of the <a href="/glossary/">Interests</a> page. <a href="https://commons.wikimedia.org/wiki/File:A_%27Renaissance_man%27_gestures_coolly_at_all_the_knowledge_tha_Wellcome_V0011954.jpg">Photo</a> licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.
+						</div>
+					</div> <!-- class="row" -->
+				</section>
+
 				
 				<!-- salmonella -->
 				<section>
@@ -221,6 +257,31 @@
 					</div> <!-- class="row" -->
 				</section>
 
+				<!-- tattoos -->
+				<section>
+					<div class="row">
+					<div class="col-5-small">
+							<a class="credits" href="/interests/#tattoos" alt="mise en place"><img class="credits left" src="/images/mise_tattoo.jpg" /></a>
+						</div>
+						<div class="col-7">
+							<p>
+								Photo by Jeff Willhelm for the Charlotte Observer when they did the <a href="https://www.charlotteobserver.com/news/local/article9090509.html">Starting Over</a> story about me in August,&nbsp;2013. (That linked story seems to have no photos.) The image is resized from a copy provided to me by the artist.
+							</p>
+						</div>
+					</div> <!-- class="row" -->
+					<hr />
+					<div class="row">
+						<div class="col-6-small">
+							<a class="credits" href="/interests/#tattoos" alt="phrits grafitti"><img class="credits left" src="/images/phrits_tattoo.jpg" /></a>
+							<a class="credits" href="/interests/#tattoos" alt="abelian grape"><img class="credits left" src="/images/grape.jpg" /></a>
+							<a class="credits" href="/interests/#tattoos" alt="placeholder"><img class="credits left" src="/images/grape.jpg" /></a>
+						</div>
+						<div class="col-6">
+							<p>Photography by <a href="https://www.instagram.com/ajonestattoo/">Alex Jones</a>, the tattoo artist. Used with verbal permission.</p>
+						</div>
+					</div> <!-- class="row" -->
+				</section>
+
 				<!-- writing hand -->
 				<section>
 					<div class="row">
@@ -234,6 +295,25 @@
 				</section>
 				
 			</div> <!-- id="images" class="features" -->
+
+		<h2 class="credits" id="old_phrits">2011 version of <span class="phrits-invert">phrits.com</span></h2>
+		<div class="features">
+			<section>
+				<span class="icon solid major"><img src="/images/phrits-favicon.ico" alt="p" /></span>
+					<p>
+						At launch (early 2023, with a little luck), almost all original content came from the old site. Recipes, writing, etc.
+					</p>
+					<p>
+						I've had a few false starts trying to relaunch. The version I put up over a decade ago was a home grown content management system written in PHP. Except that I didn't code an interface into it. Adding new content was obnoxious.
+					</p>
+					<p>
+						When I started my March 2022 attempt, I copied everything over to a separate subdomain and tweaked it until it worked. Alas, the site was implemented in PHP v5.6&mdash;current when it was developed&mdash;and PHP is up to v8.1 now. The old site is there, but program execution fails. The effort involved in updating that code just isn't worth the result. Please <a href="mailto:missingOld@phrits.com">let me know</a> if you're missing something.
+					</p>
+			</section>
+		</div> <!-- class="features" -->
+
+
+
 		</div> <!-- wrapper -->
 
 <?php include 'footer.html'; ?>

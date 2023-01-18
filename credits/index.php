@@ -1,3 +1,3 @@
-<?php
-include('../credits.php');
+<?php
+include('../credits.php');
 ?>

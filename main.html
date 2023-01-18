@@ -8,58 +8,43 @@
 </head>
 
     <body class="is-preload">
-
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#Welcome">Welcome</a></li>
-							<li><a href="#itProfessional">IT Professional</a></li>
-							<li><a href="#foodGeek">Food Geek</a></li>
-							<li><a href="#miscellany">Miscellany</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-
+	<?php include 'main_header.html'; ?>
+	
+	
 		<!-- Wrapper -->
 		<div id="wrapper">
 
 			<!-- Welcome -->
-			<section id="Welcome" class="wrapper style1 fullscreen fade-up">
-				<section class="inner">
-					<h1><span class="phrits-invert">phrits.com</span></h1>
-				</section>
+			<section id="welcome" class="wrapper style1 fullscreen fade-up">
 				<div class="inner">
-					<p>
-						<a href="#" class="image left">
-							<img src="/images/profile.jpg" alt="phrits" title="phrits"  style="min-width: 33%; margin-right: 2em;"/></a>
-					</p>
-					<ul class="welcome">
-						<li>
-							<h3><a href="#itProfessional">Information Technology Professional</a></h3>
-							<p>If it has anything to do with automated business workflow, I've done it.</p>
-						</li>
-						<li>
-							<h3><a href="#foodGeek">Cook</a></h3>
-							<p>I've been a home cook forever. I've read everything from Rombauer to McGee. I dropped out of the IT workforce to go pro for about 2&nbsp;&half; years.</p>
-						</li>
-						<li>
-							<h3><a href="#miscellany">More</a></h3>
-							<p>I'm at least a little bit interested in just about everything from mathematics to parenting to politics. I am an active and engaged member of my local community.</p>
-							<ul class="icons">
-								<li><a href="https://dice.com/u/phrits" class="fa-solid fa-dice"><span class="label">Dice.com</span></a></li>
-								<li><a href="https://reddit.com/u/phrits" class="fa-brands fa-reddit-alien"><span class="label">Reddit</span></a></li>
-								<li><a href="https://trailblazer.me/id/phrits" class="icon brands fa-salesforce"><span class="label">Salesforce</span></a></li>
-								<li><a href="https://github.com/phrits/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.instagram.com/the_real_phrits/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.facebook.com/phrits/" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
-							</ul>
-						</li>
-					</ul>
+					<h1><span class="phrits-invert">phrits.com</span></h1>
 				</div>
-			</section>
+				<div class="inner">
+					<?php include 'quickies.html'; ?>				
+					<p>
+					<a href="#" class="image left">
+						<img src="/images/profile.jpg" alt="phrits" title="phrits"  style="min-width: 33%; margin-right: 2em;"/></a>
+						<ul class="welcome">
+							<li>
+					</p>
+					<h3><a href="#itProfessional">Information Technology Professional</a></h3>
+					<p>
+						If it has anything to do with automated business workflow, I've done it.
+					</p>
+					<h3><a href="#culinarian">Culinarian</a></h3>
+					<p>I've been a home cook forever. I've read everything from Rombauer to McGee. I dropped out of the IT workforce to cook professionally for about 2&nbsp;&half; years. I am an enthusiastic omnivore.</p>
+					<h3><a href="#miscellany">Explorer</a></h3>
+					<p>I'm at least a little bit interested in just about everything from mathematics to parenting to politics. I am an active and engaged member of my local community.</p>
+					<ul class="icons">
+						<li><a href="https://dice.com/u/phrits" class="fa-solid fa-dice"><span class="label">Dice.com</span></a></li>
+						<li><a href="https://reddit.com/u/phrits" class="fa-brands fa-reddit-alien"><span class="label">Reddit</span></a></li>
+						<li><a href="https://trailblazer.me/id/phrits" class="icon brands fa-salesforce"><span class="label">Salesforce</span></a></li>
+						<li><a href="https://github.com/phrits/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.instagram.com/the_real_phrits/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.facebook.com/phrits/" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
+					</ul>
+				</div> <!-- class="inner" -->
+			</section> <!-- id="Welcome" -->
 
 			<!-- itProfessional -->
 			<section id="itProfessional" class="wrapper style2 spotlights">
@@ -87,18 +72,18 @@
 							</p>
 							<p>I am an adept user of the tools of the trade. I am fluent in SQL and can work with any C-flavored programming language.</p>
 							<ul class="actions">
-								<li><a href="#" class="button">Resume</a></li>
-								<li><a href="#" class="button">History</a></li>
+								<li><a href="/hire_me/" class="button">Hire Me</a></li>
+								<li><a href="" class="button disabled">History</a></li>
 							</ul>
 						</div>
 					</div>
 				</section>
 			</section>
 
-			<!-- foodGeek -->
-			<section id="foodGeek" class="wrapper style2 spotlights">
+			<!-- Culinarian -->
+			<section id="culinarian" class="wrapper style2 spotlights">
 				<section>
-					<a href="#foodGeek" class="image" style="min-width: 33%"><img src="/images/place_setting.jpg" alt="" data-position="center center" /></a>
+					<a href="#culinarian" class="image" style="min-width: 33%"><img src="/images/place_setting.jpg" alt="" data-position="center center" /></a>
 					<div class="content">
 						<div class="inner">
 							<h2>Food and Cooking</h2>
@@ -107,6 +92,7 @@
 							<p>People line up for my grits. My salsa beats your favorite restaurant's. My biscuits are better than your Granny's.</p>
 							<ul class="actions">
 								<li><a href="/recipes/" class="button">Recipes</a></li>
+								<li><a href="/food_books/" class="button">Book Recommendations</a></li>
 								<li><a href="/other_resources/" class="button">Other Resources</a></li>
 							</ul>
 						</div>
@@ -114,6 +100,7 @@
 				</section>
 			</section>
 
+			<!-- miscellany -->
 			<section id="miscellany" class="wrapper style2 spotlights">
 				<section>
 					<a href="#miscellany" class="image"  style="min-width: 33%"><img src="images/ink.jpg" alt="" data-position="center center" /></a>
@@ -123,12 +110,12 @@
 							<p>Everything that doesn't fit elsewhere.</p>
 							<ul class="actions">
 								<li><a href="/writing/" class="button">Writing</a></li>
-								<li><a href="/adventures/" class="button">Interests</a></li>
+								<li><a href="/interests/" class="button">Interests</a></li>
+								<li><a href="/notary/" class="button">Notary Public</a></li>
 								<li><a href="/credits/" class="button">Credits</a></li>
-								<li><a href="/about/" class="button">About Me</a></li>
 							</ul>
 							<ul class="actions">
-								<li><a href="https://old.phrits.com/" class="button">Before: <span class="phrits-invert">phrits.com</span></a></li>
+								<li><a href="/credits/#old_phrits" class="button">the old <span class="phrits-invert">phrits.com</span></a></li>
 							</ul>
 						</div>
 					</div>

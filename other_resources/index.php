@@ -1,3 +1,3 @@
-<?php
-include('../food_resources.php');
+<?php
+include('../food_resources.php');
 ?>

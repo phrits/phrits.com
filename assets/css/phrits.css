@@ -15,23 +15,24 @@
 }
 #board {
     background-image: 		url("/images/tiled-board.jpg");
-    background-repeat:		repeat-x;
-    height:		 			100px;
+    background-repeat:		repeat;
+    min-height:		 		50px;
 }
 span.dietary {
     font-variant:           small-caps !important;
     font-weight:            bold !important;
     color:                  #FFFFFF;
 }
-p.wrapper {
+
+/* p.wrapper {
     padding: 1em;
-}
+} */
 
 .recipe.ul {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
-    display: flex;
+    display: inline-flex;
     cursor: default;
 }
 
@@ -59,10 +60,6 @@ ul.welcome {
         ul.welcome > li:first-child {
             margin-top: -1em;
         }
-
-#footer p {
-    margin: 2em 2em 1em 1em;
-}
 
 .ingredient {
     list-style-type: none;
@@ -115,10 +112,84 @@ h5.credits, h5.writing,
 h6.credits, h6.writing,
             p.writing {
     margin-left: 3%;
+    margin-right: 3%;
 }
 
-aside.r {
-    float:                  right;
-    margin-left:            1ex;
-    border: 2ex #FFFFFF !important;
+#footer p {
+    margin: 1em;
+}
+
+#footer div.left{
+    float:left;
+    width: 48%;
+}
+
+#footer div.right{
+    float:right;
+    width: 48%;
+}
+
+#footer div.right p {
+    text-align: right;
+}
+
+
+div.col-8 {
+    margin-left: 1em;
+}
+
+
+ul.quickies {
+    text-align: right;
+    margin-top: -5em;
+}
+ul.quickies li {
+    display: inline-flex;
+    list-style: none !important;
+    font-size: 0.8em;
+}
+
+ul.quickies li a {
+    text-decoration: none !important;
+}
+
+
+@media screen and (max-width: 480px)
+{
+    #top_menu {
+        display: none;
+    }
+}
+@media screen and (max-width: 360px) {
+    #top_menu {
+        display: none;
+    }
+}
+
+#nc_seal {
+    max-width: 502px;
+    max-height: 504px;
+}
+
+.book_title {
+    font-style: italic;
+}
+
+li.writing {
+    margin-left: 4em;
+    list-style: none;
+}
+
+#kilominion {
+    min-width: 426px;
+    /* min-height: 46px; */
+}
+
+.foreign {
+    font-style: italic;
+}
+
+#euler {
+    max-height: 1.25em;
+    display: inline;
 }

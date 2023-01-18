@@ -146,3 +146,11 @@
 
 	</body>
 </html>
+
+<!--
+	How I learned to eat fish.
+	Jumping out of a perfectly good airplane.
+	The German ship, Fritz Knack
+	On AI generating Art and Language
+
+-->	

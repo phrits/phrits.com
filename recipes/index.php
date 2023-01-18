@@ -1,3 +1,3 @@
-<?php
-include('../recipes.php');
+<?php
+include('../recipes.php');
 ?>

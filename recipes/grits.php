@@ -1,1 +1,1 @@
-<?php include 'charleston_grits.php'; ?>
+<?php include 'charleston_grits.php'; ?>
