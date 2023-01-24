@@ -1,1 +1,0 @@
-<?php include 'notary_public.php'; ?>

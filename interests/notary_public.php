@@ -32,7 +32,7 @@
                                     Notary Number: 202222900256
                                 </p>
 								<p>
-                                     Friends and family, please reach out through normal channels. For anyone else I may be able to help, you can best reach me at <a href="mailto:notary@phrits.com">notary@<span class="phrits_invert">phrits.com</span></a>.</p>
+                                     My commission is "in and for" Wayne County, but I can legally perform notarial actions anywhere within the state of North Carolina. You can best reach me at <a href="mailto:notary@phrits.com">notary@<span class="phrits_invert">phrits.com</span></a>.
                                 </p>
 							</div>
 						</div> <!-- class="row" -->
