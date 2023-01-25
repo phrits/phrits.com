@@ -3,7 +3,7 @@
 	<head>
 		<title>phrits.com &ndash; Recipes</title>
 
-<?php include 'head.html'; ?>
+<?php include $www . '/meta/head.html'; ?>
 
 	</head>
 
@@ -33,9 +33,9 @@
 			</section>
 	</div> <!-- wrapper -->
 
-<?php include 'footer.html'; ?>
+<?php include $www . '/meta/footer.html'; ?>
 
-<?php include 'scripts.html'; ?>
+<?php include $www . '/meta/scripts.html'; ?>
 
 	</body>
 </html>

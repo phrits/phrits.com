@@ -139,17 +139,20 @@ div.col-8 {
 }
 
 
-ul.quickies {
+ul.quickies,
+ul.res_quickies {
     text-align: right;
     margin-top: -5em;
 }
-ul.quickies li {
+ul.quickies li,
+ul.res_quickies li {
     display: inline-flex;
     list-style: none !important;
     font-size: 0.8em;
 }
 
-ul.quickies li a {
+ul.quickies li a,
+ul.res_quickies li a {
     text-decoration: none !important;
 }
 
@@ -192,4 +195,39 @@ li.writing {
 #euler {
     max-height: 1.25em;
     display: inline;
+}
+
+#main .inner .image {
+    margin-top: -4em;
+}
+
+.image_caption {
+    font-style: italic;
+    font-size: 80%;
+}
+.filename {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+ul.skills {
+    margin-right: 2em;
+}
+ul.skills li {
+    list-style: square;
+}
+ul.res_quickies {
+    display: inline;
+    margin-right: 2em;
+    margin-top: -3em;
+}
+p.res_quickies {
+    margin: 0;
+    padding: 0;
+}
+h2.resume {
+    margin-top: -1em;
+    margin-left: 1em;
+}
+h3.firstline {
+    margin-top: -2em;
 }

@@ -1,9 +1,12 @@
+<?php
+require('/home/brobip/subdomtest.phrits.com/init.php');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>phrits.com &ndash; Recipes</title>
 
-<?php include 'head.html'; ?>
+<?php include $www . '/meta/head.html'; ?>
 
 	</head>
 
@@ -16,8 +19,9 @@
 				<!-- Main -->
 			<section id="main" class="wrapper">
 				<h1 class="major credits">Recipes</h1>
+            <div class="inner">
 				<span class="image fit"><img src="/images/board_and_knife.jpg" /></span>
-
+</div>
 				<!-- Blue Cheese Dip-->
 				<div class="wrapper style3 recipe">
 					<h2><a href="/recipes/blue_cheese_dip/">Blue Cheese Dip</a></h2>
@@ -32,7 +36,7 @@
 
 				<!-- Charleston Grits-->
 				<div class="wrapper style3 recipe">
-					<h2><a href="/recipes/grits/">Charleston Grits</a></h2>
+					<h2><a href="/recipes/charleston_grits/">Charleston Grits</a></h2>
 					<p>
 						A <a href="http://en.wikipedia.org/wiki/South_Carolina_Lowcountry">South Carolina Lowcountry</a> classic I first tried at the always wonderful <a href="http://www.theoldpostofficerestaurant.com/">Old Post Office Restaurant</a> in <a href="http://www.edistobeach.com/">Edisto Beach, South Carolina</a>. [
 							<span class="dietary">
@@ -181,9 +185,9 @@
 			</section>
 	</div> <!-- wrapper -->
 
-<?php include 'footer.html'; ?>
+<?php include $www . '/meta/footer.html'; ?>
 
-<?php include 'scripts.html'; ?>
+<?php include $www . '/meta/scripts.html'; ?>
 
 	</body>
 </html>

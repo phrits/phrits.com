@@ -1,14 +1,17 @@
+<?php
+require('/home/brobip/subdomtest.phrits.com/init.php');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>phrits.com &ndash; Writing</title>
 
-<?php include 'head.html'; ?>
+<?php include $www . '/meta/head.html'; ?>
 
 	</head>
 
 	<body class="is-preload">
-		<?php include 'writing_header.html'; ?>
+		<?php include $www . '/writing/writing_header.html'; ?>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -16,8 +19,9 @@
 			<section id="main" class="wrapper">
 				<h1 class="major writing">Writing</h1>
 				<p class="writing">Writing that doesn't have to do with food. <a href="/food_resources/">Here's the food stuff.</a></p>
+            <div class="inner">
 				<span class="image fit"><img src="/images/writing_hand.jpg" /></span>
-
+            </div>
 				<!-- Parenting and Family -->
 				<h2 class="writing">Parenting and Family</h2>
 				<div class="features">
@@ -140,9 +144,9 @@
 			</section> <!-- id="main" class="wrapper" -->
 		</div> <!-- wrapper -->
 
-<?php include 'footer.html'; ?>
+<?php include $www . '/meta/footer.html'; ?>
 
-<?php include 'scripts.html'; ?>
+<?php include $www . '/meta/scripts.html'; ?>
 
 	</body>
 </html>

@@ -3,12 +3,12 @@
 	<head>
 		<title>phrits.com &ndash; Credits</title>
 
-<?php include 'head.html'; ?>
+<?php include $www . '/meta/head.html'; ?>
 
 	</head>
 
 	<body class="is-preload">
-<?php include 'credits_header.html'; ?>
+<?php include $www . '/meta/credits_header.html'; ?>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -104,10 +104,10 @@
 				<section>
 					<div class="row">
 						<div class="col-5-small">
-							<a class="credits" href="/glossary/" alt="roasting meat"><img class="credits left" src="/images/roasting_meat.jpg" /></a>
+							<a class="credits" href="/food_resources/food_glossary/" alt="roasting meat"><img class="credits left" src="/images/roasting_meat.jpg" /></a>
 						</div>
 						<div class="col-7">
-							Meat roasting on a fire at the top of <a href="/glossary/">Food and Cooking Terms</a>. <a href="https://commons.wikimedia.org/wiki/File:Roasting_meat_at_Hampton_Court_Palace.JPG">Photo</a> licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.
+							Meat roasting on a fire at the top of <a href="/food_resources/food_glossary/">Food and Cooking Terms</a>. <a href="https://commons.wikimedia.org/wiki/File:Roasting_meat_at_Hampton_Court_Palace.JPG">Photo</a> licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.
 						</div>
 					</div> <!-- class="row" -->
 				</section>
@@ -152,7 +152,7 @@
 				<section>
 					<div class="row">
 						<div class="col-5-small">
-							<a class="credits" href="/meat_safety/" alt="meat"><img class="credits left" src="/images/meat.jpg" /></a>
+							<a class="credits" href="/food_resources/meat_safety/" alt="meat"><img class="credits left" src="/images/meat.jpg" /></a>
 						</div>
 						<div class="col-7">
 							Meat at the top of the <a href="/fat_tom/">meat safety</a> article. <a href="https://stocksnap.io/photo/meat-beef-HRVOVU93ZA">Photo</a> by <a href="https://stocksnap.io/author/15750">Lukas Budimaier</a> on <a href="https://stocksnap.io">StockSnap</a>.
@@ -200,10 +200,10 @@
 				<section>
 					<div class="row">
 						<div class="col-5-small">
-							<a class="credits" href="/popcorn_post/" alt="popped corn"><img class="credits left" src="/images/popped_corn.jpg" /></a>
+							<a class="credits" href="/food_resources/popcorn_post/" alt="popped corn"><img class="credits left" src="/images/popped_corn.jpg" /></a>
 						</div>
 						<div class="col-7">
-							Popcorn at the top of <a href="/popcorn_post/">The Popcorn Post</a>. Photo by Megha Mangal: <a href="https://www.pexels.com/photo/close-up-photo-of-popcorn-806880/">https://www.pexels.com/photo/close-up-photo-of-popcorn-806880/</a>.
+							Popcorn at the top of <a href="/food_resources/popcorn_post/">The Popcorn Post</a>. Photo by Megha Mangal: <a href="https://www.pexels.com/photo/close-up-photo-of-popcorn-806880/">https://www.pexels.com/photo/close-up-photo-of-popcorn-806880/</a>.
 						</div>
 					</div> <!-- class="row" -->
 				</section>
@@ -212,10 +212,10 @@
 				<section>
 					<div class="row">
 						<div class="col-5-small">
-							<a class="credits" href="/interests/" alt="Renaissance Man"><img class="credits left" src="/images/renaissance_man.jpg" /></a>
+							<a class="credits" href="/miscellany/" alt="Renaissance Man"><img class="credits left" src="/images/renaissance_man.jpg" /></a>
 						</div>
 						<div class="col-7">
-							"A 'Renaissance man' gestures coolly at all the knowledge tha Wellcome" at the top of the <a href="/glossary/">Interests</a> page. <a href="https://commons.wikimedia.org/wiki/File:A_%27Renaissance_man%27_gestures_coolly_at_all_the_knowledge_tha_Wellcome_V0011954.jpg">Photo</a> licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.
+							"A 'Renaissance man' gestures coolly at all the knowledge tha Wellcome" at the top of the <a href="/food_resources/food_glossary/">Interests</a> page. <a href="https://commons.wikimedia.org/wiki/File:A_%27Renaissance_man%27_gestures_coolly_at_all_the_knowledge_tha_Wellcome_V0011954.jpg">Photo</a> licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.
 						</div>
 					</div> <!-- class="row" -->
 				</section>
@@ -237,10 +237,10 @@
 				<section>
 					<div class="row">
 						<div class="col-5-small">
-							<a class="credits" href="/other_resources/" alt="spice jars"><img class="credits left" src="/images/spice_jars.jpg" /></a>
+							<a class="credits" href="/food_resources/" alt="spice jars"><img class="credits left" src="/images/spice_jars.jpg" /></a>
 						</div>
 						<div class="col-7">
-							Spice jars used on the <a href="/other_resources/">Other Food Resources</a> page. <a href="https://stocksnap.io/photo/spice-jar-MZJ54E9D0E">Photo</a> by <a href="https://stocksnap.io/author/candacemcdaniel">Candace McDaniel</a> on <a href="https://stocksnap.io">StockSnap</a>.
+							Spice jars used on the <a href="/food_resources/">Other Food Resources</a> page. <a href="https://stocksnap.io/photo/spice-jar-MZJ54E9D0E">Photo</a> by <a href="https://stocksnap.io/author/candacemcdaniel">Candace McDaniel</a> on <a href="https://stocksnap.io">StockSnap</a>.
 						</div>
 					</div> <!-- class="row" -->
 				</section>
@@ -261,7 +261,7 @@
 				<section>
 					<div class="row">
 					<div class="col-5-small">
-							<a class="credits" href="/interests/#tattoos" alt="mise en place"><img class="credits left" src="/images/mise_tattoo.jpg" /></a>
+							<a class="credits" href="/miscellany/#tattoos" alt="mise en place"><img class="credits left" src="/images/mise_tattoo.jpg" /></a>
 						</div>
 						<div class="col-7">
 							<p>
@@ -269,17 +269,17 @@
 							</p>
 						</div>
 					</div> <!-- class="row" -->
-					<hr />
+<!--					<hr />
 					<div class="row">
 						<div class="col-6-small">
-							<a class="credits" href="/interests/#tattoos" alt="phrits grafitti"><img class="credits left" src="/images/phrits_tattoo.jpg" /></a>
-							<a class="credits" href="/interests/#tattoos" alt="abelian grape"><img class="credits left" src="/images/grape.jpg" /></a>
-							<a class="credits" href="/interests/#tattoos" alt="placeholder"><img class="credits left" src="/images/grape.jpg" /></a>
+							<a class="credits" href="/miscellany/#tattoos" alt="phrits grafitti"><img class="credits left" src="/images/phrits_tattoo.jpg" /></a>
+							<a class="credits" href="/miscellany/#tattoos" alt="abelian grape"><img class="credits left" src="/images/grape.jpg" /></a>
+							<a class="credits" href="/miscellany/#tattoos" alt="placeholder"><img class="credits left" src="/images/grape.jpg" /></a>
 						</div>
 						<div class="col-6">
 							<p>Photography by <a href="https://www.instagram.com/ajonestattoo/">Alex Jones</a>, the tattoo artist. Used with verbal permission.</p>
 						</div>
-					</div> <!-- class="row" -->
+					</div> --> <!-- class="row" -->
 				</section>
 
 				<!-- writing hand -->
@@ -316,8 +316,8 @@
 
 		</div> <!-- wrapper -->
 
-<?php include 'footer.html'; ?>
-<?php include 'scripts.html'; ?>
+<?php include $www . '/meta/footer.html'; ?>
+<?php include $www . '/meta/scripts.html'; ?>
 
 	</body>
 </html>

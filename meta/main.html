@@ -3,7 +3,7 @@
 	<head>
 		<title>Home - phrits.com</title>
 
-<?php include 'head.html'; ?>
+<?php include $www . '/meta/head.html'; ?>
 
 </head>
 
@@ -20,12 +20,12 @@
 					<h1><span class="phrits-invert">phrits.com</span></h1>
 				</div>
 				<div class="inner">
-					<?php include 'quickies.html'; ?>				
+					<?php include $www . '/meta/quickies.html'; ?>				
 					<p>
-					<a href="#" class="image left">
-						<img src="/images/profile.jpg" alt="phrits" title="phrits"  style="min-width: 33%; margin-right: 2em;"/></a>
-						<ul class="welcome">
-							<li>
+					<a href="https://www.vesselfinder.com/?mmsi=211800420" class="image left">
+						<img src="https://static.vesselfinder.net/ship-photo/0-211800420-0aaefc4b32efdedd0f44194e79df9847/1" />
+						<br /><span class="image_caption">Placeholder boat picture Copyright: Fleetmon</span>
+						<!-- <img src="/images/profile.jpg" alt="phrits" title="phrits"  style="min-width: 33%; margin-right: 2em;"/></a> -->
 					</p>
 					<h3><a href="#itProfessional">Information Technology Professional</a></h3>
 					<p>
@@ -35,14 +35,7 @@
 					<p>I've been a home cook forever. I've read everything from Rombauer to McGee. I dropped out of the IT workforce to cook professionally for about 2&nbsp;&half; years. I am an enthusiastic omnivore.</p>
 					<h3><a href="#miscellany">Explorer</a></h3>
 					<p>I'm at least a little bit interested in just about everything from mathematics to parenting to politics. I am an active and engaged member of my local community.</p>
-					<ul class="icons">
-						<li><a href="https://dice.com/u/phrits" class="fa-solid fa-dice"><span class="label">Dice.com</span></a></li>
-						<li><a href="https://reddit.com/u/phrits" class="fa-brands fa-reddit-alien"><span class="label">Reddit</span></a></li>
-						<li><a href="https://trailblazer.me/id/phrits" class="icon brands fa-salesforce"><span class="label">Salesforce</span></a></li>
-						<li><a href="https://github.com/phrits/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.instagram.com/the_real_phrits/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.facebook.com/phrits/" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
-					</ul>
+<?php include $www . '/meta/icons.html'; ?>					
 				</div> <!-- class="inner" -->
 			</section> <!-- id="Welcome" -->
 
@@ -72,7 +65,7 @@
 							</p>
 							<p>I am an adept user of the tools of the trade. I am fluent in SQL and can work with any C-flavored programming language. I recently finished a boot camp that introduced me to Machine Learning tools and approaches.</p>
 							<ul class="actions">
-								<li><a href="/hire_me/" class="button">Hire Me</a></li>
+								<li><a href="/resume/" class="button">Hire Me</a></li>
 								<li><a href="" class="button disabled">History</a></li>
 							</ul>
 						</div>
@@ -93,7 +86,7 @@
 							<ul class="actions">
 								<li><a href="/recipes/" class="button">Recipes</a></li>
 								<li><a href="/food_books/" class="button">Good Books</a></li>
-								<li><a href="/other_resources/" class="button">Other Resources</a></li>
+								<li><a href="/food_resources/" class="button">Other Resources</a></li>
 							</ul>
 						</div>
 					</div>
@@ -110,7 +103,7 @@
 							<p>Everything that doesn't fit elsewhere.</p>
 							<ul class="actions">
 								<li><a href="/writing/" class="button">Writing</a></li>
-								<li><a href="/interests/" class="button">Interests</a></li>
+								<li><a href="/miscellany/" class="button">Interests</a></li>
 								<li><a href="/notary_public/" class="button">Notary Public</a></li>
 								<!-- <li><a href="/credits/" class="button">Credits</a></li> -->
 							</ul>
@@ -125,8 +118,8 @@
 		</div>
 
 
-<?php include 'footer.html'; ?>
-<?php include 'scripts.html'; ?>
+<?php include $www . '/meta/footer.html'; ?>
+<?php include $www . '/meta/scripts.html'; ?>
 
 	</body>
 </html>
