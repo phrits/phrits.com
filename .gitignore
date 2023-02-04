@@ -3,6 +3,7 @@
 # **************************************************************
 .API_TOKENS
 CONFIG/
+.vscode/*
 ftp-kr.json 
 ftp-sync.json
 *copy*

@@ -2640,9 +2640,9 @@
     "subdomtest.phrits.com": {
       ".gitignore": {
         "type": "-",
-        "size": 2540,
+        "size": 2551,
         "lmtime": 0,
-        "modified": false
+        "modified": true
       },
       ".well-known": {},
       "assets": {
@@ -3137,7 +3137,7 @@
         "quickies.html": {
           "type": "-",
           "size": 178,
-          "lmtime": 0,
+          "lmtime": 1675488418267,
           "modified": false
         },
         "scripts.html": {
