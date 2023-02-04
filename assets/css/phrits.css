@@ -104,16 +104,25 @@ img.writing {
     opacity: 1;
 }
 
-h1.credits, h1.writing,
-h2.credits, h2.writing,
-h3.credits, h3.writing,
-h4.credits, h4.writing,
-h5.credits, h5.writing,
-h6.credits, h6.writing,
+/* h1.credits, h1.writing, h1.resume,
+h2.credits, h2.writing, h2.resume,
+h3.credits, h3.writing, h3.resume,
+h4.credits, h4.writing, h4.resume,
+h5.credits, h5.writing, h5.resume,
+h6.credits, h6.writing, h6.resume,
             p.writing {
     margin-left: 3%;
     margin-right: 3%;
+} */
+.resume {
+    margin-top: -1em;
+    margin-left: 1em;
 }
+h1.credits, .credits, .writing, .resume {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
 
 #footer p {
     margin: 1em;
@@ -209,25 +218,36 @@ li.writing {
     font-family: 'Courier New', Courier, monospace !important;
 }
 
-ul.skills {
-    margin-right: 2em;
-}
-ul.skills li {
-    list-style: square;
-}
-ul.res_quickies {
-    display: inline;
-    margin-right: 2em;
-    margin-top: -3em;
-}
 p.res_quickies {
     margin: 0;
     padding: 0;
 }
-h2.resume {
-    margin-top: -1em;
-    margin-left: 1em;
-}
-h3.firstline {
+.firstline {
     margin-top: -2em;
+}
+.fixed {
+    font-family: 'Courier New', Courier, monospace;
+}
+ul {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ul.skills {
+}
+
+ul.skills li {
+    list-style: square;
+}
+ ul.res_quickies {
+    display: inline-block;
+    padding: 0;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+section.wide {
+    width: auto;
 }

@@ -2645,7 +2645,29 @@
         "modified": false
       },
       ".well-known": {},
-      "assets": {},
+      "assets": {
+        "css": {
+          "images": {},
+          "main.css": {
+            "type": "-",
+            "size": 72029,
+            "lmtime": 1674622858000,
+            "modified": false
+          },
+          "noscript.css": {
+            "type": "-",
+            "size": 937,
+            "lmtime": 0,
+            "modified": false
+          },
+          "phrits.css": {
+            "type": "-",
+            "size": 4531,
+            "lmtime": 1675282810000,
+            "modified": false
+          }
+        }
+      },
       "cgi-bin": {},
       "credits": {
         "error_log": {
@@ -2675,7 +2697,26 @@
           "modified": false
         }
       },
-      "food_books": {},
+      "food_books": {
+        "error_log": {
+          "type": "-",
+          "size": 3524,
+          "lmtime": 0,
+          "modified": false
+        },
+        "food_books_header.html": {
+          "type": "-",
+          "size": 692,
+          "lmtime": 0,
+          "modified": false
+        },
+        "index.php": {
+          "type": "-",
+          "size": 2162,
+          "lmtime": 1674605114000,
+          "modified": false
+        }
+      },
       "food_resources": {
         "error_log": {
           "type": "-",
@@ -2715,11 +2756,315 @@
         },
         "popcorn_post": {}
       },
-      "hire": {},
-      "hire me": {},
-      "hire_me": {},
+      "hire": {
+        "index.php": {
+          "type": "-",
+          "size": 104,
+          "lmtime": 1674604774000,
+          "modified": false
+        }
+      },
+      "hire me": {
+        "index.php": {
+          "type": "-",
+          "size": 104,
+          "lmtime": 1674604774000,
+          "modified": false
+        }
+      },
+      "hire_me": {
+        "index.php": {
+          "type": "-",
+          "size": 104,
+          "lmtime": 1674604774000,
+          "modified": false
+        }
+      },
       "hireme": {},
-      "images": {},
+      "images": {
+        "apple_tree.jpg": {
+          "type": "-",
+          "size": 386919,
+          "lmtime": 0,
+          "modified": false
+        },
+        "berteh_flow_diagram_symbols.gif": {
+          "type": "-",
+          "size": 4933,
+          "lmtime": 0,
+          "modified": false
+        },
+        "berteh_flow_diagram_symbols_inverted.gif": {
+          "type": "-",
+          "size": 4933,
+          "lmtime": 0,
+          "modified": false
+        },
+        "blue_cheese.jpg": {
+          "type": "-",
+          "size": 247914,
+          "lmtime": 0,
+          "modified": false
+        },
+        "board_and_knife.jpg": {
+          "type": "-",
+          "size": 309741,
+          "lmtime": 0,
+          "modified": false
+        },
+        "books.jpg": {
+          "type": "-",
+          "size": 82563,
+          "lmtime": 0,
+          "modified": false
+        },
+        "by-nc-sa.jpg": {
+          "type": "-",
+          "size": 3522,
+          "lmtime": 0,
+          "modified": false
+        },
+        "cooking_with_gramp.jpg": {
+          "type": "-",
+          "size": 655423,
+          "lmtime": 0,
+          "modified": false
+        },
+        "country_ham.jpg": {
+          "type": "-",
+          "size": 109077,
+          "lmtime": 0,
+          "modified": false
+        },
+        "crane.jpg": {
+          "type": "-",
+          "size": 144832,
+          "lmtime": 0,
+          "modified": false
+        },
+        "dollar_shirt.jpg": {
+          "type": "-",
+          "size": 348062,
+          "lmtime": 0,
+          "modified": false
+        },
+        "edisto_beach.jpg": {
+          "type": "-",
+          "size": 183009,
+          "lmtime": 0,
+          "modified": false
+        },
+        "eulers_identity.jpg": {
+          "type": "-",
+          "size": 9071,
+          "lmtime": 0,
+          "modified": false
+        },
+        "family.jpg": {
+          "type": "-",
+          "size": 320099,
+          "lmtime": 0,
+          "modified": false
+        },
+        "full_kilominion.jpg": {
+          "type": "-",
+          "size": 3000764,
+          "lmtime": 0,
+          "modified": false
+        },
+        "glass.jpg": {
+          "type": "-",
+          "size": 275851,
+          "lmtime": 0,
+          "modified": false
+        },
+        "grape.jpg": {
+          "type": "-",
+          "size": 30686,
+          "lmtime": 0,
+          "modified": false
+        },
+        "information_technology.jpg": {
+          "type": "-",
+          "size": 216581,
+          "lmtime": 0,
+          "modified": false
+        },
+        "ink.jpg": {
+          "type": "-",
+          "size": 94019,
+          "lmtime": 0,
+          "modified": false
+        },
+        "kilominion.jpg": {
+          "type": "-",
+          "size": 143464,
+          "lmtime": 0,
+          "modified": false
+        },
+        "meat.jpg": {
+          "type": "-",
+          "size": 235478,
+          "lmtime": 0,
+          "modified": false
+        },
+        "mise_tattoo.jpg": {
+          "type": "-",
+          "size": 100344,
+          "lmtime": 0,
+          "modified": false
+        },
+        "nc_seal.jpg": {
+          "type": "-",
+          "size": 55540,
+          "lmtime": 0,
+          "modified": false
+        },
+        "open_road.jpg": {
+          "type": "-",
+          "size": 176416,
+          "lmtime": 0,
+          "modified": false
+        },
+        "phrits-favicon.ico": {
+          "type": "-",
+          "size": 318,
+          "lmtime": 0,
+          "modified": false
+        },
+        "phrits-icon-64.png": {
+          "type": "-",
+          "size": 1241,
+          "lmtime": 0,
+          "modified": false
+        },
+        "phrits_cutting_full.png": {
+          "type": "-",
+          "size": 949529,
+          "lmtime": 0,
+          "modified": false
+        },
+        "phrits_cutting_profile.png": {
+          "type": "-",
+          "size": 27131,
+          "lmtime": 0,
+          "modified": false
+        },
+        "phrits_tattoo.jpg": {
+          "type": "-",
+          "size": 157977,
+          "lmtime": 0,
+          "modified": false
+        },
+        "place_setting.jpg": {
+          "type": "-",
+          "size": 42569,
+          "lmtime": 0,
+          "modified": false
+        },
+        "plastic_soldiers.jpg": {
+          "type": "-",
+          "size": 204297,
+          "lmtime": 0,
+          "modified": false
+        },
+        "popped_corn.jpg": {
+          "type": "-",
+          "size": 154766,
+          "lmtime": 0,
+          "modified": false
+        },
+        "profile.jpg": {
+          "type": "-",
+          "size": 25445,
+          "lmtime": 0,
+          "modified": false
+        },
+        "renaissance_man.jpg": {
+          "type": "-",
+          "size": 642465,
+          "lmtime": 0,
+          "modified": false
+        },
+        "roasting_meat.jpg": {
+          "type": "-",
+          "size": 294130,
+          "lmtime": 0,
+          "modified": false
+        },
+        "salmonella.jpg": {
+          "type": "-",
+          "size": 112590,
+          "lmtime": 0,
+          "modified": false
+        },
+        "spice_jars.jpg": {
+          "type": "-",
+          "size": 131720,
+          "lmtime": 0,
+          "modified": false
+        },
+        "sugarplum.jpg": {
+          "type": "-",
+          "size": 595590,
+          "lmtime": 0,
+          "modified": false
+        },
+        "sugarplum_small.jpg": {
+          "type": "-",
+          "size": 39885,
+          "lmtime": 0,
+          "modified": false
+        },
+        "sugarplum_thumbnail.jpg": {
+          "type": "-",
+          "size": 33654,
+          "lmtime": 0,
+          "modified": false
+        },
+        "sugarplums.jpg": {
+          "type": "-",
+          "size": 1055831,
+          "lmtime": 0,
+          "modified": false
+        },
+        "sugarplums_small.jpg": {
+          "type": "-",
+          "size": 67271,
+          "lmtime": 0,
+          "modified": false
+        },
+        "tattoo_elements.jpg": {
+          "type": "-",
+          "size": 47225,
+          "lmtime": 0,
+          "modified": false
+        },
+        "tiled-board.jpg": {
+          "type": "-",
+          "size": 1687,
+          "lmtime": 0,
+          "modified": false
+        },
+        "wooden_chain.jpg": {
+          "type": "-",
+          "size": 196942,
+          "lmtime": 0,
+          "modified": false
+        },
+        "writing_hand.jpg": {
+          "type": "-",
+          "size": 150794,
+          "lmtime": 0,
+          "modified": false
+        },
+        "Fritz_HeadShot.jpg": {
+          "type": "-",
+          "size": 152446,
+          "lmtime": 1675267298000,
+          "modified": false
+        }
+      },
       "index.php": {
         "type": "-",
         "size": 85,
@@ -2733,42 +3078,18 @@
         "modified": false
       },
       "interests": {
-        "crafts.html": {
-          "type": "-",
-          "size": 3921,
-          "lmtime": 0,
-          "modified": false
-        },
-        "error_log": {
-          "type": "-",
-          "size": 2558,
-          "lmtime": 0,
-          "modified": false
-        },
         "index.php": {
           "type": "-",
-          "size": 1207,
-          "lmtime": 1674601398000,
-          "modified": false
-        },
-        "interests_header.html": {
-          "type": "-",
-          "size": 713,
-          "lmtime": 0,
-          "modified": false
-        },
-        "tattoos.html": {
-          "type": "-",
-          "size": 4801,
-          "lmtime": 0,
+          "size": 110,
+          "lmtime": 1674608042000,
           "modified": false
         }
       },
       "meta": {
         "credits.php": {
           "type": "-",
-          "size": 16958,
-          "lmtime": 0,
+          "size": 3028,
+          "lmtime": 1675276050000,
           "modified": false
         },
         "credits_header.html": {
@@ -2789,10 +3110,22 @@
           "lmtime": 0,
           "modified": false
         },
+        "icons.html": {
+          "type": "-",
+          "size": 917,
+          "lmtime": 1674612854000,
+          "modified": false
+        },
+        "image_credits.html": {
+          "type": "-",
+          "size": 15334,
+          "lmtime": 1675316466000,
+          "modified": false
+        },
         "main.html": {
           "type": "-",
-          "size": 6161,
-          "lmtime": 0,
+          "size": 5540,
+          "lmtime": 1675268652000,
           "modified": false
         },
         "main_header.html": {
@@ -2811,6 +3144,50 @@
           "type": "-",
           "size": 361,
           "lmtime": 0,
+          "modified": false
+        }
+      },
+      "miscellany": {
+        "boat.html": {
+          "type": "-",
+          "size": 1123,
+          "lmtime": 1675275754000,
+          "modified": false
+        },
+        "crafts.html": {
+          "type": "-",
+          "size": 2683,
+          "lmtime": 1675275152000,
+          "modified": false
+        },
+        "error_log": {
+          "type": "-",
+          "size": 3390,
+          "lmtime": 0,
+          "modified": true
+        },
+        "index.php": {
+          "type": "-",
+          "size": 1663,
+          "lmtime": 1675275412000,
+          "modified": false
+        },
+        "knitting.html": {
+          "type": "-",
+          "size": 1449,
+          "lmtime": 1674602648000,
+          "modified": false
+        },
+        "miscellany_header.html": {
+          "type": "-",
+          "size": 714,
+          "lmtime": 1674607014000,
+          "modified": false
+        },
+        "tattoos.html": {
+          "type": "-",
+          "size": 2144,
+          "lmtime": 1675276766000,
           "modified": false
         }
       },
@@ -2843,8 +3220,8 @@
         },
         "notary_header.html": {
           "type": "-",
-          "size": 713,
-          "lmtime": 0,
+          "size": 714,
+          "lmtime": 1674607014000,
           "modified": false
         }
       },
@@ -2961,8 +3338,8 @@
         },
         "index.php": {
           "type": "-",
-          "size": 10769,
-          "lmtime": 1674601398000,
+          "size": 10740,
+          "lmtime": 1674605052000,
           "modified": false
         },
         "london_broil": {
@@ -3184,7 +3561,50 @@
           }
         }
       },
-      "resume": {},
+      "resume": {
+        "FKnack_Resume_IT_2007.html": {
+          "type": "-",
+          "size": 39519,
+          "lmtime": 1674614418000,
+          "modified": false
+        },
+        "FKnack_Resume_IT_2012.html": {
+          "type": "-",
+          "size": 10988,
+          "lmtime": 1674610536000,
+          "modified": false
+        },
+        "IT_Resume_2023-01.pdf": {
+          "type": "-",
+          "size": 991726,
+          "lmtime": 1674611503440,
+          "modified": true
+        },
+        "index.php": {
+          "type": "-",
+          "size": 11052,
+          "lmtime": 1675316622000,
+          "modified": false
+        },
+        "keywords.html": {
+          "type": "-",
+          "size": 3575,
+          "lmtime": 1674625014000,
+          "modified": false
+        },
+        "res_quickies.html": {
+          "type": "-",
+          "size": 283,
+          "lmtime": 1674680684000,
+          "modified": false
+        },
+        "resume_header.html": {
+          "type": "-",
+          "size": 530,
+          "lmtime": 1674593216000,
+          "modified": false
+        }
+      },
       "samples": {},
       "ward_cookbook": {
         "README.TXT": {
@@ -4437,8 +4857,8 @@
         },
         "index.php": {
           "type": "-",
-          "size": 5670,
-          "lmtime": 1674601398000,
+          "size": 5721,
+          "lmtime": 1674604968000,
           "modified": false
         },
         "leaving_it": {
@@ -4466,23 +4886,86 @@
           }
         },
         "ward_cookbook": {
+          "README.TXT": {
+            "type": "-",
+            "size": 161,
+            "lmtime": 0,
+            "modified": false
+          },
+          "appetizers": {},
+          "aromatherapy": {},
+          "autorun.bat": {
+            "type": "-",
+            "size": 16,
+            "lmtime": 0,
+            "modified": false
+          },
+          "autorun.inf": {
+            "type": "-",
+            "size": 27,
+            "lmtime": 0,
+            "modified": false
+          },
+          "background.jpg": {
+            "type": "-",
+            "size": 3841,
+            "lmtime": 0,
+            "modified": false
+          },
+          "beverages": {},
+          "breads & quickbreads": {},
+          "cookbook.html": {
+            "type": "-",
+            "size": 2724,
+            "lmtime": 0,
+            "modified": false
+          },
+          "correspondences": {},
+          "crafts": {},
+          "desserts & snacks": {},
           "error_log": {
             "type": "-",
             "size": 1611,
             "lmtime": 0,
             "modified": true
           },
+          "for ritual and magick": {},
+          "index.html": {
+            "type": "-",
+            "size": 2724,
+            "lmtime": 0,
+            "modified": false
+          },
           "index.php": {
             "type": "-",
-            "size": 140,
-            "lmtime": 1674602070000,
+            "size": 151,
+            "lmtime": 1674604010000,
+            "modified": false
+          },
+          "main dishes": {},
+          "natural health & beauty": {},
+          "natural home care": {},
+          "other cool edibles": {},
+          "recipe_index.html": {
+            "type": "-",
+            "size": 23720,
+            "lmtime": 0,
+            "modified": false
+          },
+          "sauces & gravies": {},
+          "side dishes": {},
+          "soups & salads": {},
+          "ward_cookbook.css": {
+            "type": "-",
+            "size": 3036,
+            "lmtime": 0,
             "modified": false
           }
         },
         "writing_header.html": {
           "type": "-",
-          "size": 713,
-          "lmtime": 0,
+          "size": 714,
+          "lmtime": 1674607014000,
           "modified": false
         }
       }

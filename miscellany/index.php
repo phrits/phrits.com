@@ -17,7 +17,7 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 		<div class="wrapper inner">
 
 			<!-- Main -->
-			<section id="main" class="wrapper">
+			<section id="main" class="wrapper inner">
 				<h1 class="major writing">Interests and Oddities</h1>
 				<div class="inner">
 					<span class="image fit"><img src="/images/renaissance_man.jpg" /></span>
@@ -32,7 +32,7 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 <?php include $www . '/miscellany/crafts.html'; ?>
 
 			<!-- <h1>Minecraft</h1> -->
-			<?php // include $www . '/miscellany/tattoos.html'; ?>
+			<?php include $www . '/miscellany/tattoos.html'; ?>
 
 			<!-- <h1>Certificates</h1> -->
 
@@ -41,7 +41,7 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 		<h1 class="writing">Other</h1>
 		<section class="wrapper">
 			<div class="features">
-				<section>
+				<section class="wide">
 					<h2>Voluntarism and Civic Activity</h2>
 					<p>
 					<ul>
