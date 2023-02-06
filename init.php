@@ -1,3 +1,3 @@
 <?php
-$www = '/home/brobip/subdomtest.phrits.com/';
+$www = '/home/brobip/public_html/';
 ?>

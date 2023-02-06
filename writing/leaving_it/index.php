@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,7 +17,9 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Why I'm Leaving IT</h1>
-			<span class="image fit"><img src="/images/information_technology.jpg" alt="floating icons" /></span>
+            <div class="inner">
+			    <span class="image fit"><img src="/images/information_technology.jpg" alt="floating icons" /></span>
+            </div>
             <div class="wrapper style3 inner">
 
             <h3>Written June, 2012</h3>

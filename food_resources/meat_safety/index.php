@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,8 +17,9 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Reddit: What should I know about meat and food safety?</h1>
-			<span class="image fit"><img src="/images/meat.jpg" alt="meat" /></span>
-
+            <div class="inner">
+    			<span class="image fit"><img src="/images/meat.jpg" alt="meat" /></span>
+            </div>
 				<div class="wrapper style3 inner">
 
                     <blockquote>

@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -11,17 +11,25 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 	</head>
 
 	<body class="is-preload">
-<?php include 'writing_header.html'; ?>
+<?php include '../writing_header.html'; ?>
 		<!-- Wrapper -->
 		<div id="wrapper">
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Family Goals and Expectations</h1>
-			<span class="image fit"><img src="/images/family.jpg" alt="road view" /></span>
+            <div class="inner">
+    			<span class="image fit"><img src="/images/family.jpg" alt="road view" /></span>
+            </div>
 
             <div class="wrapper style3 inner">
+            <h3>Written in early 2017</h3>
             <section>
             <p>In another context, these might instead be rules or consitutional articles, but our Family is an  imperfect union of imperfect people. By calling them <span class="emph">Goals</span> we have something to reach for and we implement a system that is resillient against the whims of unexpected circumstance. By calling them <span class="emph">Expectations</span> we remove the easy escape of declaring our goals unachievable. Both words give us room to forgive ourselves and try again when we fail.</p>
+            <article class="image right" id="grampnote">
+                <h2>Gramp's Note</h2>
+                <p>I first drafted this essay as a starting point on which to found a newly multi-generational household. No longer an empty-nester, my nuclear family now comprises Grammy and me, our daughter and son-in-law, and their three school-aged children. In many respects we are all starting anew, but we each carry the lessons and prejudices we have accumulated in our lives. It is an attempt to capture some of what I know and have come to believe.</p>
+                <p>This <a href="https://en.wikipedia.org/wiki/Wabi-sabi">imperfect, impermanent, and incomplete</a> work is drawn from experience: The family environment in which I was raised and the family environments in which I have been a child's parent or a young adult's mentor. The principles and approaches herein are in many ways specific to my own family's circumstances, and they are not intended to be judgmental nor disparaging of other ways to live a healthy family life.</p>
+            </article>
             <article>
                 <h2>Love</h2>
                 <p>Above all else, our interactions with each other and the tales we tell, particularly around outsiders, will reflect that each member of our family loves, respects, and supports the other.</p>
@@ -78,11 +86,10 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
                 <p>Family decisions specific to either married couple will be managed within and by that couple. Significant decisions for the combined Family will be made by consensus of all adults.</p>
             </article>
             <article>
-                <h2>Aside: Gramp's Note</h2>
-                <p><i>When originally published, this Aside displayed nicely as a callout near the top of the screen. I may someday come back and mess with the CSS to put it back.</i></p>
+                <h2>Gramp's Note</h2>
                 <p>I first drafted this essay as a starting point on which to found a newly multi-generational household. No longer an empty-nester, my nuclear family now comprises Grammy and me, our daughter and son-in-law, and their three school-aged children. In many respects we are all starting anew, but we each carry the lessons and prejudices we have accumulated in our lives. It is an attempt to capture some of what I know and have come to believe.</p>
                 <p>This <a href="https://en.wikipedia.org/wiki/Wabi-sabi">imperfect, impermanent, and incomplete</a> work is drawn from experience: The family environment in which I was raised and the family environments in which I have been a child's parent or a young adult's mentor. The principles and approaches herein are in many ways specific to my own family's circumstances, and they are not intended to be judgmental nor disparaging of other ways to live a healthy family life.</p>
-</article>
+            </article>
         </section>
 
             </div> <!-- class="wrapper style3 inner" -->

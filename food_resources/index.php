@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,9 +17,11 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 		<div id="wrapper">
 				<!-- Main -->
 			<section id="main" class="wrapper">
-				<h1 class="major writing">Food Writing</h1>
+				<h1 class="major credits">Food Writing</h1>
 				<p class="writing">Here I've gathered any other food-related content that doesn't belong in another category.</p>
-				<span class="image fit"><img src="/images/spice_jars.jpg" /></span>
+				<div class="inner">
+					<span class="image fit"><img src="/images/spice_jars.jpg" /></span>
+				</div>
 
 				<div class="features">
 					<!-- Food and Cooking Terms -->

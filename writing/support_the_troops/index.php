@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,8 +17,9 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Support the Troops</h1>
-			<span class="image fit"><img src="/images/plastic_soldiers.jpg" alt="plastic soldiers" /></span>
-
+            <div class="inner">
+    			<span class="image fit"><img src="/images/plastic_soldiers.jpg" alt="plastic soldiers" /></span>
+            </div>
             <div class="wrapper style3 inner">
                 <h3>Written March, 2003</h3>
                 <p>I received an email from a friend this morning in support of "National Military Appreciation Month." I don't even know if there is a such thing, or if there is, which eleven months have been set aside for being unappreciative. The message contained a link to a petition-like web page sponsored by the Department of Defense, and a comment that only 3.7 million of 250 million Americans had signed it. I followed went to the page with the intent of adding my own name, but when I got there I found that just I couldn't bring myself to do so.</p>

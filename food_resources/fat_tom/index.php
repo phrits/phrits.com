@@ -1,3 +1,6 @@
+<?php
+require('/home/brobip/public_html/init.php');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -14,8 +17,9 @@
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Your Friend in the Kitchen: FAT TOM</h1>
-			<span class="image fit"><img src="/images/salmonella.jpg" alt="salmonella" /></span>
-
+               <div class="inner">
+     			<span class="image fit"><img src="/images/salmonella.jpg" alt="salmonella" /></span>
+               </div>
 				<div class="wrapper style3 inner">
                     <p>In a restaurant kitchen, or your own, food <i>should</i> be healthful. But it <strong>must</strong> be safe. Food safety includes protection from physical hazards: Think fish pin bones or tiny shards of metal from a can lid, for example. It also includes concern for chemical hazards: Cleaning supplies don&#8217;t belong in the pantry, and we don&#8217;t cook in galvanized&mdash;zinc-plated&mdash;pots and pans. But the concern that gets most of our attention is biological, the things that cause <a href="http://en.wikipedia.org/wiki/Foodborne_illness">foodborne illnesses</a> or &quot;food poisoning&quot;.</p>
                     <p>We worry about viruses such as <a href="http://www.foodborneillness.com/hepatitis_food_poisoning/">Hepatitis A</a> being transmitted from food handlers to eaters, but dangerous bacteria&mdash;pathogens&mdash;are the real bad guys, bringing all sorts of fun games to the party: <a href="http://www.cruisecritic.com/articles.cfm?ID=71">Norovirus</a>, <a href="http://en.wikipedia.org/wiki/Jack_in_the_Box#E._coli_disaster">E. coli</a>, <a href="http://en.wikipedia.org/wiki/Ciguatera">ciguatera</a>, <a href="http://www.about-salmonella.com/">salmonella</a>, and <a href="http://en.wikipedia.org/wiki/Bacillus_cereus"><span class="foreign">bacillus cereus</span></a> are just a few. What can you do? <a href="http://www.ehow.com/how_5137788_wash-hands-food-safety.html">Wash your hands.</a> Avoid <a href="http://www.essortment.com/all/crosscontamina_rubw.htm">cross-contamination</a>. And learn about FAT TOM.<span id="more-929"></span> FAT TOM is a mnemonic to help you remember the critical factors in allowing good food to become dangerous: <strong>F</strong>ood, <strong>A</strong>cidity, <strong>T</strong>emperature, <strong>T</strong>ime, <strong>O</strong>xygen, and <strong>M</strong>oisture.</p>

@@ -1,3 +1,6 @@
+<?php
+require('/home/brobip/public_html/init.php');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -14,8 +17,9 @@
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Food and Cooking Terms</h1>
-			<span class="image fit"><img src="/images/roasting_meat.jpg" alt="meat" /></span>
-
+            <div class="inner">
+    			<span class="image fit"><img src="/images/roasting_meat.jpg" alt="meat" /></span>
+            </div>
 				<div class="wrapper style3 inner">
                     <dl>
                         <dt>

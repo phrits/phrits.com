@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,8 +17,9 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Rule Number One</h1>
-			<span class="image fit"><img src="/images/open_road.jpg" alt="road view" /></span>
-
+            <div class="inner">
+    			<span class="image fit"><img src="/images/open_road.jpg" alt="road view" /></span>
+            </div>
             <div class="wrapper style3 inner">
             <p>As a parent, I've found that it helps to have a few rules, but the fewer the better. In fact, maybe only one.</p>
         <h2>Rule Number One in Parenting</h2>

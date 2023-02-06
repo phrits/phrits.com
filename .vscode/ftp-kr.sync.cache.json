@@ -2590,51 +2590,461 @@
       }
     },
     "public_html": {
-      "sandbox": {
-        ".gitignore": {
+      ".gitignore": {
+        "type": "-",
+        "size": 2551,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".well-known": {},
+      "assets": {
+        "css": {
+          "images": {},
+          "main.css": {
+            "type": "-",
+            "size": 72029,
+            "lmtime": 0,
+            "modified": false
+          },
+          "noscript.css": {
+            "type": "-",
+            "size": 937,
+            "lmtime": 0,
+            "modified": false
+          },
+          "phrits.css": {
+            "type": "-",
+            "size": 4675,
+            "lmtime": 1675712548909,
+            "modified": false
+          }
+        }
+      },
+      "cgi-bin": {},
+      "credits": {},
+      "fat_tom": {
+        "error_log": {
           "type": "-",
-          "size": 2540,
+          "size": 5563,
           "lmtime": 0,
           "modified": false
         },
-        ".htaccess": {
-          "type": "-",
-          "size": 156,
-          "lmtime": 0,
-          "modified": false
-        },
-        "Demeter's Harvest": {},
-        "assets": {},
-        "credits": {},
-        "fat_tom": {},
-        "food_books": {},
-        "food_resources": {},
-        "hire": {},
-        "hire me": {},
-        "hire_me": {},
-        "hireme": {},
-        "images": {},
         "index.php": {
           "type": "-",
-          "size": 85,
-          "lmtime": 0,
+          "size": 8009,
+          "lmtime": 1675714461667,
           "modified": false
-        },
-        "init.php": {
+        }
+      },
+      "food_books": {
+        "error_log": {
           "type": "-",
-          "size": 41,
+          "size": 3524,
           "lmtime": 0,
           "modified": false
         },
-        "interests": {},
-        "meta": {},
-        "notary": {},
-        "notary_public": {},
-        "recipes": {},
-        "resume": {},
-        "samples": {},
+        "food_books_header.html": {
+          "type": "-",
+          "size": 692,
+          "lmtime": 0,
+          "modified": false
+        },
+        "index.php": {
+          "type": "-",
+          "size": 2152,
+          "lmtime": 1675713435611,
+          "modified": false
+        }
+      },
+      "food_resources": {
+        "error_log": {
+          "type": "-",
+          "size": 6465,
+          "lmtime": 0,
+          "modified": false
+        },
+        "fat_tom": {
+          "index.php": {
+            "type": "-",
+            "size": 8016,
+            "lmtime": 1675713824051,
+            "modified": false
+          }
+        },
+        "food_glossary": {
+          "error_log": {
+            "type": "-",
+            "size": 24067,
+            "lmtime": 0,
+            "modified": true
+          },
+          "index.php": {
+            "type": "-",
+            "size": 75617,
+            "lmtime": 1675713809940,
+            "modified": false
+          }
+        },
+        "food_resources_header.html": {
+          "type": "-",
+          "size": 692,
+          "lmtime": 0,
+          "modified": false
+        },
+        "glossary": {},
+        "index.php": {
+          "type": "-",
+          "size": 3708,
+          "lmtime": 1675713873336,
+          "modified": false
+        },
+        "meat_safety": {
+          "index.php": {
+            "type": "-",
+            "size": 6625,
+            "lmtime": 1675713794716,
+            "modified": false
+          }
+        },
+        "popcorn_post": {
+          "error_log": {
+            "type": "-",
+            "size": 2703,
+            "lmtime": 0,
+            "modified": true
+          },
+          "index.php": {
+            "type": "-",
+            "size": 32993,
+            "lmtime": 1675713649882,
+            "modified": false
+          }
+        }
+      },
+      "hire": {},
+      "hire me": {},
+      "hire_me": {},
+      "hireme": {},
+      "images": {},
+      "index.php": {
+        "type": "-",
+        "size": 85,
+        "lmtime": 0,
+        "modified": false
+      },
+      "init.php": {
+        "type": "-",
+        "size": 46,
+        "lmtime": 0,
+        "modified": false
+      },
+      "interests": {},
+      "meta": {
+        "credits.php": {
+          "type": "-",
+          "size": 3482,
+          "lmtime": 1675715150910,
+          "modified": false
+        },
+        "credits_header.html": {
+          "type": "-",
+          "size": 532,
+          "lmtime": 0,
+          "modified": false
+        },
+        "footer.html": {
+          "type": "-",
+          "size": 1437,
+          "lmtime": 1675715174117,
+          "modified": false
+        },
+        "head.html": {
+          "type": "-",
+          "size": 836,
+          "lmtime": 0,
+          "modified": false
+        },
+        "icons.html": {
+          "type": "-",
+          "size": 917,
+          "lmtime": 0,
+          "modified": false
+        },
+        "image_credits.html": {
+          "type": "-",
+          "size": 15334,
+          "lmtime": 0,
+          "modified": false
+        },
+        "main.html": {
+          "type": "-",
+          "size": 5556,
+          "lmtime": 1675713436621,
+          "modified": false
+        },
+        "main_header.html": {
+          "type": "-",
+          "size": 369,
+          "lmtime": 0,
+          "modified": false
+        },
+        "quickies.html": {
+          "type": "-",
+          "size": 178,
+          "lmtime": 0,
+          "modified": false
+        },
+        "scripts.html": {
+          "type": "-",
+          "size": 361,
+          "lmtime": 0,
+          "modified": false
+        }
+      },
+      "miscellany": {
+        "boat.html": {
+          "type": "-",
+          "size": 1113,
+          "lmtime": 0,
+          "modified": false
+        },
+        "crafts.html": {
+          "type": "-",
+          "size": 2673,
+          "lmtime": 0,
+          "modified": false
+        },
+        "index.php": {
+          "type": "-",
+          "size": 1653,
+          "lmtime": 1675713436621,
+          "modified": false
+        },
+        "knitting.html": {
+          "type": "-",
+          "size": 1449,
+          "lmtime": 0,
+          "modified": false
+        },
+        "miscellany_header.html": {
+          "type": "-",
+          "size": 714,
+          "lmtime": 0,
+          "modified": false
+        },
+        "tattoos.html": {
+          "type": "-",
+          "size": 2144,
+          "lmtime": 0,
+          "modified": false
+        }
+      },
+      "notary": {},
+      "notary_public": {
+        "error_log": {
+          "type": "-",
+          "size": 7794,
+          "lmtime": 0,
+          "modified": false
+        },
+        "index.php": {
+          "type": "-",
+          "size": 2027,
+          "lmtime": 1675713436621,
+          "modified": false
+        },
+        "notary_header.html": {
+          "type": "-",
+          "size": 714,
+          "lmtime": 0,
+          "modified": false
+        }
+      },
+      "recipes": {
+        "avocado_salad": {},
+        "barbecue_sauce": {},
+        "blue_cheese_dip": {},
+        "charleston_grits": {},
+        "country_ham": {},
+        "crazy_cake": {},
+        "eggs_in_bologna_cups": {},
+        "error_log": {
+          "type": "-",
+          "size": 18058,
+          "lmtime": 0,
+          "modified": false
+        },
+        "flour_tortillas": {},
+        "french_fried_onions": {},
+        "german_red_cabbage": {},
+        "gizzards": {},
+        "grits": {},
+        "guacamole": {},
+        "index.php": {
+          "type": "-",
+          "size": 10730,
+          "lmtime": 1675713436636,
+          "modified": false
+        },
+        "london_broil": {},
+        "microwave_lunch": {},
+        "pernil": {},
+        "popcorn": {},
+        "pumpkin_mini_muffins": {},
+        "quickle": {},
+        "quickle_variations": {},
+        "recipes_header.html": {
+          "type": "-",
+          "size": 803,
+          "lmtime": 0,
+          "modified": false
+        },
+        "restaurant_style_salsa": {},
+        "salsa": {},
+        "savory_butternut_soup": {},
+        "stuffed_shells": {},
+        "sugarplums": {},
+        "tomato_sauce": {},
+        "turkey_gizzards": {},
+        "wassail": {},
+        "whipped_cream": {}
+      },
+      "resume": {
+        "FKnack_Resume_IT_2012.html": {
+          "type": "-",
+          "size": 10988,
+          "lmtime": 0,
+          "modified": false
+        },
+        "IT_Resume.pdf": {
+          "type": "-",
+          "size": 1030705,
+          "lmtime": 1675707247839,
+          "modified": true
+        },
+        "index.php": {
+          "type": "-",
+          "size": 6292,
+          "lmtime": 1675713436636,
+          "modified": false
+        },
+        "keywords.html": {
+          "type": "-",
+          "size": 3575,
+          "lmtime": 0,
+          "modified": false
+        },
+        "res_quickies.html": {
+          "type": "-",
+          "size": 243,
+          "lmtime": 1675711164588,
+          "modified": false
+        },
+        "resume_header.html": {
+          "type": "-",
+          "size": 530,
+          "lmtime": 0,
+          "modified": false
+        },
+        "work_history.html": {
+          "type": "-",
+          "size": 4979,
+          "lmtime": 0,
+          "modified": false
+        }
+      },
+      "samples": {},
+      "ward_cookbook": {},
+      "writing": {
+        "error_log": {
+          "type": "-",
+          "size": 5646,
+          "lmtime": 0,
+          "modified": false
+        },
+        "family_goals": {
+          "error_log": {
+            "type": "-",
+            "size": 487,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 12301,
+            "lmtime": 1675713436778,
+            "modified": false
+          }
+        },
+        "glass_mountain": {
+          "error_log": {
+            "type": "-",
+            "size": 1975,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 21954,
+            "lmtime": 1675713436780,
+            "modified": false
+          }
+        },
+        "index.php": {
+          "type": "-",
+          "size": 5711,
+          "lmtime": 1675713436782,
+          "modified": false
+        },
+        "leaving_it": {
+          "error_log": {
+            "type": "-",
+            "size": 3403,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 25854,
+            "lmtime": 1675713436784,
+            "modified": false
+          }
+        },
+        "rule_number_one": {
+          "error_log": {
+            "type": "-",
+            "size": 2465,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 8386,
+            "lmtime": 1675713436785,
+            "modified": false
+          }
+        },
+        "support_the_troops": {
+          "error_log": {
+            "type": "-",
+            "size": 499,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 6675,
+            "lmtime": 1675713436788,
+            "modified": false
+          }
+        },
         "ward_cookbook": {},
-        "writing": {}
+        "writing_header.html": {
+          "type": "-",
+          "size": 714,
+          "lmtime": 0,
+          "modified": false
+        }
       }
     },
     "subdomtest.phrits.com": {

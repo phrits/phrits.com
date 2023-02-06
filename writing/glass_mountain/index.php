@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,8 +17,9 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 				<!-- Main -->
 			<section id="main" class="wrapper">
 			<h1 class="major credits">Glass Mountain</h1>
-			<span class="image fit"><img src="/images/glass.jpg" alt="glass bottles" /></span>
-
+            <div class="inner">
+			    <span class="image fit"><img src="/images/glass.jpg" alt="glass bottles" /></span>
+            </div>
             <div class="wrapper style3 inner">
 
                     <p>I first noticed Amy when she showed up in band class one day in April. I sat back among the second clarinets and she sat in the row in front of me playing what was probably the strangest looking and sounding musical instrument I had ever seen: a bassoon. She had reddish brown hair and big round glasses that both seemed to complement the mahogany luster of her instrument. And as it buzzed out its low notes, I was drawn to her like a snake to a flute.</p>

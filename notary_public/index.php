@@ -1,5 +1,5 @@
 <?php
-require('/home/brobip/subdomtest.phrits.com/init.php');
+require('/home/brobip/public_html/init.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,8 +17,10 @@ require('/home/brobip/subdomtest.phrits.com/init.php');
 				<!-- Main -->
 			<section id="main" class="wrapper">
                 <h1 class="major credits">Notary Public</h1>
+				<div class="inner">
                 <span class="image fit"><img id="nc_seal" src="/images/nc_seal.jpg" alt="Seal of the State of North Carolina" title="Esse quam videri." /></span>
-				<!-- Parenting and Family -->
+				</div>
+
 				<div class="features">
 
 				<!-- Wayne County, North Carolina -->

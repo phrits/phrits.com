@@ -143,3 +143,6 @@ __pycache__/*
 
 # # Pyre type checker
 # .pyre/
+.vscode/ftp-kr.sync.cache.json
+.vscode/ftp-kr.sync.cache.json
+.vscode/ftp-kr.sync.cache.json

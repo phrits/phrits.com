@@ -1,3 +1,6 @@
+<?php
+require('/home/brobip/public_html/init.php');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -35,19 +38,25 @@
 						Lots of my original content first appeared elsewhere: Now defunct websites, my old site(s), <a href="https://reddit.com/">Reddit</a> or <a href="https://facebook.com/">Facebook</a> posts and comments, etc. I've made a few minor additions, corrections, or updates here and there.
 					</p>
 				</section>
+				<section style="width: auto; border: 0 !important;" id="wooden_board">
+					<span class="icon solid major fa-solid fa-bread-slice"></span>
+					<p>
+						The wooden board at the bottom of the page represents my personal philosphy of openness and honesty. It also symbolizes my belief that food should be better than mere sustenance. Everything should be &quot;above board&quot;.
+					</p>
+				</section>    
 			</div>
 
-<?php include 'image_credits.html'; ?>
+		<?php include 'image_credits.html'; ?>
 
 		<h2 class="credits" id="old_phrits">2011 version of <span class="phrits-invert">phrits.com</span></h2>
 		<div class="features">
 			<section style="width: auto;">
 				<span class="icon solid major"><img src="/images/phrits-favicon.ico" alt="p" /></span>
 					<p>
-						At launch (early 2023, with a little luck), almost all original content came from the old site. Recipes, writing, etc.
+						At launch in February, 2023, almost all original content came from the old site. Recipes, writing, etc.
 					</p>
 					<p>
-						I've had a few false starts trying to relaunch. The version I put up over a decade ago was a home grown content management system written in PHP. Except that I didn't code an interface into it. Adding new content was obnoxious.
+						I've had a few false starts trying to relaunch. The version I put up over a decade ago was a home grown content management system written in PHP. Except that I didn't code a front end. Adding new content was obnoxious.
 					</p>
 					<p>
 						When I started my March 2022 attempt, I copied everything over to a separate subdomain and tweaked it until it worked. Alas, the site was implemented in PHP v5.6&mdash;current when it was developed&mdash;and PHP is up to v8.1 now. The old site is there, but program execution fails. The effort involved in updating that code just isn't worth the result. Please <a href="mailto:missingOld@phrits.com">let me know</a> if you're missing something.
