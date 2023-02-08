@@ -2622,6 +2622,12 @@
       },
       "cgi-bin": {},
       "credits": {},
+      "error_log": {
+        "type": "-",
+        "size": 1030,
+        "lmtime": 0,
+        "modified": false
+      },
       "fat_tom": {
         "error_log": {
           "type": "-",

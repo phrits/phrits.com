@@ -36,7 +36,7 @@ require('/home/brobip/public_html/init.php');
 				<section>
 					<span class="icon solid major fa-exclamation"></span>
 					<p>
-						<a href="/resume/IT_Resume.pdf">IT Resume &ndash; 2023-01 (<span class="filename">PDF</span>)</a>
+						<a href="/resume/IT_Resume.pdf">IT Resume &ndash; 2023-02 (<span class="filename">PDF</span>)</a>
 					</p>
 					<h3 class="resume">Older Versions</h3>
 					<ul class="ingredient">
