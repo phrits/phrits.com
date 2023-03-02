@@ -63,7 +63,7 @@ ul.welcome {
 
 .ingredient {
     list-style-type: none;
-    text-indent: -1.5em;
+    text-indent: -.5em;
   }
   
 li.ingredient::before {
@@ -259,4 +259,10 @@ border-right: 0;
 padding: 2em;
 padding-bottom: 0;
 margin-top: 1em !important;
+}
+.meta_headshot {
+    line-height: .7em;
+}
+.meta_caption {
+    font-size: 80%;
 }

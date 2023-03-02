@@ -2614,8 +2614,8 @@
           },
           "phrits.css": {
             "type": "-",
-            "size": 4675,
-            "lmtime": 1675712548909,
+            "size": 4762,
+            "lmtime": 1675897943661,
             "modified": false
           }
         }
@@ -2772,8 +2772,8 @@
         },
         "icons.html": {
           "type": "-",
-          "size": 917,
-          "lmtime": 0,
+          "size": 926,
+          "lmtime": 1675882156468,
           "modified": false
         },
         "image_credits.html": {
@@ -2784,8 +2784,8 @@
         },
         "main.html": {
           "type": "-",
-          "size": 5556,
-          "lmtime": 1675713436621,
+          "size": 5557,
+          "lmtime": 1677686730769,
           "modified": false
         },
         "main_header.html": {
@@ -2924,14 +2924,14 @@
         },
         "IT_Resume.pdf": {
           "type": "-",
-          "size": 1030705,
-          "lmtime": 1675707247839,
-          "modified": true
+          "size": 240375,
+          "lmtime": 1677701224520,
+          "modified": false
         },
         "index.php": {
           "type": "-",
           "size": 6292,
-          "lmtime": 1675713436636,
+          "lmtime": 1675881924561,
           "modified": false
         },
         "keywords.html": {
