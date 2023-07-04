@@ -4,7 +4,7 @@ require('/home/brobip/public_html/init.php');
 <!DOCTYPE HTML>
 <html>
 	<head>
-        <title>Recipe Title - phrits.com</title>
+        <title>Crazy Cake - phrits.com</title>
         <meta name="description" content="" />
 <?php include $www . '/meta/head.html'; ?>
     </head>

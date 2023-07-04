@@ -2772,8 +2772,8 @@
         },
         "icons.html": {
           "type": "-",
-          "size": 926,
-          "lmtime": 1675882156468,
+          "size": 1060,
+          "lmtime": 1677795633883,
           "modified": false
         },
         "image_credits.html": {
@@ -2872,16 +2872,68 @@
         "blue_cheese_dip": {},
         "charleston_grits": {},
         "country_ham": {},
-        "crazy_cake": {},
-        "eggs_in_bologna_cups": {},
+        "crazy_cake": {
+          "error_log": {
+            "type": "-",
+            "size": 152449,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 2112,
+            "lmtime": 1688439237756,
+            "modified": false
+          }
+        },
+        "eggs_in_bologna_cups": {
+          "error_log": {
+            "type": "-",
+            "size": 156244,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 2734,
+            "lmtime": 1688439250922,
+            "modified": false
+          }
+        },
         "error_log": {
           "type": "-",
           "size": 18058,
           "lmtime": 0,
           "modified": false
         },
-        "flour_tortillas": {},
-        "french_fried_onions": {},
+        "flour_tortillas": {
+          "error_log": {
+            "type": "-",
+            "size": 154076,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 2341,
+            "lmtime": 1688439261701,
+            "modified": false
+          }
+        },
+        "french_fried_onions": {
+          "error_log": {
+            "type": "-",
+            "size": 160189,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 5873,
+            "lmtime": 1688439293201,
+            "modified": false
+          }
+        },
         "german_red_cabbage": {},
         "gizzards": {},
         "grits": {},
@@ -2905,7 +2957,20 @@
           "lmtime": 0,
           "modified": false
         },
-        "restaurant_style_salsa": {},
+        "restaurant_style_salsa": {
+          "error_log": {
+            "type": "-",
+            "size": 127598,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 3434,
+            "lmtime": 1688439185757,
+            "modified": false
+          }
+        },
         "salsa": {},
         "savory_butternut_soup": {},
         "stuffed_shells": {},
@@ -2913,9 +2978,28 @@
         "tomato_sauce": {},
         "turkey_gizzards": {},
         "wassail": {},
-        "whipped_cream": {}
+        "whipped_cream": {
+          "error_log": {
+            "type": "-",
+            "size": 130026,
+            "lmtime": 0,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 5255,
+            "lmtime": 1688439275861,
+            "modified": false
+          }
+        }
       },
       "resume": {
+        "FKnack_Resume_IT_2007.html": {
+          "type": "-",
+          "size": 40485,
+          "lmtime": 1677793741107,
+          "modified": false
+        },
         "FKnack_Resume_IT_2012.html": {
           "type": "-",
           "size": 10988,
@@ -2924,8 +3008,8 @@
         },
         "IT_Resume.pdf": {
           "type": "-",
-          "size": 240375,
-          "lmtime": 1677701224520,
+          "size": 222629,
+          "lmtime": 1677869671216,
           "modified": false
         },
         "index.php": {
