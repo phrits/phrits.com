@@ -17,20 +17,7 @@
         "lmtime": 0,
         "modified": false
       },
-      "fat_tom": {
-        "error_log": {
-          "type": "-",
-          "size": 5563,
-          "lmtime": 0,
-          "modified": false
-        },
-        "index.php": {
-          "type": "-",
-          "size": 8009,
-          "lmtime": 1681649978835,
-          "modified": false
-        }
-      },
+      "fat_tom": {},
       "food_books": {},
       "food_resources": {},
       "hire": {},
