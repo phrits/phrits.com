@@ -1,4 +1,4 @@
 <?php
-require('/home/brobip/public_html/init.php');
+require('/home/cc55vfcn2kpt/public_html/init.php');
 include($www . '/miscellany/index.php');
 ?>
