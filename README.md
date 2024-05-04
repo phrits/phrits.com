@@ -1,5 +1,7 @@
 # phrits.com
 
+[Comment, 2024-05-04. Good heavens, this is terrible! I'm adding a new section and having to update the menu file for 'bout every damn thing. I'm going to need to get on the Components version sooner than I thought. This is kind of embarassing.]
+
 This is the repo for my personal website, [`phrits.com`](https://phrits.com).
 
 ## Status
