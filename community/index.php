@@ -32,6 +32,8 @@ require('/home/cc55vfcn2kpt/public_html/init.php');
 								<p>2024-05-04</p>
 								<p>Coming "soon". My plan is to put together a JavaScript collapsing page of information about what each organization is about, my position, what I'm doing to help, maybe what I want to see next. Stay tuned. If I'm not shouting into the void, pester me.</p>
 							</div>
+							<div class="col-12">
+							</div>
 						</div> <!-- class="row" -->
 					</div>
 				</section>
