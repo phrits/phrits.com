@@ -17,7 +17,7 @@ require('/home/cc55vfcn2kpt/public_html/init.php');
 	<div id="wrapper">
 			<!-- Main -->
 		<section id="main" class="wrapper style1 spotlights">
-			<h1 class="major credits">Business Information Technologist</h1>
+			<h1 class="major credits">Strategic Organizational Specialist</h1>
 
 			<!-- Intro -->
 			<div class="features">
