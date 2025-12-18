@@ -1,0 +1,202 @@
+/* Validated CSS through W3C CSS Validator. Bunch of level 1 warnings about missing colors, but they're bogus. */
+
+body {
+    font-family: sans-serif, fantasy, cursive;
+}
+
+body.chapter {
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
+	background-image: url(background.jpg);
+}
+
+body.index {
+	margin-top: 3%;
+	margin-right: 5%;
+	margin-left: 5%;
+	background-image: url(background.jpg);
+}
+
+body.recipe {
+	background-color: #F0FFF0; /* HoneyDew */
+	padding-right: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
+	padding-left: 5%;
+	border: solid #8B4513; /* SaddleBrown */
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h1.maintitle {
+    text-align: center;
+    font-weight: bold;
+    font-size:200%;
+}
+
+h1.indextitle {
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1.recipetitle {
+    font-size: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2.chapter {
+    text-align: center;
+    font-weight: bold;
+    color: #006400; /* DarkGreen */
+    font-size: 150%;
+}
+
+h2.recipe {
+    text-align: center;
+    font-weight: bold;
+    color: #006400; /* DarkGreen */
+}
+
+h3.recipetitle {
+    text-align: center;
+}
+
+p.indexlink {
+    text-align: center;
+    line-height: 25%;
+}
+
+p.chapterlink {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25%;
+}
+
+p.subrecipe {
+    font-weight: bold;
+    font-style:italic;
+    color: black;
+}
+
+p.correspondence {
+    font-weight: bold;
+    line-height: 10px;
+    text-align: center;
+    color: #2F4F4F; /* DarkSlateGray */
+}
+
+p.directions {
+    font-size:90%;
+    color: #2F4F4F; /* DarkSlateGray */
+}
+
+p.author {
+    font-weight: 600;
+    color: #A52A2A; /* Brown */
+    font-size: 110%
+}
+
+p.note {
+    font-style:oblique;
+    font-size:75%;
+}
+
+p.holiday {
+    font-weight: bold;
+    font-style:italic;
+    text-align: center;
+    font-size: 125%;
+}
+
+p.leftfooter {
+    font-weight: bold;
+    font-style:italic;
+    text-align: left;
+    font-size: 120%;
+    padding-left: 5%;
+}
+
+p.rightfooter {
+    font-weight: bold;
+    font-style:italic;
+    text-align: right;
+    font-size: 120%;
+    padding-right: 5%;
+}
+
+p.centerfooter {
+    font-weight: bold;
+    font-style:italic;
+    text-align: center;
+    font-size: 120%;
+}
+
+A {
+    color: green;
+    font-weight:bold;
+}
+
+A:link {
+    color: green;
+}
+
+A:visited {
+    color:#8B4513; /* SaddleBrown */
+}
+
+A:hover {
+    color: #8B008B; /* DarkMagenta */
+}
+
+A:active {
+    color: blue;
+}
+
+.copyright {
+    text-align: right;
+    font-size: x-small;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+a.copyright {
+    color: black;
+}
+
+.recipelink {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    text-align: left;
+}
+
+.chapterlink {
+    text-decoration: none;
+}
+
+.indexlink {
+    text-decoration: none;
+}
+
+.footerlink {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+
+ul {
+    list-style-type: none;
+    font-size:smaller;
+    color: #2F4F4F; /* DarkSlateGray */
+}
+
+hr {
+    background-color: #8B4513; /* SaddleBrown */
+    width: 75%
+}
