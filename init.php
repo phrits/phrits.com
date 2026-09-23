@@ -1,3 +1,3 @@
 <?php
-$www = '/home/cc55vfcn2kpt/public_html/';
+$www = '/home/ouft0uca97k2/public_html/';
 ?>
