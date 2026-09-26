@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import legacyUrls from '../data/legacy-redirects.json';
+
+const redirects = legacyUrls as Record<string, string>;
+let oldPath = Astro.url.pathname;
+try { oldPath = decodeURIComponent(oldPath); } catch { /* Keep the encoded path if it is malformed. */ }
+const destination = redirects[oldPath] ?? redirects[oldPath.replace(/\/$/, '')] ?? redirects[`${oldPath.replace(/\/$/, '')}/`];
+if (destination && destination !== Astro.url.pathname) return Astro.redirect(destination, 301);
+Astro.response.status = 404;
+---
+<Layout title="Page not found">
+  <section class="not-found max-w-6xl mx-auto px-lg py-4xl">
+    <p class="eyebrow">404 · Not found</p>
+    <h1>That address has moved on.</h1>
+    <p>The page may have been renamed or removed from the archive.</p>
+    <a class="text-link" href="/">Go to phrits.com</a>
+  </section>
+</Layout>
+<style>
+  .not-found { min-height: 55vh; }
+  h1 { max-width: 12ch; margin-block: 1rem; font-size: clamp(3rem, 7vw, 6rem); }
+</style>
