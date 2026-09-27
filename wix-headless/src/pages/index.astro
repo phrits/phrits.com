@@ -13,7 +13,7 @@ catch (error) { console.error('[home] Notes unavailable:', error); }
   {samples && <Fragment slot="head"><meta name="robots" content="noindex, nofollow" /></Fragment>}
   <section class="hero">
     <div class="hero-geometry" aria-hidden="true">
-      <div class="hero-oxblood"></div>
+      <div class="hero-charcoal"></div>
       <div class="hero-navy"></div>
       <div class="hero-notch"></div>
     </div>
@@ -70,11 +70,11 @@ catch (error) { console.error('[home] Notes unavailable:', error); }
   .intro { max-width: 38rem; padding: 1.25rem 1.5rem 1.4rem 0; font-size: clamp(1.15rem, 2vw, 1.45rem); background: var(--color-paper); }
   .hero .text-link { margin-top: 1.5rem; }
   .hero-geometry { position: absolute; inset: 0; pointer-events: none; }
-  .hero-oxblood { position: absolute; top: 0; right: 0; width: 38%; height: 72%; background: #5b2747; }
+  .hero-charcoal { position: absolute; top: 0; right: 0; width: 38%; height: 72%; background: #44352D; }
   .hero-navy { position: absolute; right: 13%; bottom: 0; width: 50%; height: 39%; background: #2f5d50; }
-  .hero-notch { position: absolute; right: 6%; top: 18%; width: 8%; height: 19%; background: #d97a53; }
+  .hero-notch { position: absolute; right: 6%; top: 18%; width: 8%; height: 19%; background: #B97D73; }
   .current { position: relative; display: grid; grid-template-columns: minmax(12rem, .85fr) minmax(0, 1.35fr); gap: var(--spacing-2xl); align-items: center; overflow: hidden; }
-  .current-label { color: var(--color-paper); background: #5b2747; font-family: var(--font-display); font-size: clamp(7rem, 18vw, 16rem); font-weight: 800; line-height: .76; letter-spacing: -.08em; padding: 3rem 1rem 2rem 0; text-align: right; }
+  .current-label { color: var(--color-paper); background: #44352D; font-family: var(--font-display); font-size: clamp(7rem, 18vw, 16rem); font-weight: 800; line-height: .76; letter-spacing: -.08em; padding: 3rem 1rem 2rem 0; text-align: right; }
   .current-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-lg); }
   .current-copy h2, .archive-band h2 { max-width: 12ch; font-size: clamp(2.7rem, 5.5vw, 5.5rem); }
   .notes-band { color: var(--color-paper); background: #2f5d50; }
@@ -84,15 +84,15 @@ catch (error) { console.error('[home] Notes unavailable:', error); }
   .mini-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .notes-mini a:hover .mini-title { text-decoration: underline; }
   .mini-pin { flex: none; background: #f8f4e9; color: #2f5d50; padding: .1rem .35rem; font: bold .7rem var(--font-mono); text-transform: uppercase; }
-  .notes-band .text-link::after { color: #d97a53; }
-  .archive-band { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-lg); border-left: clamp(2rem, 8vw, 8rem) solid #5b2747; }
+  .notes-band .text-link::after { color: #B97D73; }
+  .archive-band { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-lg); border-left: clamp(2rem, 8vw, 8rem) solid #44352D; }
   [data-decorative-slot="hero"], [data-decorative-slot="about"] { display: none; }
   @media (max-width: 767px) {
     .mini-title { white-space: normal; overflow-wrap: anywhere; }
     .hero { min-height: 44rem; }
     .hero-copy { padding-top: 4rem; padding-bottom: 12rem; }
     .hero-copy h1 { font-size: clamp(4rem, 21vw, 6rem); }
-    .hero-oxblood { width: 34%; height: 25%; }
+    .hero-charcoal { width: 34%; height: 25%; }
     .hero-navy { right: 0; width: 78%; height: 22%; }
     .hero-notch { top: auto; bottom: 12%; left: 0; width: 17%; height: 7%; }
     .current { grid-template-columns: 1fr; gap: var(--spacing-xl); }
