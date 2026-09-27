@@ -3,12 +3,14 @@
 @theme {
   --color-paper: #FBF7EE;
   --color-paper-warm: #F2E9DA;
-  --color-ink: #171717;
-  --color-ink-soft: #343238;
-  --color-mute: #68615B;
+  --color-charcoal: #44352D;
+  --color-green: #2F5D50;
+  --color-rose: #B97D73;
+  --color-ink: var(--color-charcoal);
+  --color-ink-soft: #5B4D44;
+  --color-mute: #70655E;
   --color-rule: #CBBEAC;
-  --color-accent: #760000;
-  --color-navy: #08087A;
+  --color-accent: var(--color-rose);
   --color-yellow: #F5C62E;
   --color-cream: #FFFDF7;
   --color-error: #A3261D;
@@ -100,7 +102,7 @@
 }
 .site-nav-item a { padding-block: .25rem; border-bottom: .25rem solid transparent; }
 .site-nav-item a:hover, .site-nav-item a:focus-visible { border-color: var(--color-accent); }
-.site-footer { border-top: 1px solid var(--color-rule); background: var(--color-navy); color: var(--color-paper); }
+.site-footer { border-top: 1px solid var(--color-rule); background: var(--color-green); color: var(--color-paper); }
 .site-footer a:hover { color: var(--color-yellow); }
 
 ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
