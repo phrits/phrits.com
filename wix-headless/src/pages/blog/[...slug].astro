@@ -1,0 +1,26 @@
+---
+import NoteSample from '../../components/NoteSample.astro';
+import { samplePosts } from '../../lib/note-samples';
+import RicosViewer from '../../components/RicosViewer';
+import BlogPost from '../../layouts/BlogPost.astro';
+import { getPostBySlug } from '../../lib/blog';
+
+export const wixMetadata = {
+  appDefId: '14bcded7-0066-7c35-14d7-466cb3f09103',
+  pageIdentifier: 'wix.blog.sub_pages.post',
+  identifiers: { slug: 'BLOG.POST.SLUG' },
+};
+
+const { slug } = Astro.params;
+const samples = Astro.url.searchParams.get('samples') === '1';
+let post = null;
+try {
+  post = samples ? samplePosts.find(post => post.slug === slug) : (slug ? await getPostBySlug(slug) : null);
+} catch (error) {
+  console.error('[blog] post query failed:', error);
+}
+if (!post) return Astro.redirect('/blog');
+---
+<BlogPost title={post.title} description={post.excerpt} pubDate={post.pubDate} heroImage={post.coverImageUrl} tags={post.tags} samples={samples}>
+  {samples ? <NoteSample /> : <RicosViewer client:only="react" content={post.richContent} />}
+</BlogPost>

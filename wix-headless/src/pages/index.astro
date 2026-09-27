@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { queryBlogPosts } from '../lib/blog';
+import { homeNotes } from '../lib/notes';
+import { samplePosts } from '../lib/note-samples';
+const samples = Astro.url.searchParams.get('samples') === '1';
+let notes = [];
+try { notes = homeNotes(samples ? samplePosts : await queryBlogPosts()); }
+catch (error) { console.error('[home] Notes unavailable:', error); }
+
+---
+<Layout title="Home" description="Fritz Knack—arts leader, technology professional, and civic volunteer in Goldsboro, North Carolina.">
+  {samples && <Fragment slot="head"><meta name="robots" content="noindex, nofollow" /></Fragment>}
+  <section class="hero">
+    <div class="hero-geometry" aria-hidden="true">
+      <div class="hero-oxblood"></div>
+      <div class="hero-navy"></div>
+      <div class="hero-notch"></div>
+    </div>
+    <div class="hero-copy max-w-6xl mx-auto px-lg">
+      <img class="home-mark" src="/phrits-mark.svg" width="112" height="112" alt="" />
+      <p class="eyebrow">Fritz Knack · Goldsboro, North Carolina</p>
+      <h1>Art.<br />Systems.<br />Service.<br />Place.</h1>
+      <p class="intro">I’m Fritz Knack—an Arts Council leader, longtime technology professional, and civic volunteer working to make good institutions work better.</p>
+      <a class="text-link" href="/work">See what I’m working on</a>
+    </div>
+    <div data-decorative-slot="hero"></div>
+  </section>
+
+  <section class="current max-w-6xl mx-auto px-lg py-4xl">
+    <div class="current-label" aria-hidden="true">NOW</div>
+    <div class="current-copy">
+      <p class="eyebrow">Current work</p>
+      <h2>Useful work, close to home.</h2>
+      <p class="copy">My work sits where arts leadership, practical technology, and civic life meet. I help people make institutions clearer, steadier, and more useful to the communities they serve.</p>
+      <a class="text-link" href="/helping-nonprofits">How I help nonprofits</a>
+    </div>
+  </section>
+
+  <section class="notes-band">
+    <div class="max-w-6xl mx-auto px-lg py-3xl grid md:grid-cols-[1fr_1.3fr] gap-2xl items-end">
+      <h2 class="huge-label">Notes</h2>
+      <div class="flex flex-col gap-md">
+        <p class="copy">Occasional writing about nonprofit work, technology, food, local life, and whatever else proves useful.</p>
+        {samples && <p class="eyebrow">Sample preview · Lorem Ipsum</p>}
+        {notes.length > 0 && <ol class="notes-mini" aria-label="Recent and pinned notes">
+          {notes.map(post => <li><a href={`/blog/${post.slug}/${samples ? '?samples=1' : ''}`}>
+            {post.pinned && <span class="mini-pin">Pinned</span>}<span class="mini-title">{post.title}</span>
+          </a></li>)}
+        </ol>}
+        <a class="text-link" href={`/blog${samples ? '?samples=1' : ''}`}>Read the notes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="archive-band max-w-6xl mx-auto px-lg py-4xl">
+    <div data-decorative-slot="about"></div>
+    <p class="eyebrow">Earlier versions of <span class="brand-inline">phrits</span></p>
+    <h2>A personal web archive, kept intact.</h2>
+    <p class="copy">The older site—recipes, writing, professional history, interests, and miscellany—still belongs here. It keeps its own period character instead of being dressed up as something new.</p>
+    <a class="text-link" href="/archive">Enter the archive</a>
+  </section>
+</Layout>
+
+<style>
+  .hero { position: relative; min-height: 46rem; overflow: hidden; }
+  .hero-copy { position: relative; z-index: 2; padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: 8rem; }
+  .home-mark { width: clamp(4.5rem, 8vw, 7rem); margin-bottom: var(--spacing-lg); }
+  .hero-copy h1 { max-width: 8ch; margin: 1.25rem 0 1.5rem; font-size: clamp(4.2rem, 10vw, 9.5rem); line-height: .74; letter-spacing: -.065em; }
+  .intro { max-width: 38rem; padding: 1.25rem 1.5rem 1.4rem 0; font-size: clamp(1.15rem, 2vw, 1.45rem); background: var(--color-paper); }
+  .hero .text-link { margin-top: 1.5rem; }
+  .hero-geometry { position: absolute; inset: 0; pointer-events: none; }
+  .hero-oxblood { position: absolute; top: 0; right: 0; width: 38%; height: 72%; background: #5b2747; }
+  .hero-navy { position: absolute; right: 13%; bottom: 0; width: 50%; height: 39%; background: #2f5d50; }
+  .hero-notch { position: absolute; right: 6%; top: 18%; width: 8%; height: 19%; background: #d97a53; }
+  .current { position: relative; display: grid; grid-template-columns: minmax(12rem, .85fr) minmax(0, 1.35fr); gap: var(--spacing-2xl); align-items: center; overflow: hidden; }
+  .current-label { color: var(--color-paper); background: #5b2747; font-family: var(--font-display); font-size: clamp(7rem, 18vw, 16rem); font-weight: 800; line-height: .76; letter-spacing: -.08em; padding: 3rem 1rem 2rem 0; text-align: right; }
+  .current-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-lg); }
+  .current-copy h2, .archive-band h2 { max-width: 12ch; font-size: clamp(2.7rem, 5.5vw, 5.5rem); }
+  .notes-band { color: var(--color-paper); background: #2f5d50; }
+  .notes-mini { list-style: none; padding: 0; margin: .5rem 0; }
+  .notes-mini li + li { border-top: 1px solid #ffffff40; }
+  .notes-mini a { display: flex; align-items: baseline; gap: .65rem; padding: .65rem 0; min-height: 44px; }
+  .mini-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .notes-mini a:hover .mini-title { text-decoration: underline; }
+  .mini-pin { flex: none; background: #f8f4e9; color: #2f5d50; padding: .1rem .35rem; font: bold .7rem var(--font-mono); text-transform: uppercase; }
+  .notes-band .text-link::after { color: #d97a53; }
+  .archive-band { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-lg); border-left: clamp(2rem, 8vw, 8rem) solid #5b2747; }
+  [data-decorative-slot="hero"], [data-decorative-slot="about"] { display: none; }
+  @media (max-width: 767px) {
+    .mini-title { white-space: normal; overflow-wrap: anywhere; }
+    .hero { min-height: 44rem; }
+    .hero-copy { padding-top: 4rem; padding-bottom: 12rem; }
+    .hero-copy h1 { font-size: clamp(4rem, 21vw, 6rem); }
+    .hero-oxblood { width: 34%; height: 25%; }
+    .hero-navy { right: 0; width: 78%; height: 22%; }
+    .hero-notch { top: auto; bottom: 12%; left: 0; width: 17%; height: 7%; }
+    .current { grid-template-columns: 1fr; gap: var(--spacing-xl); }
+    .current-label { margin-right: 20%; font-size: 9rem; padding: 2rem 1rem 1.5rem; }
+    .archive-band { border-left-width: 1.25rem; }
+  }
+</style>

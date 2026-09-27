@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+---
+<Layout title="Helping Nonprofits" description="Practical help for nonprofits from Fritz Knack.">
+  <PageIntro eyebrow="Helping nonprofits" title="Practical help. No theater." lede="Sometimes an organization needs a strategy. Sometimes it needs someone to untangle the spreadsheet, fix the process, or ask the obvious question everyone has been stepping around." />
+  <section class="help max-w-6xl mx-auto px-lg py-4xl">
+    <div class="statement"><span>Clearer</span><span>Steadier</span><span>More useful</span></div>
+    <div class="copy-block">
+      <h2>What useful help can look like</h2>
+      <ul>
+        <li>Sorting priorities when everything feels urgent</li>
+        <li>Making technology and information systems serve the work</li>
+        <li>Clarifying roles, decisions, and next steps</li>
+        <li>Helping boards and staff communicate without fog</li>
+        <li>Building workable processes people will actually follow</li>
+      </ul>
+      <a href="/contact" class="btn-primary">Start a conversation</a>
+    </div>
+  </section>
+</Layout>
+<style>
+  .help { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl); align-items: start; }
+  .statement { display: flex; flex-direction: column; color: var(--color-paper); font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 700; line-height: .92; }
+  .statement span { padding: 1.25rem; background: var(--color-navy); }
+  .statement span:nth-child(2) { margin-left: 10%; background: var(--color-accent); }
+  .statement span:nth-child(3) { margin-left: 20%; color: var(--color-ink); background: var(--color-yellow); }
+  h2 { font-size: clamp(2.2rem, 4vw, 4rem); margin-bottom: var(--spacing-lg); }
+  li { padding: 1rem 0; border-top: .3rem solid var(--color-rule); font-size: 1.1rem; }
+  .btn-primary { margin-top: var(--spacing-xl); }
+  @media (max-width: 767px) { .help { grid-template-columns: 1fr; gap: var(--spacing-2xl); } }
+</style>

@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import items from '../../data/archive-items.json';
+import '../../styles/archive-content.css';
+const item = items.find(i => i.slug === Astro.url.searchParams.get('slug'));
+if (!item) Astro.response.status = 404;
+const cookbook = item?.slug.startsWith('demeters-harvest/');
+---
+<Layout title={item?.title ?? 'Archive page not found'}>
+<div class="archive-reading"><nav><a href={cookbook ? '/archive/demeters-harvest/' : '/archive/'}>← {cookbook ? 'Demeter’s Harvest' : 'Archive'}</a></nav>
+{item ? <><p class="archive-context">{item.section} · Historical copy</p><article class="legacy-content" set:html={item.html}/></> : <h1>Archive page not found</h1>}
+</div></Layout>

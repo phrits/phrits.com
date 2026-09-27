@@ -1,0 +1,25 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="site-footer" transition:persist="site-footer">
+  <div class="max-w-6xl mx-auto px-lg py-3xl grid md:grid-cols-[1fr_auto] gap-xl">
+    <div class="flex flex-col gap-sm max-w-prose">
+      <span class="brand-wordmark text-2xl text-paper">phrits.com</span>
+      <p class="text-sm text-paper-warm">Useful notes from Goldsboro.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="grid grid-cols-2 gap-x-xl gap-y-xs text-sm">
+        <li><a href="/">Home</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Notes</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/helping-nonprofits">Helping Nonprofits</a></li>
+        <li><a href="/archive">Archive</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="max-w-6xl mx-auto px-lg pb-xl text-xs text-paper-warm">
+    <p>© {year} <span class="brand-inline">phrits.com</span>. All rights reserved.</p>
+  </div>
+</footer>

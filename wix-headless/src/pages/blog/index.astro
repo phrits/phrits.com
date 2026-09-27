@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { queryBlogPosts, type BlogPost } from '../../lib/blog';
+import { newest } from '../../lib/notes';
+import { samplePosts } from '../../lib/note-samples';
+const samples = Astro.url.searchParams.get('samples') === '1';
+let posts: BlogPost[] = [];
+let failed = false;
+try { posts = newest(samples ? samplePosts : await queryBlogPosts()); }
+catch (error) { failed = true; console.error('[blog] listing query failed:', error); }
+const topics = [...new Map(posts.flatMap(post => post.tags).map(tag => [tag.slug, tag])).values()].sort((a,b) => a.label.localeCompare(b.label));
+const categories = [...new Set(posts.map(post => post.category).filter(Boolean))].sort();
+const groups = [{ key: 'pins', title: 'Pinned', posts: posts.filter(post => post.pinned), limit: 3 }, { key: 'recent', title: 'Latest notes', posts: posts.filter(post => !post.pinned), limit: 10 }];
+---
+<Layout title="Notes" description="Writing by Fritz Knack. Browse, search, and explore notes by topic." hasSeoTags>
+  <Fragment slot="head"><BaseHead title="Notes · phrits.com" description="Writing by Fritz Knack. Browse, search, and explore notes by topic." />{samples && <meta name="robots" content="noindex, nofollow" />}</Fragment>
+  <header class="notes-hero">
+    <div class="notes-stripes" aria-hidden="true"><i></i><i></i></div>
+    <div class="notes-copy max-w-6xl mx-auto px-lg">
+      <p class="eyebrow">Notes</p>
+      <h1>Things worth writing down.</h1>
+      <p>Field notes from nonprofit work, technology, food, community life, and the occasional problem that got interesting.</p>
+    </div>
+  </header>
+  <section class="notes max-w-6xl mx-auto px-lg py-4xl" data-notes-index>
+    <aside class="notes-tools">
+      <p class="eyebrow">From the notebook</p>
+      <h2>Explore.</h2>
+      {samples && <p class="sample-notice">Sample preview: Lorem Ipsum articles for testing layout. <a href="/blog">View published notes</a>.</p>}
+      <div data-filters hidden>
+        <label for="note-search">Search notes</label>
+        <input id="note-search" type="search" placeholder="Words, titles, or topics" autocomplete="off" />
+        {categories.length > 0 && <><label for="note-category">Category</label><select id="note-category"><option value="">All categories</option>{categories.map(category => <option>{category}</option>)}</select></>}
+        {topics.length > 0 && <fieldset><legend>Topics</legend><p class="filter-help">Choose one or more. Matches include every selected topic.</p><div class="topic-options">{topics.map(topic => <label class="topic-option"><input type="checkbox" value={topic.slug} /><span>{topic.label}</span></label>)}</div></fieldset>}
+        <button class="reset" type="button" data-reset>Clear filters</button>
+      </div>
+      <a class="feed-link" href="/rss.xml">RSS feed</a>
+    </aside>
+    <div class="posts-shell">
+      <p class="result-count" data-count role="status" aria-live="polite">{posts.length} {posts.length === 1 ? 'note' : 'notes'}</p>
+      {failed && <p>Notes are temporarily unavailable. Please try again shortly.</p>}
+      {!failed && posts.length === 0 && <p>Published notes will appear here.</p>}
+      <p data-empty hidden>No notes match these filters. Try fewer topics or different search words.</p>
+      {groups.map(group => <section class:list={['note-group', group.key]} data-group={group.key} hidden={!group.posts.length} aria-labelledby={`${group.key}-heading`}>
+        <h2 id={`${group.key}-heading`} class="group-heading">{group.title}</h2>
+        <ol id={`${group.key}-list`}>
+          {group.posts.map((post, i) => <li class:list={['post-row', { 'is-pinned': post.pinned }]} data-slug={post.slug} hidden={i >= group.limit}>
+            <article>
+              <div class="post-meta">{post.pinned && <span class="pin-label">Pinned</span>}<span>{post.category ?? 'Note'}</span><FormattedDate date={post.pubDate} /></div>
+              <h3><a href={`/blog/${post.slug}/${samples ? '?samples=1' : ''}`}>{post.title}</a></h3>
+              {post.excerpt && <p class="post-excerpt">{post.excerpt}</p>}
+              {post.tags.length > 0 && <ul class="post-topics" aria-label="Topics">{post.tags.map(tag => <li><a href={`/blog?${samples ? 'samples=1&' : ''}topic=${encodeURIComponent(tag.slug)}`}>{tag.label}</a></li>)}</ul>}
+            </article>
+          </li>)}
+        </ol>
+        <button type="button" class="continue" data-continue={group.key} aria-controls={`${group.key}-list`} hidden>Continue {group.key === 'pins' ? 'pinned notes' : 'reading'}</button>
+      </section>)}
+    </div>
+    <script type="application/json" data-notes-data set:html={JSON.stringify(posts.map(({richContent, coverImageUrl, ...post}) => post)).replace(/</g, '\\u003c')} />
+  </section>
+  <noscript><style>.post-row[hidden] { display: block !important; }</style></noscript>
+</Layout>
+<script>
+  import { matchesNote } from '../../lib/notes';
+  function setupNotes() {
+    const root = document.querySelector<HTMLElement>('[data-notes-index]');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = 'true';
+    const posts = JSON.parse(root.querySelector('[data-notes-data]')!.textContent!);
+    const search = root.querySelector<HTMLInputElement>('#note-search')!;
+    const category = root.querySelector<HTMLSelectElement>('#note-category');
+    const checks = [...root.querySelectorAll<HTMLInputElement>('.topic-option input')];
+    const limits = { pins: 3, recent: 10 };
+    const filters = root.querySelector<HTMLElement>('[data-filters]')!;
+    filters.hidden = false;
+    function restore() {
+      const params = new URLSearchParams(location.search);
+      search.value = params.get('q') ?? '';
+      if (category) category.value = params.get('category') ?? '';
+      checks.forEach(input => input.checked = params.getAll('topic').includes(input.value));
+    }
+    function render(updateUrl = false, reset = false) {
+      if (reset) { limits.pins = 3; limits.recent = 10; }
+      const selected = checks.filter(input => input.checked).map(input => input.value);
+      const matching = posts.filter((post: any) => matchesNote(post, search.value, selected, category?.value));
+      const found = new Set(matching.map((post: any) => post.slug));
+      for (const key of ['pins', 'recent'] as const) {
+        const group = root!.querySelector<HTMLElement>(`[data-group="${key}"]`)!;
+        let count = 0;
+        group.querySelectorAll<HTMLElement>('[data-slug]').forEach(row => {
+          const match = found.has(row.dataset.slug);
+          row.hidden = !match || ++count > limits[key];
+        });
+        group.hidden = count === 0;
+        const more = group.querySelector<HTMLButtonElement>('[data-continue]')!;
+        more.hidden = count <= limits[key];
+        more.textContent = `Continue ${key === 'pins' ? 'pinned notes' : 'reading'} (${Math.max(0, count - limits[key])} more)`;
+      }
+      root!.querySelector<HTMLElement>('[data-empty]')!.hidden = matching.length > 0 || posts.length === 0;
+      root!.querySelector('[data-count]')!.textContent = `${matching.length} ${matching.length === 1 ? 'note' : 'notes'}${search.value || selected.length || category?.value ? ' match' + (matching.length === 1 ? 'es' : '') : ''}`;
+      if (updateUrl) {
+        const url = new URL(location.href);
+        ['q', 'topic', 'category'].forEach(key => url.searchParams.delete(key));
+        if (search.value.trim()) url.searchParams.set('q', search.value.trim());
+        selected.forEach(topic => url.searchParams.append('topic', topic));
+        if (category?.value) url.searchParams.set('category', category.value);
+        history.replaceState(null, '', url);
+      }
+    }
+    restore(); render();
+    search.addEventListener('input', () => render(true, true));
+    category?.addEventListener('change', () => render(true, true));
+    checks.forEach(input => input.addEventListener('change', () => render(true, true)));
+    root.querySelector('[data-reset]')!.addEventListener('click', () => {
+      search.value = ''; if (category) category.value = ''; checks.forEach(input => input.checked = false);
+      render(true, true); search.focus();
+    });
+    root.querySelectorAll<HTMLButtonElement>('[data-continue]').forEach(button => button.addEventListener('click', () => {
+      const key = button.dataset.continue as 'pins' | 'recent';
+      const group = button.closest('[data-group]')!;
+      const previous = new Set([...group.querySelectorAll<HTMLElement>('[data-slug]')].filter(row => !row.hidden));
+      limits[key] += key === 'pins' ? 3 : 10;
+      render();
+      const firstNew = [...group.querySelectorAll<HTMLElement>('[data-slug]')].find(row => !row.hidden && !previous.has(row));
+      firstNew?.querySelector<HTMLAnchorElement>('h3 a')?.focus({ preventScroll: true });
+    }));
+  }
+  setupNotes();
+  document.addEventListener('astro:page-load', setupNotes);
+</script>
+<style>
+  [hidden] { display: none !important; }
+  .notes-hero { position: relative; min-height: 32rem; overflow: hidden; color: #f8f4e9; background: #146b6d; }
+  .notes-copy { position: relative; z-index: 2; padding-block: var(--spacing-3xl); }
+  .notes-copy h1 { max-width: 10ch; margin: 1rem 0 1.5rem; font-size: clamp(3.5rem, 8vw, 8rem); line-height: .88; }
+  .notes-copy > p:last-child { max-width: 38rem; font-size: 1.3rem; }
+  .notes-stripes i { position: absolute; transform: rotate(-12deg); background: #273aa3; }
+  .notes-stripes i:first-child { right: -8%; top: -25%; width: 28%; height: 150%; }
+  .notes-stripes i:last-child { right: 19%; bottom: -18%; width: 13%; height: 72%; background: #d98743; }
+  .notes { display: grid; grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr); gap: var(--spacing-2xl); }
+  .notes-tools h2 { margin: .5rem 0 1.5rem; font-size: clamp(2.8rem, 5vw, 4rem); }
+  .notes-tools label, legend { display: block; font-weight: bold; margin-top: 1rem; }
+  input[type="search"], select { width: 100%; min-height: 48px; padding: .6rem; margin-top: .4rem; border: 1px solid #65746e; background: #fffdf7; color: #182b2b; border-radius: 0; font-size: 1rem; }
+  fieldset { border: 0; padding: 0; margin: 1rem 0; }
+  .filter-help { font-size: .9rem; margin-block: .5rem; }
+  .topic-options { display: flex; gap: .5rem; flex-wrap: wrap; }
+  .notes-tools .topic-option { display: flex; gap: .5rem; align-items: center; min-height: 44px; border: 1px solid #65746e; padding: .4rem .6rem; margin: 0; cursor: pointer; }
+  .topic-option:has(input:checked) { background: #146b6d; color: #fff; }
+  .topic-option input { accent-color: #146b6d; width: 1.1rem; height: 1.1rem; }
+  .reset, .feed-link { display: inline-block; text-decoration: underline; min-height: 44px; padding-block: .6rem; }
+  .feed-link { margin-top: 1rem; }
+  .posts-shell { min-width: 0; padding: clamp(1rem, 3vw, 2rem); border-top: 1rem solid #d98743; border-bottom: 1rem solid #146b6d; background: var(--color-paper-warm); }
+  .result-count { font: .8rem var(--font-mono); margin-bottom: 1.5rem; }
+  .group-heading { font-size: 1.5rem; margin-bottom: 1rem; }
+  ol, .post-topics { list-style: none; padding: 0; margin: 0; }
+  .post-row { padding: 1.5rem 0; border-top: 1px solid var(--color-rule); }
+  .is-pinned { padding-inline: 1rem; border-left: .35rem solid #d98743; background: #efe5d4; margin-bottom: .75rem; }
+  .post-meta { display: flex; align-items: center; gap: .65rem; flex-wrap: wrap; font: .75rem var(--font-mono); margin-bottom: .65rem; }
+  .post-meta time { margin-left: auto; }
+  .pin-label { padding: .2rem .4rem; background: #273aa3; color: white; font-weight: bold; text-transform: uppercase; }
+  h3 { font-size: clamp(1.65rem, 3vw, 2.6rem); overflow-wrap: anywhere; }
+  h3 a:hover { text-decoration: underline; text-underline-offset: .15em; }
+  .post-excerpt { color: var(--color-ink-soft); margin-top: .8rem; line-height: 1.65; }
+  .post-topics { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+  .post-topics a { display: inline-block; padding: .4rem .5rem; border: 1px solid #65746e; font: .8rem var(--font-mono); }
+  .continue { min-height: 48px; padding: .8rem 1rem; margin-block: 1rem; border: 2px solid #146b6d; color: #fff; background: #146b6d; cursor: pointer; font-weight: bold; }
+  .continue:hover { background: #234d4e; }
+  .note-group + .note-group { margin-top: 2.5rem; }
+  .sample-notice { border-left: 4px solid #d98743; padding: .75rem; margin-bottom: 1rem; }
+  .sample-notice a { text-decoration: underline; }
+  :is(a, button, input, select):focus-visible { outline: 3px solid #d98743; outline-offset: 4px; }
+  @media (max-width: 767px) {
+    .notes-hero { min-height: auto; }
+    .notes-stripes i:first-child { right: -28%; width: 42%; }
+    .notes-stripes i:last-child { right: -8%; }
+    .notes { grid-template-columns: 1fr; gap: 1.5rem; }
+    .notes-copy > p:last-child { max-width: 85%; }
+    .post-meta time { margin-left: 0; }
+  }
+</style>

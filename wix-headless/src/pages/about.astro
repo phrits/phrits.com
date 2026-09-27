@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="About" description="About Fritz Knack of Goldsboro, North Carolina.">
+  <header class="about-hero">
+    <div class="about-frame" aria-hidden="true"></div>
+    <div class="about-copy max-w-6xl mx-auto px-lg">
+      <p class="eyebrow">About · Fritz Knack</p>
+      <h1>Curious, practical, and rooted here.</h1>
+      <p>I’m an arts leader, a longtime technology professional, a civic volunteer, an enthusiastic cook, and a person who believes useful work can also be humane.</p>
+    </div>
+  </header>
+  <section class="about max-w-6xl mx-auto px-lg py-4xl">
+    <aside aria-hidden="true"><strong>NC</strong><span>Goldsboro</span></aside>
+    <div class="prose">
+      <p class="eyebrow">A through line</p>
+      <h2>Helping people make sense of complicated things.</h2>
+      <p>Across technology, nonprofit leadership, and community work, I keep returning to the same questions: What are we trying to accomplish? What is getting in the way? And what would make the work clearer for the people who actually have to do it?</p>
+      <p>This site is part working notebook, part introduction, and part long-running personal archive. It collects what I’m doing now without pretending the earlier chapters never happened.</p>
+    </div>
+  </section>
+</Layout>
+<style>
+  .about-hero { position: relative; min-height: 40rem; overflow: hidden; background: #f3eee2; }
+  .about-copy { position: relative; z-index: 2; padding-top: var(--spacing-3xl); padding-left: clamp(2.25rem, 13vw, 12rem); }
+  .about-copy h1 { max-width: 11ch; margin: 1rem 0 1.5rem; font-size: clamp(4rem, 8vw, 8rem); line-height: .82; }
+  .about-copy > p:last-child { max-width: 39rem; padding: 1rem; background: #f3eee2; font-size: 1.3rem; }
+  .about-frame { position: absolute; left: 0; top: 0; width: 28%; height: 82%; border-right: 5.5rem solid #4c5f38; border-bottom: 5.5rem solid #4c5f38; }
+  .about-frame::after { content: ""; position: absolute; left: 55%; bottom: -8.5rem; width: 28rem; height: 5.5rem; background: #7c4568; }
+  .about { display: grid; grid-template-columns: .65fr 1.35fr; gap: var(--spacing-3xl); align-items: start; }
+  aside { min-height: 29rem; display: flex; flex-direction: column; justify-content: space-between; padding: var(--spacing-lg); color: var(--color-paper); background: #7c4568; }
+  aside strong { font-family: var(--font-display); font-size: clamp(6rem, 14vw, 12rem); line-height: .72; letter-spacing: -.08em; }
+  aside span { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .12em; }
+  .prose { padding-top: var(--spacing-lg); }
+  h2 { max-width: 12ch; margin: 1rem 0 2rem; font-size: clamp(2.7rem, 5vw, 5rem); }
+  .prose p:not(.eyebrow) { max-width: 42rem; margin-bottom: 1.4rem; font-size: 1.15rem; }
+  @media (max-width: 767px) { .about-hero { min-height: 44rem; } .about-copy { padding-left: var(--spacing-lg); } .about-frame { top: auto; bottom: 0; width: 45%; height: 24%; border-width: 0 3rem 3rem 0; } .about { grid-template-columns: 1fr; gap: var(--spacing-xl); } aside { min-height: 15rem; } }
+</style>

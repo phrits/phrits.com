@@ -1,0 +1,34 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  lede: string;
+  tone?: 'oxblood' | 'navy';
+}
+const { eyebrow, title, lede, tone = 'oxblood' } = Astro.props;
+---
+<header class:list={['page-intro', tone]}>
+  <div class="page-intro-inner max-w-6xl mx-auto px-lg">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p>{lede}</p>
+  </div>
+  <div class="slab" aria-hidden="true"></div>
+</header>
+<style>
+  .page-intro { position: relative; min-height: clamp(24rem, 48vw, 39rem); overflow: hidden; }
+  .page-intro-inner { position: relative; z-index: 2; padding-top: var(--spacing-3xl); padding-bottom: var(--spacing-3xl); }
+  h1 { max-width: 11ch; margin: 1rem 0 1.5rem; font-size: clamp(3.8rem, 8vw, 8rem); line-height: .82; letter-spacing: -.055em; }
+  p:last-child { max-width: 38rem; padding: 1rem 1.25rem 1.1rem 0; background: var(--color-paper); font-size: clamp(1.1rem, 2vw, 1.4rem); }
+  .slab { position: absolute; top: 0; right: 0; width: 42%; height: 76%; }
+  .slab::after { content: ""; position: absolute; left: -28%; bottom: -30%; width: 95%; height: 45%; background: var(--color-navy); }
+  .oxblood .slab { background: var(--color-accent); }
+  .navy .slab { background: var(--color-navy); }
+  .navy .slab::after { background: var(--color-accent); }
+  @media (max-width: 767px) {
+    .page-intro { min-height: 34rem; }
+    .page-intro-inner { padding-top: var(--spacing-2xl); }
+    .slab { top: auto; bottom: 0; width: 68%; height: 24%; }
+    .slab::after { left: -38%; bottom: 45%; width: 62%; height: 50%; }
+  }
+</style>

@@ -1,14 +1,27 @@
-# Wix Headless branch
+# phrits.com — Wix Headless
 
-This folder holds the Wix Headless handoff and legacy redirect implementation. The full Astro app and imported archive content are not yet in this branch.
+This folder contains the Astro site connected to Wix Headless, the migrated legacy archive, recipes, Notes/blog, and URL redirects.
 
-The redirect implementation is already present:
+## Edit and preview
 
-- `src/data/legacy-redirects.json` — 319 known legacy paths mapped to migrated destinations.
-- `src/pages/[...legacy].astro` — 301 redirects for known paths and a styled 404 for unknown paths.
-- `scripts/import-legacy-archive.py` — link rewriting and redirect-map generation.
-- `docs/LEGACY-URL-REDIRECTS.md` — migration notes.
+Open this `wix-headless` folder in VS Code. Use GitHub Desktop to switch to the `wix-headless` branch and fetch/pull updates before editing. Commit and push your changes to that branch when ready.
 
-`wix.config.json` is ignored because it contains this project's site and app identifiers. Keep your existing linked copy local.
+From this folder:
 
-When the app source is present, use VS Code for editing and GitHub Desktop to fetch/pull assistant commits and commit/push your changes. From the app folder, `npx wix dev` starts local development, `npx wix build` builds the project, `npx wix preview` uploads a test version, and `npx wix release` publishes to the live Wix site. GitHub and Wix preview/release are separate actions.
+- `npm install` installs dependencies.
+- `npx wix dev` starts local development.
+- `npx wix build` builds the site.
+- `npx wix preview` uploads a test version to Wix.
+- `npx wix release` publishes to the connected Wix site.
+
+A Git commit updates GitHub. Wix preview and release are separate actions.
+
+## What's here
+
+- `src/pages/` — site pages, archive, recipe index, Notes, and legacy URL handling.
+- `src/data/archive-items.json` and `archive-recipes.json` — imported archive and recipe records.
+- `public/archive-legacy/` — original archive media and downloadable files.
+- `src/data/legacy-redirects.json` — old URLs mapped to local pages or the requested external-link fallback.
+- `docs/NOTES-GUIDE.md` — how to add, pin, tag, and summarize Notes.
+
+The Wix project configuration is included so the branch can build against the connected site. Wix credentials and session state are excluded by `.gitignore`.

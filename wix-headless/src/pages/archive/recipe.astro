@@ -1,0 +1,6 @@
+---
+import recipes from '../../data/archive-recipes.json';
+const slug = Astro.url.searchParams.get('slug');
+const recipe = recipes.find(item => item.slug === slug);
+return Astro.redirect(recipe ? `/archive/recipes/${recipe.slug}/${Astro.url.hash}` : '/archive/recipes/', 301);
+---

@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.tsx';
+import { forms } from '@wix/forms';
+import { auth } from '@wix/essentials';
+
+let wixForm: Awaited<ReturnType<typeof forms.listForms>>['forms'][number] | undefined;
+try {
+  const elevatedListForms = auth.elevate(forms.listForms);
+  const listResult = await elevatedListForms('wix.form_app.form');
+  wixForm = listResult.forms?.[0];
+} catch (error) {
+  console.error('[forms] contact form discovery failed:', error);
+}
+
+const formId = wixForm?._id ?? '';
+const formFields = wixForm?.formFields
+  ?.filter((field) => field.fieldType === 'INPUT' && !field.hidden)
+  .map((field) => {
+    const options = field.inputOptions;
+    const stringOptions = options?.stringOptions;
+    const label =
+      stringOptions?.textInputOptions?.label ??
+      stringOptions?.dropdownOptions?.label ??
+      stringOptions?.phoneInputOptions?.label ??
+      '';
+
+    return {
+      label,
+      target: options?.target ?? '',
+      required: options?.required ?? false,
+      componentType: stringOptions?.componentType ?? 'TEXT_INPUT',
+      identifier: field.identifier ?? '',
+      options: stringOptions?.dropdownOptions?.options?.map((option) => ({
+        value: option.value ?? option.label ?? '',
+        label: option.label ?? option.value ?? '',
+      })),
+    };
+  })
+  .filter((field) => field.target) ?? [];
+---
+<Layout title="Contact" description="Contact Fritz Knack.">
+  <header class="contact-hero">
+    <div class="contact-bracket" aria-hidden="true"></div>
+    <div class="contact-copy max-w-6xl mx-auto px-lg">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s talk about something useful.</h1>
+      <p>If you’re working on an arts, nonprofit, technology, or community problem—and think another practical mind would help—I’d be glad to hear from you.</p>
+    </div>
+  </header>
+  <section class="contact max-w-6xl mx-auto px-lg py-4xl">
+    <div>
+      <p class="eyebrow">Send a note</p>
+      <h2>What are you working on?</h2>
+      <p>Use the form and give me enough context to understand the shape of it. No pitch deck required.</p>
+    </div>
+    <div class="form-shell" data-contact-form>
+      <p class="eyebrow">Contact form</p>
+      {formId ? (
+        <ContactForm client:load formId={formId} fields={formFields} />
+      ) : (
+        <p class="form-unavailable">The contact form is temporarily unavailable. Please try again shortly.</p>
+      )}
+      <noscript>Please enable JavaScript to use the contact form.</noscript>
+    </div>
+  </section>
+</Layout>
+<style>
+  .contact-hero { position: relative; min-height: 39rem; overflow: hidden; background: #e9edf0; }
+  .contact-copy { position: relative; z-index: 2; padding-top: var(--spacing-3xl); padding-left: clamp(2.25rem, 9vw, 8rem); }
+  .contact-copy h1 { max-width: 11ch; margin: 1rem 0 1.5rem; font-size: clamp(4rem, 8vw, 8rem); line-height: .82; }
+  .contact-copy > p:last-child { max-width: 39rem; padding: 1rem; background: #e9edf0; font-size: 1.3rem; }
+  .contact-bracket { position: absolute; left: 0; top: 4rem; width: 67%; height: 27rem; border-left: 5rem solid #b24c35; border-top: 5rem solid #b24c35; }
+  .contact-bracket::after { content: ""; position: absolute; right: -40%; bottom: -8rem; width: 52%; height: 10rem; background: #46586d; }
+  .contact { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--spacing-3xl); }
+  h2 { max-width: 10ch; margin: 1rem 0; font-size: clamp(2.8rem, 5vw, 5rem); }
+  .contact > div > p:last-child { max-width: 32rem; font-size: 1.1rem; }
+  .form-shell { min-height: 25rem; padding: var(--spacing-xl); border: .75rem solid #b24c35; background: var(--color-paper-warm); }
+  .form-shell > .eyebrow { margin-bottom: var(--spacing-lg); }
+  .form-unavailable { max-width: 32rem; font-weight: 650; }
+  @media (max-width: 767px) { .contact-hero { min-height: 44rem; } .contact-copy { padding-left: var(--spacing-lg); } .contact-bracket { top: auto; bottom: 0; width: 72%; height: 13rem; border-width: 3rem 0 0 3rem; } .contact { grid-template-columns: 1fr; gap: var(--spacing-xl); } }
+</style>
+<style is:global>
+  .form-container { display: grid; gap: var(--spacing-md); }
+  .form-field { display: grid; gap: var(--spacing-2xs); }
+  .form-label { font-family: var(--font-mono); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .required { color: var(--color-accent); }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-sm);
+    background: var(--color-cream);
+    color: var(--color-ink);
+    padding: .8rem .9rem;
+    line-height: 1.35;
+  }
+  .form-textarea { min-height: 10rem; resize: vertical; }
+  .form-input:focus-visible,
+  .form-select:focus-visible,
+  .form-textarea:focus-visible { outline: .3rem solid var(--color-yellow); outline-offset: 2px; border-color: var(--color-navy); }
+  .form-input-error { border-color: var(--color-error); }
+  .form-field-error,
+  .form-error { color: var(--color-error); font-weight: 700; }
+  .form-field-error { font-size: .9rem; }
+  .form-button {
+    justify-self: start;
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--color-navy);
+    color: var(--color-paper);
+    padding: .9rem 1.35rem;
+    font-weight: 750;
+  }
+  .form-button:hover:not(:disabled) { background: var(--color-accent); }
+  .form-button:focus-visible { outline: .3rem solid var(--color-yellow); outline-offset: 3px; }
+  .form-button:disabled { cursor: wait; opacity: .6; }
+  .form-success { border-left: .75rem solid var(--color-navy); background: var(--color-cream); padding: var(--spacing-lg); font-size: 1.15rem; }
+</style>
