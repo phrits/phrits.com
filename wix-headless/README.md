@@ -8,11 +8,11 @@ Open this `wix-headless` folder in VS Code. Use GitHub Desktop to switch to the 
 
 From this folder:
 
-- `npm install` installs dependencies.
-- `npx wix dev` starts local development.
-- `npx wix build` builds the site.
-- `npx wix preview` uploads a test version to Wix.
-- `npx wix release` publishes to the connected Wix site.
+- `npm install` installs dependencies, including the Wix CLI.
+- `npm run dev` starts local development.
+- `npm run build` builds the site.
+- `npm run preview` uploads a test version to Wix.
+- `npm run release` publishes to the connected Wix site.
 
 A Git commit updates GitHub. Wix preview and release are separate actions.
 
