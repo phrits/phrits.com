@@ -2,6 +2,7 @@
 .env
 .env.*
 !.env.example
+wix.config.json
 
 # Wix and Astro local state
 .wix/
