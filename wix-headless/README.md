@@ -1,21 +1,14 @@
-# Wix Headless app
+# Wix Headless branch
 
-This folder contains the Astro app for phrits.com. The repository's `main` branch remains the legacy PHP site; this app lives in `wix-headless/` on the `wix-headless` branch.
+This folder holds the Wix Headless handoff and legacy redirect implementation. The full Astro app and imported archive content are not yet in this branch.
 
-## Local Wix connection
+The redirect implementation is already present:
 
-The site-specific `wix.config.json` is intentionally excluded from Git. Copy that one file from your existing linked Wix project into this folder on your computer. It tells the Wix CLI which site and private app to use. Keep it local.
+- `src/data/legacy-redirects.json` — 319 known legacy paths mapped to migrated destinations.
+- `src/pages/[...legacy].astro` — 301 redirects for known paths and a styled 404 for unknown paths.
+- `scripts/import-legacy-archive.py` — link rewriting and redirect-map generation.
+- `docs/LEGACY-URL-REDIRECTS.md` — migration notes.
 
-## Develop, preview, and publish
+`wix.config.json` is ignored because it contains this project's site and app identifiers. Keep your existing linked copy local.
 
-Open this folder in VS Code. Use GitHub Desktop to fetch/pull assistant commits, review your changes, and commit/push your own changes.
-
-From a terminal opened in this folder:
-
-- `npm ci` installs the locked dependencies.
-- `npx wix dev` starts the local development environment.
-- `npx wix build` checks and builds the project.
-- `npx wix preview` uploads a test version to Wix and returns preview URLs. It does not publish that version to the live site.
-- `npx wix release` publishes the current project to the live Wix site.
-
-Wix preview/release and GitHub commit/push are separate actions. You can test with preview before committing; release only when you intend the code to be live.
+When the app source is present, use VS Code for editing and GitHub Desktop to fetch/pull assistant commits and commit/push your changes. From the app folder, `npx wix dev` starts local development, `npx wix build` builds the project, `npx wix preview` uploads a test version, and `npx wix release` publishes to the live Wix site. GitHub and Wix preview/release are separate actions.
